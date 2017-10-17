@@ -1,0 +1,81 @@
+{
+  "@context": {
+    "common": "http://iot.schema.org/interaction-patterns#",
+    "iot": "http://iot.schema.org/core#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "qudt": "http://qudt.org/1.1/schema/qudt#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+	"dct": "http://purl.org/dc/terms/"
+  },  
+  "schema:Unit": [
+    {
+		"@id": "iot:TemperatureUnit",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "An enumeration of temperature units.",
+		"rdfs:label": "Temperature Unit",
+		"rdfs:subClassOf": {
+		"@id": "schema:Enumeration"
+		}
+	},
+    {	
+		"@id": "iot:Celsius",
+		"@type": "iot:TemperatureUnit",
+		"rdfs:comment": "unit of the temperature of which the scale is defined by two fixe-points, the temperatures of freezing and boiling point of water at normal pressure (air pressure of 1 013,25 hPa)",
+		"rdfs:label": "Degree Celsius",
+		"iot:reference": "0112/2///62720#UAA033#001",
+		"dct:source": "http://data.nasa.gov/qudt/owl/unit#DegreeCelsius"
+	},
+    {
+		"@id": "iot:Kelvin",
+		"@type": "iot:TemperatureUnit",
+		"rdfs:comment": "unit of thermodynamic temperature is the fraction 1/273,16 of the thermodynamic temperature of the triple point of water",
+		"rdfs:label": "Degree Kelvin",
+		"iot:reference" : "0112/2///62720#UAA185#001",
+		"dct:source": "http://data.nasa.gov/qudt/owl/unit#Kelvin"
+    },
+	{
+		"@id": "iot:Fahrenheit",
+		"@type": "iot:TemperatureUnit",
+		"rdfs:comment": "unit of temperature according to the temperature of the freezing and boiling point of water (32 °F and 212 °F)",
+		"rdfs:label": "Degree Fahrenheit",
+		"iot:reference" : "0112/2///62720#UAA039#001",
+		"dct:source": "http://data.nasa.gov/qudt/owl/unit#DegreeFahrenheit"
+    },
+	{
+		"@id": "iot:TimeUnitType",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "An enumeration of time unit.",
+		"rdfs:label": "Time Unit Type",
+		"rdfs:subClassOf": {
+			"@id": "schema:Enumeration"
+		}
+	},
+    {	
+		"@id": "iot:Second",
+		"@type": "iot:TimeUnitType",
+		"rdfs:comment": "Second Time Unit",
+		"rdfs:label": "Second",
+	    "iot:reference" : "0112/2///62720#UAA972#001",
+	    "dct:source": "http://data.nasa.gov/qudt/owl/unit#SecondTime"		
+	},
+    {	
+		"@id": "iot:Minute",
+		"@type": "iot:TimeUnitType",
+		"rdfs:comment": "Minute Time Unit",
+		"rdfs:label": "Minute",
+	    "iot:reference" : "0112/2///62720#UAA842#001",
+	    "dct:source": "http://data.nasa.gov/qudt/owl/unit#MinuteTime"		
+	},	
+    {	
+		"@id": "iot:Hour",
+		"@type": "iot:TimeUnitType",
+		"rdfs:comment": "Hour Time Unit",
+		"rdfs:label": "Hour",
+	    "iot:reference" : "0112/2///62720#UAA407#001",
+	    "dct:source": "http://data.nasa.gov/qudt/owl/unit#Hour"		
+	}	
+  ]
+}

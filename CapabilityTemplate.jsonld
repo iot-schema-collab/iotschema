@@ -1,0 +1,36 @@
+{
+  "@context" : [
+	{
+    "qudt": "http://qudt.org/1.1/schema/qudt#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"	
+  }],
+      "@id": "",
+      "@type": "rdfs:Class",
+	  "rdfs:subClassOf": { "@id": "Capability" },
+      "rdfs:comment": "",
+      "rdfs:label": "",	  
+      "domain": {"@id": "Common"},
+      "providesInterctionPattern": [
+        {
+          "@id": "",
+		  "@type": "rdfs:Class",
+          "acceptsInputData": { "@id": "" },
+          "domain": { "@id": "Common" },
+          "providesOutputData": {
+		   "@id": "",
+           "domain": { "@id": "Common" },
+           "rdfs:comment": "",
+           "rdfs:label": "",
+           "rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+           "schema:propertyType": { "@id": "" },
+           "schema:unitCode": { "@id": "" }
+		  },
+          "rdfs:comment": "",
+          "rdfs:label": "",
+          "rdfs:subClassOf": { "@id": "Property" }
+        }
+      ]
+}

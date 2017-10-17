@@ -1,0 +1,297 @@
+{
+  "@context": {
+    "iot": "http://iot.schema.org/core#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "qudt": "http://qudt.org/1.1/schema/qudt#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "iot:InteractionPattern": [
+    {
+		"@id": "iot:Temperature",
+		"@type": "rdfs:Class",
+		"iot:providesOutputData": {
+		"@id": "iot:TemperatureData"
+		},
+		"rdfs:comment": "Temperature interaction property",
+		"rdfs:label": "Temperature",
+		"rdfs:subClassOf": { "@id": "iot:Property" }
+    },
+    {
+		"@id": "iot:TemperatureData",
+		"rdfs:comment": " Temperature data",
+		"rdfs:label": "Temperature Data",
+		"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+		"schema:propertyType": { "@id": "schema:Float" },
+		"schema:unitCode": { "@id": "iot:TemperatureUnit" },
+		"schema:minValue": "schema:Integer",
+		"schema:maxValue": "schema:Integer"		
+    },		
+    {
+		"@id": "iot:TargetTemperature",
+		"@type": "rdfs:Class",	
+		"iot:acceptsInputData": {
+		"@id": "iot:TemperatureData"
+		},		  
+		"iot:providesOutputData": {
+		"@id": "iot:TemperatureData"
+		},
+		"rdfs:comment": "Target temperature",
+		"rdfs:label": "Target Temperature",
+		"rdfs:subClassOf": { "@id": "iot:Property" }
+    },	
+    {
+		"@id": "iot:BinarySwitch",
+		"@type": "rdfs:Class",
+		"iot:acceptsInputData": {
+			"@id": "iot:StateData"
+		},
+		"iot:providesOutputData": {
+			"@id": "iot:Toggle"
+		},
+		"rdfs:comment": "Binary Switch status property",
+		"rdfs:label": "Binary Switch",
+		"rdfs:subClassOf": {
+			"@id": "iot:Property"
+      }
+    },
+    {
+		"@id": "iot:Toggle",
+		"rdfs:comment": "Toggle",
+		"rdfs:label": "Toggle",
+		"rdfs:subClassOf": {
+			"@id": "schema:PropertyValue"
+		},
+		"schema:propertyType": {
+			"@id": "schema:Boolean"
+		}
+    },
+    {
+		"@id": "iot:RunMode",
+		"@type": "rdfs:Class",
+		"iot:acceptsInputData": {
+		"@id": "iot:RunModeData"
+		},
+		"iot:providesOutputData": {
+			"@id": "iot:RunModeData"
+		},
+		"rdfs:comment": "Run modes of an air conditioner",
+		"rdfs:label": "Run Mode",
+		"rdfs:subClassOf": {
+			"@id": "iot:Property"
+      }
+    },
+    {
+		"@id": "iot:RunModeData",
+		"rdfs:comment": "Run modes",
+		"rdfs:label": "Run Mode Data",
+		"rdfs:subClassOf": {
+			"@id": "schema:PropertyValue"
+		},
+		"schema:propertyType": {
+			"@id": "iot:RunModeType"
+		}
+    },
+	{
+		"@id": "iot:RunModeType",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "An enumeration of run modes of an air conditioner.",
+		"rdfs:label": "Run Mode Type",
+		"rdfs:subClassOf": {
+			"@id": "schema:Enumeration"
+		}
+	},
+    {	
+		"@id": "iot:CoolMode",
+		"@type": "iot:RunModeType",
+		"rdfs:comment": "Cool mode",
+		"rdfs:label": "Cool Mode"
+	},
+    {	
+		"@id": "iot:FanMode",
+		"@type": "iot:RunModeType",
+		"rdfs:comment": "Fan Mode",
+		"rdfs:label": "Fan Mode"
+	},	
+    {	
+		"@id": "iot:DryMode",
+		"@type": "iot:RunModeType",
+		"rdfs:comment": "Dry Mode",
+		"rdfs:label": "Dry Mode"
+	},
+    {	
+		"@id": "iot:EnergyOrPowerSaverMode",
+		"@type": "iot:RunModeType",
+		"rdfs:comment": "Energy Or Power Saver Mode",
+		"rdfs:label": "Energy Or Power Saver Mode"
+	},
+    {	
+		"@id": "iot:SleepMode",
+		"@type": "iot:RunModeType",
+		"rdfs:comment": "Sleep Mode",
+		"rdfs:label": "Sleep Mode"
+	},
+    {
+		"@id": "iot:CountDown",
+		"@type": "rdfs:Class",
+		"iot:acceptsInputData": {
+		"@id": "iot:TimeData"
+		},
+		"iot:providesOutputData": {
+			"@id": "iot:TimeData"
+		},
+		"rdfs:comment": "Count-down or Timer",
+		"rdfs:label": "Count Down",
+		"rdfs:subClassOf": {
+			"@id": "iot:Property"
+      }
+    },	
+    {
+		"@id": "iot:TimeData",
+		"rdfs:comment": "Time data",
+		"rdfs:label": "Time Data",
+		"rdfs:subClassOf": {
+			"@id": "schema:PropertyValue"
+		},
+		"schema:propertyType": {
+			"@id": "schema:Number"
+		},
+		"schema:unitCode": {
+			"@id": "iot:TimeUnitType"
+		}
+    },
+    {
+		"@id": "iot:WindStrength",
+		"@type": "rdfs:Class",
+		"iot:providesOutputData": {
+			"@id": "iot:WindData"
+		},
+		"rdfs:comment": "Wind strength",
+		"rdfs:label": "Wind Strength",
+		"rdfs:subClassOf": {
+			"@id": "iot:Property"
+      }
+    },	
+    {
+		"@id": "iot:WindData",
+		"rdfs:comment": "Wind data",
+		"rdfs:label": "Wind Data",
+		"rdfs:subClassOf": {
+			"@id": "schema:PropertyValue"
+		},
+		"schema:propertyType": {
+			"@id": "schema:Integer"
+		},
+		"schema:minValue": "schema:Integer",
+		"schema:maxValue": "schema:Integer"
+    },	
+    {
+		"@id": "common:SetLevel",
+		"@type": "rdfs:Class",
+		"iot:acceptsInputData": [
+		{
+			"@id": "common:TransitionTimeData"
+		},
+		{
+			"@id": "common:LevelData"
+		}
+		],
+		"rdfs:comment": "Set level Action",
+		"rdfs:label": "Set Level Action",
+		"rdfs:subClassOf": {
+		"@id": "iot:Action"
+      }
+    },
+    {
+		"@id": "common:StateDataExt",
+		"iot:hasFeatureOfInterest": {
+			"@id": "schema:Room"
+		},
+		"iot:observedProperty": {
+			"@id": "common:MotionDetected"
+		},
+		"rdfs:comment": "State data Extended with SSN/SOSA observation and actuation pattern",
+		"rdfs:label": "State Data",
+		"rdfs:subClassOf": {
+		"@id": "schema:PropertyValue"
+		},
+		"schema:propertyType": {
+			"@id": "schema:Boolean"
+		}
+    },
+    {
+		"@id": "common:MotionDetected",
+		"@type": "rdfs:Class",
+		"iot:providesOutputData": {
+			"@id": "common:StateData"
+		},
+		"rdfs:comment": "Detects motion",
+		"rdfs:label": "Motion Detected",
+		"rdfs:subClassOf": {
+			"@id": "iot:Property"
+		}
+    },
+    {
+		"@id": "common:MotionDetectedExt",
+		"@type": "rdfs:Class",
+		"iot:isObservedBy": {
+			"@id": "iot:Sensor"
+		},
+		"iot:providesOutputData": {
+			"@id": "common:StateDataExt"
+		},
+		"rdfs:comment": "Motion detection property extended with SSN/SOSA observation and actuation pattern",
+		"rdfs:label": "Motion Detected",
+		"rdfs:subClassOf": {
+			"@id": "iot:Property"
+		}
+    },
+    {
+		"@id": "common:TransitionTime",
+		"@type": "rdfs:Class",
+		"iot:acceptsInputData": {
+		"@id": "common:TransitionTimeData"
+		},
+		"iot:providesOutputData": {
+			"@id": "common:TransitionTimeData"
+		},
+		"rdfs:comment": "Transition time property",
+		"rdfs:label": "Transition Time",
+		"rdfs:subClassOf": {
+			"@id": "iot:Property"
+		}
+    },
+    {
+		"@id": "common:LevelData",
+		"rdfs:comment": "Level data",
+		"rdfs:label": "Level Data",
+		"rdfs:subClassOf": {
+			"@id": "schema:PropertyValue"
+		},
+		"schema:propertyType": {
+			"@id": "schema:Number"
+		},
+		"schema:unitCode": {
+			"@id": "qudt:Percent"
+		}
+    },
+    {
+		"@id": "common:CurrentLevel",
+		"@type": "rdfs:Class",
+		"iot:acceptsInputData": {
+			"@id": "common:LevelData"
+		},
+		"iot:providesOutputData": {
+			"@id": "common:LevelData"
+		},
+		"rdfs:comment": "Current level property",
+		"rdfs:label": "Current Level",
+		"rdfs:subClassOf": {
+			"@id": "iot:Property"
+		}
+    }
+  ]
+}
+

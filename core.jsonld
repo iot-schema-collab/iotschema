@@ -1,0 +1,22 @@
+{
+  "@context": {
+    "common": "http://iot.schema.org/interaction-patterns#",
+    "iot": "http://iot.schema.org/core#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "qudt": "http://qudt.org/1.1/schema/qudt#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "iot:Unit",
+  "@type": "rdfs:Class",
+  "rdfs:comment": "Unit of measurement",
+  "rdfs:label": "Unit",
+
+  "@type": "schema:Property",
+  "@id": "iotschema:reference",
+  "domain": "iot:Unit",
+  "range": "schema:Text",
+  "description": "IRDI reference to unit as specified by IEC Common Data Dictionary"
+}	  
