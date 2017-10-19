@@ -1,34 +1,32 @@
 {
   "@context": {
-    "iot": "http://iot.schema.org/core#",
-    "owl": "http://www.w3.org/2002/07/owl#",
-    "qudt": "http://qudt.org/1.1/schema/qudt#",
+    "iot": "http://iotschema.org/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "schema": "http://schema.org/",
-    "xsd": "http://www.w3.org/2001/XMLSchema#"
+    "schema": "http://schema.org/"
   },
-  "iot:InteractionPattern": [
+  "@graph": [
     {
 		"@id": "iot:Temperature",
 		"@type": "rdfs:Class",
-		"iot:providesOutputData": {
-		"@id": "iot:TemperatureData"
-		},
 		"rdfs:comment": "Temperature interaction property",
 		"rdfs:label": "Temperature",
-		"rdfs:subClassOf": { "@id": "iot:Property" }
+		"rdfs:subClassOf": { "@id": "iot:Property" },
+		"iot:providesOutputData": {
+			"@id": "iot:TemperatureData"
+		}
     },
     {
 		"@id": "iot:TemperatureData",
+		"@type": "rdfs:Class",
 		"rdfs:comment": " Temperature data",
 		"rdfs:label": "Temperature Data",
 		"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
 		"schema:propertyType": { "@id": "schema:Float" },
 		"schema:unitCode": { "@id": "iot:TemperatureUnit" },
-		"schema:minValue": "schema:Integer",
-		"schema:maxValue": "schema:Integer"		
-    },		
+		"schema:minValue": "schema:Float",
+		"schema:maxValue": "schema:Float"		
+    },	
     {
 		"@id": "iot:TargetTemperature",
 		"@type": "rdfs:Class",	
@@ -36,7 +34,7 @@
 		"@id": "iot:TemperatureData"
 		},		  
 		"iot:providesOutputData": {
-		"@id": "iot:TemperatureData"
+			"@id": "iot:TemperatureData"
 		},
 		"rdfs:comment": "Target temperature",
 		"rdfs:label": "Target Temperature",
@@ -46,9 +44,6 @@
 		"@id": "iot:BinarySwitch",
 		"@type": "rdfs:Class",
 		"iot:acceptsInputData": {
-			"@id": "iot:StateData"
-		},
-		"iot:providesOutputData": {
 			"@id": "iot:Toggle"
 		},
 		"rdfs:comment": "Binary Switch status property",
@@ -68,11 +63,77 @@
 			"@id": "schema:Boolean"
 		}
     },
+	{
+		"@id": "iot:TurnOn",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Turn on a switch",
+		"rdfs:label": "Turn On",
+		"rdfs:subClassOf": {
+			"@id": "iot:Property"
+		}
+	},
+	{
+		"@id": "iot:TurnOff",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Turn off a switch",
+		"rdfs:label": "Turn Off",
+		"rdfs:subClassOf": {
+			"@id": "iot:Property"
+		}
+	},
+	{
+		"@id": "iot:SwitchStatus",
+		"@type": "rdfs:Class",
+		"iot:providesOutputData": {
+			"@id": "schema:Boolean"
+		},		
+		"rdfs:comment": "Status of a switch",
+		"rdfs:label": "Switch Status",
+		"rdfs:subClassOf": {
+			"@id": "iot:Property"
+		}
+	},	
+	{
+		"@id": "iot:SetDimmer",
+		"@type": "rdfs:Class",
+		"iot:acceptsInputData": {
+			"@id": "iot:DimmerData"
+		},		
+		"rdfs:comment": "Set quantized representation for brightness (e.g., in the range 0-100)",
+		"rdfs:label": "Set Dimmer",
+		"rdfs:subClassOf": {
+			"@id": "iot:Property"
+		}
+	},	
+	{
+		"@id": "iot:CurrentDimmer",
+		"@type": "rdfs:Class",
+		"iot:providesOutputData": {
+			"@id": "iot:DimmerData"
+		},		
+		"rdfs:comment": "Get quantized representation of the current sensed value for brightness (e.g., in the range 0-100)",
+		"rdfs:label": "Set Dimmer",
+		"rdfs:subClassOf": {
+			"@id": "iot:Property"
+		}
+	},	
+	{
+		"@id": "iot:RampTime",
+		"@type": "rdfs:Class",
+		"iot:providesOutputData": {
+			"@id": "schema:Integer"
+		},		
+		"rdfs:comment": "Actual speed of changing between 2 dimming values",
+		"rdfs:label": "Ramp Time",
+		"rdfs:subClassOf": {
+			"@id": "iot:Property"
+		}
+	},	
     {
 		"@id": "iot:RunMode",
 		"@type": "rdfs:Class",
 		"iot:acceptsInputData": {
-		"@id": "iot:RunModeData"
+			"@id": "iot:RunModeData"
 		},
 		"iot:providesOutputData": {
 			"@id": "iot:RunModeData"
@@ -291,6 +352,82 @@
 		"rdfs:subClassOf": {
 			"@id": "iot:Property"
 		}
+    },
+	{
+		"@id": "iot:CurrentColour",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "RGB colour",
+		"rdfs:label": "Light Colour",
+		"rdfs:subClassOf": { "@id": "iot:Property" },
+		"iot:providesOutputData": [
+		{
+			"@id": "iot:RColourData"
+		},
+		{
+			"@id": "iot:GColourData"
+		},
+		{
+			"@id": "iot:BColourData"
+		}
+		],
+    },
+	{
+		"@id": "iot:SetColour",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "RGB colour",
+		"rdfs:label": "Light Colour",
+		"rdfs:subClassOf": { "@id": "iot:Property" },
+		"iot:acceptsInputData": [
+		{
+			"@id": "iot:RColourData"
+		},
+		{
+			"@id": "iot:GColourData"
+		},
+		{
+			"@id": "iot:BColourData"
+		}
+		],
+    },
+    {
+		"@id": "iot:RColourData",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Red component of the RGB colour data",
+		"rdfs:label": "Red",
+		"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+		"schema:propertyType": { "@id": "schema:Integer" },
+		"schema:minValue": "schema:Integer",
+		"schema:maxValue": "schema:Integer"		
+    },
+	{
+		"@id": "iot:GColourData",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Green component of the RGB colour data",
+		"rdfs:label": "Green",
+		"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+		"schema:propertyType": { "@id": "schema:Integer" },
+		"schema:minValue": "schema:Integer",
+		"schema:maxValue": "schema:Integer"		
+    },
+	{
+		"@id": "iot:BColourData",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Blue component of the RGB colour data",
+		"rdfs:label": "Blue",
+		"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+		"schema:propertyType": { "@id": "schema:Integer" },
+		"schema:minValue": "schema:Integer",
+		"schema:maxValue": "schema:Integer"		
+    },
+	{
+		"@id": "iot:DimmerData",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Dimmer data",
+		"rdfs:label": "Dimmer Data",
+		"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+		"schema:propertyType": { "@id": "schema:Integer" },
+		"schema:minValue": "schema:Integer",
+		"schema:maxValue": "schema:Integer"		
     }
   ]
 }

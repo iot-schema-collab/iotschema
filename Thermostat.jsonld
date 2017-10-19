@@ -12,7 +12,7 @@
 	"rdfs:comment": "A capability for thermostat",
 	"rdfs:label": "Thermostat Capability",	  
 	"iot:domain": {"@id": "iot:Common"},
-	"iot:providesInterctionPattern": [
+	"iot:providesInteractionPattern": [
 		{
 		"@id": "iot:Temperature",
 		"@id": "iot:TargetTemperature"

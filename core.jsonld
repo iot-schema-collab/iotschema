@@ -1,22 +1,350 @@
 {
   "@context": {
-    "common": "http://iot.schema.org/interaction-patterns#",
-    "iot": "http://iot.schema.org/core#",
-    "owl": "http://www.w3.org/2002/07/owl#",
-    "qudt": "http://qudt.org/1.1/schema/qudt#",
+    "iot": "http://iotschema.org/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "schema": "http://schema.org/",
-    "xsd": "http://www.w3.org/2001/XMLSchema#"
+    "schema": "http://schema.org/"
   },
-  "@id": "iot:Unit",
-  "@type": "rdfs:Class",
-  "rdfs:comment": "Unit of measurement",
-  "rdfs:label": "Unit",
+  "@graph": [
+    {
+      "@id": "iot:Domain",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Specifies a domain e.g., Building domain, Mobility domain, or domain agnostic (Common domain).",
+      "rdfs:label": "Domain",
+      "rdfs:subClassOf": {
+        "@id": "schema:Enumeration"
+      }
+    },
+	{
+		"@id": "iot:Unit",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Unit of measurement",
+		"rdfs:label": "Unit"
+	},
+	{
+	    "@id": "iot:reference",
+		"@type": "rdf:Property",
+		"schema:domainIncludes": "iot:Unit",
+		"schema:rangeIncludes": "schema:Text",
+		"rdfs:coment": "IRDI reference to unit as specified by IEC Common Data Dictionary",
+		"rdfs:label" : "Reference"
+	},
+    {
+      "@id": "iot:isObservedBy",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Relation between a PropertyValue and the Sensor which is able to observe it.",
+      "rdfs:label": "Is Observed By",
+      "schema:domainIncludes": [
+        {
+          "@id": "iot:Event"
+        },
+        {
+          "@id": "iot:Property"
+        }
+      ],
+      "schema:rangeIncludes": {
+        "@id": "iot:Sensor"
+      }
+    },
+    {
+      "@id": "iot:Action",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Action subclass of InteractionPattern",
+      "rdfs:label": "Action",
+      "rdfs:subClassOf": {
+        "@id": "iot:InteractionPattern"
+      }
+    },
+    {
+      "@id": "iot:Sensor",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Sensor - Device, agent (including humans), or software (simulation). Sensors respond to a Stimulus, e.g., a change in the environment, data composed from the Results of prior Observations, and generate a Result.",
+      "rdfs:label": "Sensor",
+      "rdfs:subClassOf": {
+        "@id": "iot:Device"
+      }
+    },
+    {
+      "@id": "iot:InteractionPattern",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "General Interaction Pattern Class",
+      "rdfs:label": "Interaction Pattern"
+    },
+    {
+      "@id": "iot:observes",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Relation between a Sensor and either a Property or an Event that it is capable of sensing.",
+      "rdfs:label": "Observes",
+      "schema:domainIncludes": {
+        "@id": "iot:Sensor"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "iot:Property"
+        },
+        {
+          "@id": "iot:Event"
+        }
+      ]
+    },
+    {
+      "@id": "iot:providesOutputData",
+      "@type": "rdf:Property",
+      "rdfs:label": "Provides Output Data",
+	  "rdfs:comment": "Property for Output Data from an Interaction.",
+      "schema:domainIncludes": [
+	    {
+        "@id": "iot:InteractionPattern"
+		}],
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:PropertyValue"
+        },
+        {
+          "@id": "schema:PropertyValueSpecification"
+        }		
+      ]
+    },
+    {
+      "@id": "iot:madeActuation",
+      "@type": "rdf:Property",
+      "rdfs:comment": " Relation linking a PropertyValue to the Actuator that made that Actuation. ",
+      "rdfs:label": "Made Actuation",
+      "schema:domainIncludes": {
+        "@id": "iot:Actuator"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:PropertyValue"
+      }
+    },
+    {
+      "@id": "iot:Property",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Property subclass of InteractionPattern",
+      "rdfs:label": "Property",
+      "rdfs:subClassOf": {
+        "@id": "iot:InteractionPattern"
+      }
+    },
+    {
+      "@id": "iot:FeatureOfInterest",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Feature Of Interest - The thing whose property is being estimated or calculated in the course of an Observation, or whose property is being manipulated by an Actuator. ",
+      "rdfs:label": "FeatureOfInterest"
+    },
+    {
+      "@id": "iot:phenomenonTime",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The time that the Result of an Observation or Actuation applies to the FeatureOfInterest. Not necessarily the same as the resultTime. May be an interval or an instant, or some other compound temporal entity [owl-time].  ",
+      "rdfs:label": "Phenomenon Time",
+      "schema:domainIncludes": {
+        "@id": "iot:PropertyValue"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:DateTime"
+        },
+        {
+          "@id": "schema:Duration"
+        }
+      ]
+    },
+    {
+      "@id": "iot:observedProperty",
+      "@type": "rdf:Property",
+      "rdfs:comment": " Relation linking a PropertyValue to the property or Event that was observed. The Property or Event should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this PropertyValue. ",
+      "rdfs:label": "Observed Property",
+      "schema:domainIncludes": {
+        "@id": "iot:PropertyValue"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Property"
+        },
+        {
+          "@id": "schema:Event"
+        }
+      ]
+    },
+    {
+      "@id": "iot:acceptsInputData",
+      "@type": "rdf:Property",
+      "rdfs:label": "accepts input data",
+	  "rdfs:comment" : "Property for Input Data of an Interaction.",
+      "schema:domainIncludes": {
+        "@id": "iot:InteractionPattern"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:PropertyValue"
+        },
+        {
+          "@id": "schema:PropertyValueSpecification"
+        }
+      ]
+    },
+    {
+      "@id": "iot:Actuator",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Actuator - A device that is used to change the state of the world. ",
+      "rdfs:label": "Actuator",
+      "rdfs:subClassOf": {
+        "@id": "iot:Device"
+      }
+    },
+    {
+      "@id": "iot:hasFeatureOfInterest",
+      "@type": "rdf:Property",
+      "rdfs:comment": " A relation between a PropertyValue and the entity whose quality was observed, or whose property was modified.",
+      "rdfs:label": "Has Feature Of Interest",
+      "schema:domainIncludes": {
+        "@id": "schema:PropertyValue"
+      },
+      "schema:rangeIncludes": {
+        "@id": "iot:FeatureOfInterest"
+      }
+    },
+    {
+      "@id": "iot:isActedOnBy",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Relation between an Action or a Property of a FeatureOfInterest and an Actuator changing its state.",
+      "rdfs:label": "Is Acted On By",
+      "schema:domainIncludes": [
+        {
+          "@id": "iot:Action"
+        },
+        {
+          "@id": "iot:Property"
+        }
+      ],
+      "schema:rangeIncludes": {
+        "@id": "iot:Actuator"
+      }
+    },
+    {
+      "@id": "iot:resultTime",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The result time is the instant of time when the Observation or Actuation activity was completed. ",
+      "rdfs:label": "Result Time",
+      "schema:domainIncludes": {
+        "@id": "iot:PropertyValue"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:DateTime"
+      }
+    },
+    {
+      "@id": "iot:Capability",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Capability Class",
+      "rdfs:label": "Capability",
+      "rdfs:subClassOf": {
+        "@id": "schema:Thing"
+      }
+    },
+    {
+      "@id": "iot:providesInteractionPattern",
+      "@type": "rdf:Property",
+      "rdfs:label": "Property for InteractionPattern",
+	  "rdfs:comment": "A property that relates a capability with its interaction patterns.",
+      "schema:domainIncludes": {
+        "@id": "iot:Capability"
+      },
+      "schema:rangeIncludes": {
+        "@id": "iot:InteractionPattern"
+      }
+    },
+    {
+      "@id": "iot:Common",
+      "@type": "iot:Domain",
+      "rdfs:comment": "Horizontal Domain (Cross Domain)",
+      "rdfs:label": "Common"
+    },
+    {
+      "@id": "iot:domain",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Specifies a domain e.g., Building domain, Mobility domain, or domain agnostic (Common domain).",
+      "rdfs:label": "domain",
+      "schema:rangeIncludes": {
+        "@id": "iot:Domain"
+      }
+    },
+    {
+      "@id": "iot:actsOnProperty",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Relation between a PropertyValue and the Property or Action of a FeatureOfInterest it is acting upon.",
+      "rdfs:label": "Acts On Property",
+      "schema:domainIncludes": {
+        "@id": "iot:PropertyValue"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Action"
+        },
+        {
+          "@id": "schema:Property"
+        }
+      ]
+    },
+    {
+      "@id": "iot:Event",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Event subclass of InteractionPattern",
+      "rdfs:label": "Event",
+      "rdfs:subClassOf": {
+        "@id": "iot:InteractionPattern"
+      }
+    },
+    {
+      "@id": "iot:Building",
+      "@type": "iot:Domain",
+      "rdfs:comment": "Building Domain",
+      "rdfs:label": "Building"
+    },
+    {
+      "@id": "iot:Mobility",
+      "@type": "iot:Domain",
+      "rdfs:comment": "Mobility Domain",
+      "rdfs:label": "Mobility"
+    },
+    {
+      "@id": "iot:madeObservation",
+      "@type": "rdf:Property",
+      "rdfs:comment": " Relation between a Sensor and a PropertyValue it has made. ",
+      "rdfs:label": "Made Observation",
+      "schema:domainIncludes": {
+        "@id": "iot:Sensor"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:PropertyValue"
+      }
+    },
+    {
+      "@id": "iot:Device",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Device Class",
+      "rdfs:label": "Device",
+      "rdfs:subClassOf": {
+        "@id": "schema:Thing"
+      }
+    },
+    {
+      "@id": "iot:forProperty",
+      "@type": "rdf:Property",
+      "rdfs:comment": " Relation between an Actuator and either a Property or an Action that it is capable of actuation. ",
+      "rdfs:label": "For Property",
+      "schema:domainIncludes": {
+        "@id": "iot:Actuator"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "iot:Action"
+        },
+        {
+          "@id": "iot:Property"
+        }
+      ]
+    }
+  ]
+}
 
-  "@type": "schema:Property",
-  "@id": "iotschema:reference",
-  "domain": "iot:Unit",
-  "range": "schema:Text",
-  "description": "IRDI reference to unit as specified by IEC Common Data Dictionary"
-}	  

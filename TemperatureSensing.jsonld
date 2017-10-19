@@ -4,7 +4,7 @@
 		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
 		"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
 		"schema": "http://schema.org/",
-		"iot": "http://iot.schema.org/core#"
+		"iot": "http://iotschema.org/"
 	}],
 	"@id": "iot:TemperatureSensing",
 	"@type": "rdfs:Class",
@@ -12,7 +12,7 @@
 	"rdfs:comment": "A capability for temperature sensing",
 	"rdfs:label": "Temperature Capability",	  
 	"iot:domain": {"@id": "iot:Common"},
-	"iot:providesInterctionPattern": [
+	"iot:providesInteractionPattern": [
 	{
 		"@id": "iot:Temperature"
 	}]

@@ -12,7 +12,7 @@
 	"rdfs:comment": "A capability for air conditioner",
 	"rdfs:label": "Air conditioner Capability",	  
 	"iot:domain": {"@id": "iot:Home"},
-	"iot:providesInterctionPattern": [
+	"iot:providesInteractionPattern": [
 	{
 		"@id": "iot:Temperature",
 		"@id": "iot:TargetTemperature",
