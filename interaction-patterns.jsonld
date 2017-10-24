@@ -282,16 +282,14 @@
 			"@id": "schema:Boolean"
 		}
     },
-    {
-		"@id": "common:MotionDetected",
+	{
+		"@id": "iot:MotionDetected",
 		"@type": "rdfs:Class",
-		"iot:providesOutputData": {
-			"@id": "common:StateData"
-		},
 		"rdfs:comment": "Detects motion",
 		"rdfs:label": "Motion Detected",
-		"rdfs:subClassOf": {
-			"@id": "iot:Property"
+		"rdfs:subClassOf": { "@id": "iot:Property" },
+		"iot:providesOutputData": {
+			"@id": "iot:StateData"
 		}
     },
     {
@@ -369,7 +367,7 @@
 		{
 			"@id": "iot:BColourData"
 		}
-		],
+		]
     },
 	{
 		"@id": "iot:SetColour",
@@ -387,7 +385,7 @@
 		{
 			"@id": "iot:BColourData"
 		}
-		],
+		]
     },
     {
 		"@id": "iot:RColourData",
@@ -428,7 +426,53 @@
 		"schema:propertyType": { "@id": "schema:Integer" },
 		"schema:minValue": "schema:Integer",
 		"schema:maxValue": "schema:Integer"		
-    }
+    },
+	{
+		"@id": "iot:StateData",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "State data",
+		"rdfs:label": "State Data",
+		"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+		"schema:propertyType": { "@id": "schema:Boolean" }
+    },
+    {
+		"@id": "iot:MotionType",
+		"@type": "rdfs:Class",
+		"iot:providesOutputData": {
+			"@id": "iot:MotionTypeData"
+		},
+		"rdfs:comment": "The type of the sensor (for instance PIR type)",
+		"rdfs:label": "Motion Type",
+		"rdfs:subClassOf": {
+			"@id": "iot:Property"
+      }
+    },
+    {
+		"@id": "iot:MotionTypeData",
+		"rdfs:comment": "Motion types",
+		"rdfs:label": "Motion Type Data",
+		"rdfs:subClassOf": {
+			"@id": "schema:PropertyValue"
+		},
+		"schema:propertyType": {
+			"@id": "iot:MotionSensorType"
+		}
+    },
+	{
+		"@id": "iot:MotionSensorType",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "The type of the sensor (for instance PIR type).",
+		"rdfs:label": "MotionSensorType",
+		"rdfs:subClassOf": {
+			"@id": "schema:Enumeration"
+		}
+	},
+    {	
+		"@id": "iot:PIR",
+		"@type": "iot:MotionSensorType",
+		"rdfs:comment": "Passive infrared sensor",
+		"rdfs:label": "PIR"
+	}
   ]
 }
 
