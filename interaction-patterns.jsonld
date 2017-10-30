@@ -472,7 +472,30 @@
 		"@type": "iot:MotionSensorType",
 		"rdfs:comment": "Passive infrared sensor",
 		"rdfs:label": "PIR"
-	}
+	},
+	{
+		"@id": "iot:Illuminance",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Illuminance interaction property",
+		"rdfs:label": "Illuminance",
+		"rdfs:subClassOf": { "@id": "iot:Property" },
+		"iot:providesOutputData": [
+		{
+			"@id": "iot:IlluminanceData"
+		}
+		]
+    },
+    {
+		"@id": "iot:IlluminanceData",
+		"@type": "rdfs:Class",
+		"rdfs:comment": " Illuminance data",
+		"rdfs:label": "Illuminance Data",
+		"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+		"schema:propertyType": { "@id": "schema:Float" },
+		"schema:unitCode": { "@id": "iot:IlluminanceUnit" },
+		"schema:minValue": "schema:Float",
+		"schema:maxValue": "schema:Float"		
+    }
   ]
 }
 

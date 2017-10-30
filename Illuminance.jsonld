@@ -1,0 +1,23 @@
+{
+  "@context" : [
+	{
+		"qudt": "http://qudt.org/1.1/schema/qudt#",
+		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+		"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+		"schema": "http://schema.org/",
+		"xsd": "http://www.w3.org/2001/XMLSchema#"	
+	}],
+	"@id": "iot:IlluminanceSensing",
+	"@type": "rdfs:Class",
+	"rdfs:subClassOf": { "@id": "Capability" },
+	"rdfs:comment": "Sensed luminous flux per unit area in lux.",
+	"rdfs:label": "Illuminance Capability",	  
+	"domain": [
+		{"@id": "iot:Home"},
+		{"@id": "iot:Building"}
+		],
+	"providesInteractionPattern": [
+	{
+		"@id": "iot:Illuminance"
+	}]
+}

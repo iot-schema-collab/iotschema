@@ -76,6 +76,14 @@
 		"rdfs:label": "Hour",
 	    "iot:reference" : "0112/2///62720#UAA407#001",
 	    "dct:source": "http://data.nasa.gov/qudt/owl/unit#Hour"		
+	},	
+    {	
+		"@id": "iot:Lux",
+		"@type": "iot:IlluminanceUnit",
+		"rdfs:comment": "Illuminance Unit",
+		"rdfs:label": "Illuminance Unit",
+	    "iot:reference" : "0112/2///62720#UAA723#001",
+	    "dct:source": "http://qudt.org/vocab/unit#Lux"		
 	}	
   ]
 }
