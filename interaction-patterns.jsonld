@@ -495,7 +495,40 @@
 		"schema:unitCode": { "@id": "iot:IlluminanceUnit" },
 		"schema:minValue": "schema:Float",
 		"schema:maxValue": "schema:Float"		
-    }
+    },
+	{
+		"@id": "iot:Humidity",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Humidity interaction property (e.g., in the range 0-100)",
+		"rdfs:label": "Humidity",
+		"rdfs:subClassOf": { "@id": "iot:Property" },
+		"iot:providesOutputData": [
+		{
+			"@id": "iot:HumidityData"
+		}
+		]
+    },
+    {
+		"@id": "iot:HumidityData",
+		"@type": "rdfs:Class",
+		"rdfs:comment": " Humidity data",
+		"rdfs:label": "Humidity Data",
+		"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+		"schema:propertyType": { "@id": "schema:Float" },
+		"schema:unitCode": { "@id": "iot:PercentUnit" }
+    },	
+	{
+		"@id": "iot:TargetHumidity",
+		"@type": "rdfs:Class",
+		"iot:acceptsInputData": {
+			"@id": "iot:HumidityData"
+		},		
+		"rdfs:comment": "Desired value for Humidity (e.g., in the range 0-100)",
+		"rdfs:label": "Target Humidity",
+		"rdfs:subClassOf": {
+			"@id": "iot:Property"
+		}
+	}
   ]
 }
 

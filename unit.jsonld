@@ -84,6 +84,14 @@
 		"rdfs:label": "Illuminance Unit",
 	    "iot:reference" : "0112/2///62720#UAA723#001",
 	    "dct:source": "http://qudt.org/vocab/unit#Lux"		
+	},	
+    {	
+		"@id": "iot:Percent",
+		"@type": "iot:PercentUnit",
+		"rdfs:comment": "Percent Unit",
+		"rdfs:label": "Percent Unit",
+	    "iot:reference" : "0112/2///62720#UAA000#001",
+	    "dct:source": "http://qudt.org/vocab/unit#Percent"		
 	}	
   ]
 }
