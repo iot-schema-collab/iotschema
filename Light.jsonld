@@ -5,18 +5,18 @@
 		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
 		"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
 		"schema": "http://schema.org/",
-		"xsd": "http://www.w3.org/2001/XMLSchema#"	
+		"iot": "http://iotschema.org/"
 	}],
 	"@id": "iot:LightControl",
 	"@type": "rdfs:Class",
-	"rdfs:subClassOf": { "@id": "Capability" },
+	"rdfs:subClassOf": { "@id": "iot:Capability" },
 	"rdfs:comment": "A capability for controling a light source, such as an RGB or other light.",
 	"rdfs:label": "Light Control",	  
-	"domain": [
+	"iot:domain": [
 		{"@id": "iot:Home"},
 		{"@id": "iot:Building"}
 		],
-	"providesInteractionPattern": [
+	"iot:providesInteractionPattern": [
 	{
 		"@id": "iot:BinarySwitch",
 		"@id": "iot:CurrentColour",

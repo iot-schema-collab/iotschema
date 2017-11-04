@@ -39,6 +39,29 @@
 		"rdfs:comment": "Target temperature",
 		"rdfs:label": "Target Temperature",
 		"rdfs:subClassOf": { "@id": "iot:Property" }
+    },
+    {
+		"@id": "iot:OperationStatus",
+		"@type": "rdfs:Class",
+		"iot:providesOutputData": {
+			"@id": "iot:StatusData"
+		},
+		"rdfs:comment": "Operation Status property",
+		"rdfs:label": "Operation Status",
+		"rdfs:subClassOf": {
+			"@id": "iot:Property"
+      }
+    },	
+    {
+		"@id": "iot:StatusData",
+		"rdfs:comment": "StatusData",
+		"rdfs:label": "StatusData",
+		"rdfs:subClassOf": {
+			"@id": "schema:PropertyValue"
+		},
+		"schema:propertyType": {
+			"@id": "schema:Boolean"
+		}
     },	
     {
 		"@id": "iot:BinarySwitch",
