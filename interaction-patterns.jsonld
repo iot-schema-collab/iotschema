@@ -272,14 +272,14 @@
 		"schema:maxValue": "schema:Integer"
     },	
     {
-		"@id": "common:SetLevel",
+		"@id": "iot:SetLevel",
 		"@type": "rdfs:Class",
 		"iot:acceptsInputData": [
 		{
-			"@id": "common:TransitionTimeData"
+			"@id": "iot:TransitionTimeData"
 		},
 		{
-			"@id": "common:LevelData"
+			"@id": "iot:LevelData"
 		}
 		],
 		"rdfs:comment": "Set level Action",
@@ -289,12 +289,12 @@
       }
     },
     {
-		"@id": "common:StateDataExt",
+		"@id": "iot:StateDataExt",
 		"iot:hasFeatureOfInterest": {
 			"@id": "schema:Room"
 		},
 		"iot:observedProperty": {
-			"@id": "common:MotionDetected"
+			"@id": "iot:MotionDetected"
 		},
 		"rdfs:comment": "State data Extended with SSN/SOSA observation and actuation pattern",
 		"rdfs:label": "State Data",
@@ -316,13 +316,13 @@
 		}
     },
     {
-		"@id": "common:MotionDetectedExt",
+		"@id": "iot:MotionDetectedExt",
 		"@type": "rdfs:Class",
 		"iot:isObservedBy": {
 			"@id": "iot:Sensor"
 		},
 		"iot:providesOutputData": {
-			"@id": "common:StateDataExt"
+			"@id": "iot:StateDataExt"
 		},
 		"rdfs:comment": "Motion detection property extended with SSN/SOSA observation and actuation pattern",
 		"rdfs:label": "Motion Detected",
@@ -331,13 +331,13 @@
 		}
     },
     {
-		"@id": "common:TransitionTime",
+		"@id": "iot:TransitionTime",
 		"@type": "rdfs:Class",
 		"iot:acceptsInputData": {
-		"@id": "common:TransitionTimeData"
+		"@id": "iot:TransitionTimeData"
 		},
 		"iot:providesOutputData": {
-			"@id": "common:TransitionTimeData"
+			"@id": "iot:TransitionTimeData"
 		},
 		"rdfs:comment": "Transition time property",
 		"rdfs:label": "Transition Time",
@@ -346,7 +346,7 @@
 		}
     },
     {
-		"@id": "common:LevelData",
+		"@id": "iot:LevelData",
 		"rdfs:comment": "Level data",
 		"rdfs:label": "Level Data",
 		"rdfs:subClassOf": {
@@ -360,13 +360,10 @@
 		}
     },
     {
-		"@id": "common:CurrentLevel",
+		"@id": "iot:CurrentLevel",
 		"@type": "rdfs:Class",
-		"iot:acceptsInputData": {
-			"@id": "common:LevelData"
-		},
 		"iot:providesOutputData": {
-			"@id": "common:LevelData"
+			"@id": "iot:LevelData"
 		},
 		"rdfs:comment": "Current level property",
 		"rdfs:label": "Current Level",
