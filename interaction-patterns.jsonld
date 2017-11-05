@@ -357,7 +357,9 @@
 		},
 		"schema:unitCode": {
 			"@id": "qudt:Percent"
-		}
+		},
+		"schema:minValue": "schema:Integer",
+		"schema:maxValue": "schema:Integer"		
     },
     {
 		"@id": "iot:CurrentLevel",
