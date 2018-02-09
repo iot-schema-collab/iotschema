@@ -1,7 +1,6 @@
 {
   "@context": {
-    "common": "http://iot.schema.org/interaction-patterns#",
-    "iot": "http://iot.schema.org/core#",
+    "iot": "http://iotschema.org/",
     "owl": "http://www.w3.org/2002/07/owl#",
     "qudt": "http://qudt.org/1.1/schema/qudt#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -9,8 +8,8 @@
     "schema": "http://schema.org/",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
 	"dct": "http://purl.org/dc/terms/"
-  },  
-  "schema:Unit": [
+  },
+  "@graph": [
     {
 		"@id": "iot:TemperatureUnit",
 		"@type": "rdfs:Class",
@@ -84,7 +83,7 @@
 		"rdfs:label": "Illuminance Unit",
 	    "iot:reference" : "0112/2///62720#UAA723#001",
 	    "dct:source": "http://qudt.org/vocab/unit#Lux"		
-	},	
+	},
     {	
 		"@id": "iot:Percent",
 		"@type": "iot:PercentUnit",
@@ -92,6 +91,6 @@
 		"rdfs:label": "Percent Unit",
 	    "iot:reference" : "0112/2///62720#UAA000#001",
 	    "dct:source": "http://qudt.org/vocab/unit#Percent"		
-	}	
+	}
   ]
 }
