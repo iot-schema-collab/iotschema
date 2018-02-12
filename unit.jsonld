@@ -19,7 +19,7 @@
 		"@id": "schema:Enumeration"
 		}
 	},
-    {	
+    {
 		"@id": "iot:Celsius",
 		"@type": "iot:TemperatureUnit",
 		"rdfs:comment": "unit of the temperature of which the scale is defined by two fixe-points, the temperatures of freezing and boiling point of water at normal pressure (air pressure of 1 013,25 hPa)",
@@ -75,7 +75,7 @@
 		"rdfs:label": "Hour",
 	    "iot:reference" : "0112/2///62720#UAA407#001",
 	    "dct:source": "http://data.nasa.gov/qudt/owl/unit#Hour"		
-	},	
+	},
     {	
 		"@id": "iot:Lux",
 		"@type": "iot:IlluminanceUnit",
