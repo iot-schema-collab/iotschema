@@ -26,7 +26,7 @@
 		"@type": "rdf:Property",
 		"schema:domainIncludes": "iot:Unit",
 		"schema:rangeIncludes": "schema:Text",
-		"rdfs:coment": "IRDI reference to unit as specified by IEC Common Data Dictionary",
+		"rdfs:comment": "IRDI reference to unit as specified by IEC Common Data Dictionary",
 		"rdfs:label" : "Reference"
 	},
     {

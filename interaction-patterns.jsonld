@@ -54,6 +54,7 @@
     },	
     {
 		"@id": "iot:StatusData",
+		"@type": "rdfs:Class",
 		"rdfs:comment": "StatusData",
 		"rdfs:label": "StatusData",
 		"rdfs:subClassOf": {
@@ -77,6 +78,7 @@
     },
     {
 		"@id": "iot:Toggle",
+		"@type": "rdfs:Class",
 		"rdfs:comment": "Toggle",
 		"rdfs:label": "Toggle",
 		"rdfs:subClassOf": {
@@ -169,6 +171,7 @@
     },
     {
 		"@id": "iot:RunModeData",
+		"@type": "rdfs:Class",
 		"rdfs:comment": "Run modes",
 		"rdfs:label": "Run Mode Data",
 		"rdfs:subClassOf": {
@@ -234,6 +237,7 @@
     },	
     {
 		"@id": "iot:TimeData",
+		"@type": "rdfs:Class",
 		"rdfs:comment": "Time data",
 		"rdfs:label": "Time Data",
 		"rdfs:subClassOf": {
@@ -260,6 +264,7 @@
     },	
     {
 		"@id": "iot:WindData",
+		"@type": "rdfs:Class",
 		"rdfs:comment": "Wind data",
 		"rdfs:label": "Wind Data",
 		"rdfs:subClassOf": {
@@ -290,6 +295,7 @@
     },
     {
 		"@id": "iot:StateDataExt",
+		"@type": "rdfs:Class",
 		"iot:hasFeatureOfInterest": {
 			"@id": "schema:Room"
 		},
@@ -347,6 +353,7 @@
     },
     {
 		"@id": "iot:LevelData",
+		"@type": "rdfs:Class",
 		"rdfs:comment": "Level data",
 		"rdfs:label": "Level Data",
 		"rdfs:subClassOf": {
@@ -471,6 +478,7 @@
     },
     {
 		"@id": "iot:MotionTypeData",
+		"@type": "rdfs:Class",
 		"rdfs:comment": "Motion types",
 		"rdfs:label": "Motion Type Data",
 		"rdfs:subClassOf": {

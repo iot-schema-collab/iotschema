@@ -1,0 +1,8 @@
+{
+    "name": "iotschema-tools",
+    "version": "0.1.0",
+    "description": "Development tools for iotschema.org",
+    "dependencies": {
+        "jsonld": "0.4.x"
+    }
+}

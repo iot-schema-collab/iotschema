@@ -1,7 +1,6 @@
 {
   "@context": {
-    "common": "http://iot.schema.org/interaction-patterns#",
-    "iot": "http://iot.schema.org/core#",
+    "iot": "http://iotschema.org/",
     "owl": "http://www.w3.org/2002/07/owl#",
     "qudt": "http://qudt.org/1.1/schema/qudt#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -9,8 +8,8 @@
     "schema": "http://schema.org/",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
 	"dct": "http://purl.org/dc/terms/"
-  },  
-  "schema:Unit": [
+  },
+  "@graph": [
     {
 		"@id": "iot:TemperatureUnit",
 		"@type": "rdfs:Class",
@@ -20,7 +19,7 @@
 		"@id": "schema:Enumeration"
 		}
 	},
-    {	
+    {
 		"@id": "iot:Celsius",
 		"@type": "iot:TemperatureUnit",
 		"rdfs:comment": "unit of the temperature of which the scale is defined by two fixe-points, the temperatures of freezing and boiling point of water at normal pressure (air pressure of 1 013,25 hPa)",
@@ -76,7 +75,7 @@
 		"rdfs:label": "Hour",
 	    "iot:reference" : "0112/2///62720#UAA407#001",
 	    "dct:source": "http://data.nasa.gov/qudt/owl/unit#Hour"		
-	},	
+	},
     {	
 		"@id": "iot:Lux",
 		"@type": "iot:IlluminanceUnit",
@@ -84,7 +83,7 @@
 		"rdfs:label": "Illuminance Unit",
 	    "iot:reference" : "0112/2///62720#UAA723#001",
 	    "dct:source": "http://qudt.org/vocab/unit#Lux"		
-	},	
+	},
     {	
 		"@id": "iot:Percent",
 		"@type": "iot:PercentUnit",
@@ -92,6 +91,6 @@
 		"rdfs:label": "Percent Unit",
 	    "iot:reference" : "0112/2///62720#UAA000#001",
 	    "dct:source": "http://qudt.org/vocab/unit#Percent"		
-	}	
+	}
   ]
 }
