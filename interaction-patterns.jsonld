@@ -94,7 +94,7 @@
 		"rdfs:comment": "Turn on a switch",
 		"rdfs:label": "Turn On",
 		"rdfs:subClassOf": {
-			"@id": "iot:Property"
+			"@id": "iot:Action"
 		}
 	},
 	{
@@ -103,7 +103,7 @@
 		"rdfs:comment": "Turn off a switch",
 		"rdfs:label": "Turn Off",
 		"rdfs:subClassOf": {
-			"@id": "iot:Property"
+			"@id": "iot:Action"
 		}
 	},
 	{
@@ -127,7 +127,7 @@
 		"rdfs:comment": "Set quantized representation for brightness (e.g., in the range 0-100)",
 		"rdfs:label": "Set Dimmer",
 		"rdfs:subClassOf": {
-			"@id": "iot:Property"
+			"@id": "iot:Action"
 		}
 	},	
 	{
@@ -316,7 +316,7 @@
 		"@type": "rdfs:Class",
 		"rdfs:comment": "Detects motion",
 		"rdfs:label": "Motion Detected",
-		"rdfs:subClassOf": { "@id": "iot:Property" },
+		"rdfs:subClassOf": { "@id": "iot:Event" },
 		"iot:providesOutputData": {
 			"@id": "iot:StateData"
 		}
@@ -403,7 +403,7 @@
 		"@type": "rdfs:Class",
 		"rdfs:comment": "RGB colour",
 		"rdfs:label": "Light Colour",
-		"rdfs:subClassOf": { "@id": "iot:Property" },
+		"rdfs:subClassOf": { "@id": "iot:Action" },
 		"iot:acceptsInputData": [
 		{
 			"@id": "iot:RColourData"
