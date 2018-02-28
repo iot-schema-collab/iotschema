@@ -11,161 +11,161 @@
 			"@type": "rdfs:Class",
 			"rdfs:subClassOf": "iot:ChangePropertyAction",
 			"rdfs:label": "ChangeBinarySwitch",
-			"rdfs:comment": "Specification of an action acting on some property of type BinarySwitch."
+			"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/BinarySwitch\">BinarySwitch</a>."
 		},
 		{
 			"@id": "iot:ChangeCountDown",
 			"@type": "rdfs:Class",
 			"rdfs:subClassOf": "iot:ChangePropertyAction",
 			"rdfs:label": "ChangeCountDown",
-			"rdfs:comment": "Specification of an action acting on some property of type CountDown."
+			"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/CountDown\">CountDown</a>."
 		},
 		{
 			"@id": "iot:ChangeCurrentColour",
 			"@type": "rdfs:Class",
 			"rdfs:subClassOf": "iot:ChangePropertyAction",
 			"rdfs:label": "ChangeCurrentColour",
-			"rdfs:comment": "Specification of an action acting on some property of type CurrentColour."
+			"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/CurrentColour\">CurrentColour</a>."
 		},
 		{
 			"@id": "iot:ChangeCurrentDimmer",
 			"@type": "rdfs:Class",
 			"rdfs:subClassOf": "iot:ChangePropertyAction",
 			"rdfs:label": "ChangeCurrentDimmer",
-			"rdfs:comment": "Specification of an action acting on some property of type CurrentDimmer."
+			"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/CurrentDimmer\">CurrentDimmer</a>."
 		},
 		{
 			"@id": "iot:ChangeCurrentLevel",
 			"@type": "rdfs:Class",
 			"rdfs:subClassOf": "iot:ChangePropertyAction",
 			"rdfs:label": "ChangeCurrentLevel",
-			"rdfs:comment": "Specification of an action acting on some property of type CurrentLevel."
+			"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/CurrentLevel\">CurrentLevel</a>."
 		},
 		{
 			"@id": "iot:ChangeHumidity",
 			"@type": "rdfs:Class",
 			"rdfs:subClassOf": "iot:ChangePropertyAction",
 			"rdfs:label": "ChangeHumidity",
-			"rdfs:comment": "Specification of an action acting on some property of type Humidity."
+			"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/Humidity\">Humidity</a>."
 		},
 		{
 			"@id": "iot:ChangeIlluminance",
 			"@type": "rdfs:Class",
 			"rdfs:subClassOf": "iot:ChangePropertyAction",
 			"rdfs:label": "ChangeIlluminance",
-			"rdfs:comment": "Specification of an action acting on some property of type Illuminance."
+			"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/Illuminance\">Illuminance</a>."
 		},
 		{
 			"@id": "iot:ChangeMotionDetected",
 			"@type": "rdfs:Class",
 			"rdfs:subClassOf": "iot:ChangePropertyAction",
 			"rdfs:label": "ChangeMotionDetected",
-			"rdfs:comment": "Specification of an action acting on some property of type MotionDetected."
+			"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/MotionDetected\">MotionDetected</a>."
 		},
 		{
 			"@id": "iot:ChangeMotionDetectedExt",
 			"@type": "rdfs:Class",
 			"rdfs:subClassOf": "iot:ChangePropertyAction",
 			"rdfs:label": "ChangeMotionDetectedExt",
-			"rdfs:comment": "Specification of an action acting on some property of type MotionDetectedExt."
+			"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/MotionDetectedExt\">MotionDetectedExt</a>."
 		},
 		{
 			"@id": "iot:ChangeMotionType",
 			"@type": "rdfs:Class",
 			"rdfs:subClassOf": "iot:ChangePropertyAction",
 			"rdfs:label": "ChangeMotionType",
-			"rdfs:comment": "Specification of an action acting on some property of type MotionType."
+			"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/MotionType\">MotionType</a>."
 		},
 		{
 			"@id": "iot:ChangeOperationStatus",
 			"@type": "rdfs:Class",
 			"rdfs:subClassOf": "iot:ChangePropertyAction",
 			"rdfs:label": "ChangeOperationStatus",
-			"rdfs:comment": "Specification of an action acting on some property of type OperationStatus."
+			"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/OperationStatus\">OperationStatus</a>."
 		},
 		{
 			"@id": "iot:ChangeRampTime",
 			"@type": "rdfs:Class",
 			"rdfs:subClassOf": "iot:ChangePropertyAction",
 			"rdfs:label": "ChangeRampTime",
-			"rdfs:comment": "Specification of an action acting on some property of type RampTime."
+			"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/RampTime\">RampTime</a>."
 		},
 		{
 			"@id": "iot:ChangeRunMode",
 			"@type": "rdfs:Class",
 			"rdfs:subClassOf": "iot:ChangePropertyAction",
 			"rdfs:label": "ChangeRunMode",
-			"rdfs:comment": "Specification of an action acting on some property of type RunMode."
+			"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/RunMode\">RunMode</a>."
 		},
 		{
 			"@id": "iot:ChangeSetColour",
 			"@type": "rdfs:Class",
 			"rdfs:subClassOf": "iot:ChangePropertyAction",
 			"rdfs:label": "ChangeSetColour",
-			"rdfs:comment": "Specification of an action acting on some property of type SetColour."
+			"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/SetColour\">SetColour</a>."
 		},
 		{
 			"@id": "iot:ChangeSetDimmer",
 			"@type": "rdfs:Class",
 			"rdfs:subClassOf": "iot:ChangePropertyAction",
 			"rdfs:label": "ChangeSetDimmer",
-			"rdfs:comment": "Specification of an action acting on some property of type SetDimmer."
+			"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/SetDimmer\">SetDimmer</a>."
 		},
 		{
 			"@id": "iot:ChangeSwitchStatus",
 			"@type": "rdfs:Class",
 			"rdfs:subClassOf": "iot:ChangePropertyAction",
 			"rdfs:label": "ChangeSwitchStatus",
-			"rdfs:comment": "Specification of an action acting on some property of type SwitchStatus."
+			"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/SwitchStatus\">SwitchStatus</a>."
 		},
 		{
 			"@id": "iot:ChangeTargetHumidity",
 			"@type": "rdfs:Class",
 			"rdfs:subClassOf": "iot:ChangePropertyAction",
 			"rdfs:label": "ChangeTargetHumidity",
-			"rdfs:comment": "Specification of an action acting on some property of type TargetHumidity."
+			"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/TargetHumidity\">TargetHumidity</a>."
 		},
 		{
 			"@id": "iot:ChangeTargetTemperature",
 			"@type": "rdfs:Class",
 			"rdfs:subClassOf": "iot:ChangePropertyAction",
 			"rdfs:label": "ChangeTargetTemperature",
-			"rdfs:comment": "Specification of an action acting on some property of type TargetTemperature."
+			"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/TargetTemperature\">TargetTemperature</a>."
 		},
 		{
 			"@id": "iot:ChangeTemperature",
 			"@type": "rdfs:Class",
 			"rdfs:subClassOf": "iot:ChangePropertyAction",
 			"rdfs:label": "ChangeTemperature",
-			"rdfs:comment": "Specification of an action acting on some property of type Temperature."
+			"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/Temperature\">Temperature</a>."
 		},
 		{
 			"@id": "iot:ChangeTransitionTime",
 			"@type": "rdfs:Class",
 			"rdfs:subClassOf": "iot:ChangePropertyAction",
 			"rdfs:label": "ChangeTransitionTime",
-			"rdfs:comment": "Specification of an action acting on some property of type TransitionTime."
+			"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/TransitionTime\">TransitionTime</a>."
 		},
 		{
 			"@id": "iot:ChangeTurnOff",
 			"@type": "rdfs:Class",
 			"rdfs:subClassOf": "iot:ChangePropertyAction",
 			"rdfs:label": "ChangeTurnOff",
-			"rdfs:comment": "Specification of an action acting on some property of type TurnOff."
+			"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/TurnOff\">TurnOff</a>."
 		},
 		{
 			"@id": "iot:ChangeTurnOn",
 			"@type": "rdfs:Class",
 			"rdfs:subClassOf": "iot:ChangePropertyAction",
 			"rdfs:label": "ChangeTurnOn",
-			"rdfs:comment": "Specification of an action acting on some property of type TurnOn."
+			"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/TurnOn\">TurnOn</a>."
 		},
 		{
 			"@id": "iot:ChangeWindStrength",
 			"@type": "rdfs:Class",
 			"rdfs:subClassOf": "iot:ChangePropertyAction",
 			"rdfs:label": "ChangeWindStrength",
-			"rdfs:comment": "Specification of an action acting on some property of type WindStrength."
+			"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/WindStrength\">WindStrength</a>."
 		}
 	]
 }
