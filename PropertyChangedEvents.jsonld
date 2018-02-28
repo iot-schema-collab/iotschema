@@ -56,13 +56,6 @@
 			"rdfs:comment": "Specification of an event occurring when some property of type <a href=\"http://iotschema.org/Illuminance\">Illuminance</a> changes."
 		},
 		{
-			"@id": "iot:MotionDetectedChanged",
-			"@type": "rdfs:Class",
-			"rdfs:subClassOf": "iot:PropertyChangedEvent",
-			"rdfs:label": "MotionDetectedChanged",
-			"rdfs:comment": "Specification of an event occurring when some property of type <a href=\"http://iotschema.org/MotionDetected\">MotionDetected</a> changes."
-		},
-		{
 			"@id": "iot:MotionDetectedExtChanged",
 			"@type": "rdfs:Class",
 			"rdfs:subClassOf": "iot:PropertyChangedEvent",
@@ -98,20 +91,6 @@
 			"rdfs:comment": "Specification of an event occurring when some property of type <a href=\"http://iotschema.org/RunMode\">RunMode</a> changes."
 		},
 		{
-			"@id": "iot:SetColourChanged",
-			"@type": "rdfs:Class",
-			"rdfs:subClassOf": "iot:PropertyChangedEvent",
-			"rdfs:label": "SetColourChanged",
-			"rdfs:comment": "Specification of an event occurring when some property of type <a href=\"http://iotschema.org/SetColour\">SetColour</a> changes."
-		},
-		{
-			"@id": "iot:SetDimmerChanged",
-			"@type": "rdfs:Class",
-			"rdfs:subClassOf": "iot:PropertyChangedEvent",
-			"rdfs:label": "SetDimmerChanged",
-			"rdfs:comment": "Specification of an event occurring when some property of type <a href=\"http://iotschema.org/SetDimmer\">SetDimmer</a> changes."
-		},
-		{
 			"@id": "iot:SwitchStatusChanged",
 			"@type": "rdfs:Class",
 			"rdfs:subClassOf": "iot:PropertyChangedEvent",
@@ -145,20 +124,6 @@
 			"rdfs:subClassOf": "iot:PropertyChangedEvent",
 			"rdfs:label": "TransitionTimeChanged",
 			"rdfs:comment": "Specification of an event occurring when some property of type <a href=\"http://iotschema.org/TransitionTime\">TransitionTime</a> changes."
-		},
-		{
-			"@id": "iot:TurnOffChanged",
-			"@type": "rdfs:Class",
-			"rdfs:subClassOf": "iot:PropertyChangedEvent",
-			"rdfs:label": "TurnOffChanged",
-			"rdfs:comment": "Specification of an event occurring when some property of type <a href=\"http://iotschema.org/TurnOff\">TurnOff</a> changes."
-		},
-		{
-			"@id": "iot:TurnOnChanged",
-			"@type": "rdfs:Class",
-			"rdfs:subClassOf": "iot:PropertyChangedEvent",
-			"rdfs:label": "TurnOnChanged",
-			"rdfs:comment": "Specification of an event occurring when some property of type <a href=\"http://iotschema.org/TurnOn\">TurnOn</a> changes."
 		},
 		{
 			"@id": "iot:WindStrengthChanged",
