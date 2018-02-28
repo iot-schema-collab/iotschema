@@ -30,7 +30,7 @@ function generate(node) {
         let name = getLocalName(node);
         
         let a = {
-            '@name': 'iot:Change' + name,
+            '@id': 'iot:Change' + name,
             '@type': 'rdfs:Class',
             'rdfs:subClassOf': 'iot:ChangePropertyAction',
             'rdfs:label': 'Change' + name,
@@ -39,7 +39,7 @@ function generate(node) {
         actions.push(a);
         
         let e = {
-            '@name': 'iot:' + name + 'Changed',
+            '@id': 'iot:' + name + 'Changed',
             '@type': 'rdfs:Class',
             'rdfs:subClassOf': 'iot:PropertyChangedEvent',
             'rdfs:label': name + 'Changed',
@@ -60,10 +60,10 @@ fs.readdirSync('..')
                 g.forEach(n => generate(n));
             })
             .then(() => {
-                let actionData = JSON.stringify({ '@context': ctx, '@graph': actions });
+                let actionData = JSON.stringify({ '@context': ctx, '@graph': actions }, null, '\t');
                 fs.writeFileSync('..' + sep + 'ChangePropertyActions.jsonld', actionData, { encoding: 'utf-8' });
                 
-                let eventData = JSON.stringify({ '@context': ctx, '@graph': events });
+                let eventData = JSON.stringify({ '@context': ctx, '@graph': events }, null, '\t');
                 fs.writeFileSync('..' + sep + 'PropertyChangedEvents.jsonld', eventData, { encoding: 'utf-8' });
             });
     });

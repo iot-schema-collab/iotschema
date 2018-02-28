@@ -56,6 +56,15 @@
       }
     },
     {
+      "@id": "iot:ChangePropertyAction",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Specification of an action acting on some property.",
+      "rdfs:label": "ChangePropertyAction",
+      "rdfs:subClassOf": {
+        "@id": "iot:Action"
+      }
+    },
+    {
       "@id": "iot:Sensor",
       "@type": "rdfs:Class",
       "rdfs:comment": "Sensor - Device, agent (including humans), or software (simulation). Sensors respond to a Stimulus, e.g., a change in the environment, data composed from the Results of prior Observations, and generate a Result.",
@@ -293,6 +302,15 @@
       "rdfs:label": "Event",
       "rdfs:subClassOf": {
         "@id": "iot:InteractionPattern"
+      }
+    },
+    {
+      "@id": "iot:PropertyChangedEvent",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Specification of an event occurring when some property changes.",
+      "rdfs:label": "PropertyChangedEvent",
+      "rdfs:subClassOf": {
+        "@id": "iot:Event"
       }
     },
     {

@@ -1,1 +1,171 @@
-{"@context":{"rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#","rdfs":"http://www.w3.org/2000/01/rdf-schema#","schema":"http://schema.org/","iot":"http://iotschema.org/"},"@graph":[{"@name":"iot:BinarySwitchChanged","@type":"rdfs:Class","rdfs:subClassOf":"iot:PropertyChangedEvent","rdfs:label":"BinarySwitchChanged","rdfs:comment":"Specification of an event occurring when some property of type BinarySwitch changes."},{"@name":"iot:CountDownChanged","@type":"rdfs:Class","rdfs:subClassOf":"iot:PropertyChangedEvent","rdfs:label":"CountDownChanged","rdfs:comment":"Specification of an event occurring when some property of type CountDown changes."},{"@name":"iot:CurrentColourChanged","@type":"rdfs:Class","rdfs:subClassOf":"iot:PropertyChangedEvent","rdfs:label":"CurrentColourChanged","rdfs:comment":"Specification of an event occurring when some property of type CurrentColour changes."},{"@name":"iot:CurrentDimmerChanged","@type":"rdfs:Class","rdfs:subClassOf":"iot:PropertyChangedEvent","rdfs:label":"CurrentDimmerChanged","rdfs:comment":"Specification of an event occurring when some property of type CurrentDimmer changes."},{"@name":"iot:CurrentLevelChanged","@type":"rdfs:Class","rdfs:subClassOf":"iot:PropertyChangedEvent","rdfs:label":"CurrentLevelChanged","rdfs:comment":"Specification of an event occurring when some property of type CurrentLevel changes."},{"@name":"iot:HumidityChanged","@type":"rdfs:Class","rdfs:subClassOf":"iot:PropertyChangedEvent","rdfs:label":"HumidityChanged","rdfs:comment":"Specification of an event occurring when some property of type Humidity changes."},{"@name":"iot:IlluminanceChanged","@type":"rdfs:Class","rdfs:subClassOf":"iot:PropertyChangedEvent","rdfs:label":"IlluminanceChanged","rdfs:comment":"Specification of an event occurring when some property of type Illuminance changes."},{"@name":"iot:MotionDetectedChanged","@type":"rdfs:Class","rdfs:subClassOf":"iot:PropertyChangedEvent","rdfs:label":"MotionDetectedChanged","rdfs:comment":"Specification of an event occurring when some property of type MotionDetected changes."},{"@name":"iot:MotionDetectedExtChanged","@type":"rdfs:Class","rdfs:subClassOf":"iot:PropertyChangedEvent","rdfs:label":"MotionDetectedExtChanged","rdfs:comment":"Specification of an event occurring when some property of type MotionDetectedExt changes."},{"@name":"iot:MotionTypeChanged","@type":"rdfs:Class","rdfs:subClassOf":"iot:PropertyChangedEvent","rdfs:label":"MotionTypeChanged","rdfs:comment":"Specification of an event occurring when some property of type MotionType changes."},{"@name":"iot:OperationStatusChanged","@type":"rdfs:Class","rdfs:subClassOf":"iot:PropertyChangedEvent","rdfs:label":"OperationStatusChanged","rdfs:comment":"Specification of an event occurring when some property of type OperationStatus changes."},{"@name":"iot:RampTimeChanged","@type":"rdfs:Class","rdfs:subClassOf":"iot:PropertyChangedEvent","rdfs:label":"RampTimeChanged","rdfs:comment":"Specification of an event occurring when some property of type RampTime changes."},{"@name":"iot:RunModeChanged","@type":"rdfs:Class","rdfs:subClassOf":"iot:PropertyChangedEvent","rdfs:label":"RunModeChanged","rdfs:comment":"Specification of an event occurring when some property of type RunMode changes."},{"@name":"iot:SetColourChanged","@type":"rdfs:Class","rdfs:subClassOf":"iot:PropertyChangedEvent","rdfs:label":"SetColourChanged","rdfs:comment":"Specification of an event occurring when some property of type SetColour changes."},{"@name":"iot:SetDimmerChanged","@type":"rdfs:Class","rdfs:subClassOf":"iot:PropertyChangedEvent","rdfs:label":"SetDimmerChanged","rdfs:comment":"Specification of an event occurring when some property of type SetDimmer changes."},{"@name":"iot:SwitchStatusChanged","@type":"rdfs:Class","rdfs:subClassOf":"iot:PropertyChangedEvent","rdfs:label":"SwitchStatusChanged","rdfs:comment":"Specification of an event occurring when some property of type SwitchStatus changes."},{"@name":"iot:TargetHumidityChanged","@type":"rdfs:Class","rdfs:subClassOf":"iot:PropertyChangedEvent","rdfs:label":"TargetHumidityChanged","rdfs:comment":"Specification of an event occurring when some property of type TargetHumidity changes."},{"@name":"iot:TargetTemperatureChanged","@type":"rdfs:Class","rdfs:subClassOf":"iot:PropertyChangedEvent","rdfs:label":"TargetTemperatureChanged","rdfs:comment":"Specification of an event occurring when some property of type TargetTemperature changes."},{"@name":"iot:TemperatureChanged","@type":"rdfs:Class","rdfs:subClassOf":"iot:PropertyChangedEvent","rdfs:label":"TemperatureChanged","rdfs:comment":"Specification of an event occurring when some property of type Temperature changes."},{"@name":"iot:TransitionTimeChanged","@type":"rdfs:Class","rdfs:subClassOf":"iot:PropertyChangedEvent","rdfs:label":"TransitionTimeChanged","rdfs:comment":"Specification of an event occurring when some property of type TransitionTime changes."},{"@name":"iot:TurnOffChanged","@type":"rdfs:Class","rdfs:subClassOf":"iot:PropertyChangedEvent","rdfs:label":"TurnOffChanged","rdfs:comment":"Specification of an event occurring when some property of type TurnOff changes."},{"@name":"iot:TurnOnChanged","@type":"rdfs:Class","rdfs:subClassOf":"iot:PropertyChangedEvent","rdfs:label":"TurnOnChanged","rdfs:comment":"Specification of an event occurring when some property of type TurnOn changes."},{"@name":"iot:WindStrengthChanged","@type":"rdfs:Class","rdfs:subClassOf":"iot:PropertyChangedEvent","rdfs:label":"WindStrengthChanged","rdfs:comment":"Specification of an event occurring when some property of type WindStrength changes."}]}
+{
+	"@context": {
+		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+		"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+		"schema": "http://schema.org/",
+		"iot": "http://iotschema.org/"
+	},
+	"@graph": [
+		{
+			"@id": "iot:BinarySwitchChanged",
+			"@type": "rdfs:Class",
+			"rdfs:subClassOf": "iot:PropertyChangedEvent",
+			"rdfs:label": "BinarySwitchChanged",
+			"rdfs:comment": "Specification of an event occurring when some property of type BinarySwitch changes."
+		},
+		{
+			"@id": "iot:CountDownChanged",
+			"@type": "rdfs:Class",
+			"rdfs:subClassOf": "iot:PropertyChangedEvent",
+			"rdfs:label": "CountDownChanged",
+			"rdfs:comment": "Specification of an event occurring when some property of type CountDown changes."
+		},
+		{
+			"@id": "iot:CurrentColourChanged",
+			"@type": "rdfs:Class",
+			"rdfs:subClassOf": "iot:PropertyChangedEvent",
+			"rdfs:label": "CurrentColourChanged",
+			"rdfs:comment": "Specification of an event occurring when some property of type CurrentColour changes."
+		},
+		{
+			"@id": "iot:CurrentDimmerChanged",
+			"@type": "rdfs:Class",
+			"rdfs:subClassOf": "iot:PropertyChangedEvent",
+			"rdfs:label": "CurrentDimmerChanged",
+			"rdfs:comment": "Specification of an event occurring when some property of type CurrentDimmer changes."
+		},
+		{
+			"@id": "iot:CurrentLevelChanged",
+			"@type": "rdfs:Class",
+			"rdfs:subClassOf": "iot:PropertyChangedEvent",
+			"rdfs:label": "CurrentLevelChanged",
+			"rdfs:comment": "Specification of an event occurring when some property of type CurrentLevel changes."
+		},
+		{
+			"@id": "iot:HumidityChanged",
+			"@type": "rdfs:Class",
+			"rdfs:subClassOf": "iot:PropertyChangedEvent",
+			"rdfs:label": "HumidityChanged",
+			"rdfs:comment": "Specification of an event occurring when some property of type Humidity changes."
+		},
+		{
+			"@id": "iot:IlluminanceChanged",
+			"@type": "rdfs:Class",
+			"rdfs:subClassOf": "iot:PropertyChangedEvent",
+			"rdfs:label": "IlluminanceChanged",
+			"rdfs:comment": "Specification of an event occurring when some property of type Illuminance changes."
+		},
+		{
+			"@id": "iot:MotionDetectedChanged",
+			"@type": "rdfs:Class",
+			"rdfs:subClassOf": "iot:PropertyChangedEvent",
+			"rdfs:label": "MotionDetectedChanged",
+			"rdfs:comment": "Specification of an event occurring when some property of type MotionDetected changes."
+		},
+		{
+			"@id": "iot:MotionDetectedExtChanged",
+			"@type": "rdfs:Class",
+			"rdfs:subClassOf": "iot:PropertyChangedEvent",
+			"rdfs:label": "MotionDetectedExtChanged",
+			"rdfs:comment": "Specification of an event occurring when some property of type MotionDetectedExt changes."
+		},
+		{
+			"@id": "iot:MotionTypeChanged",
+			"@type": "rdfs:Class",
+			"rdfs:subClassOf": "iot:PropertyChangedEvent",
+			"rdfs:label": "MotionTypeChanged",
+			"rdfs:comment": "Specification of an event occurring when some property of type MotionType changes."
+		},
+		{
+			"@id": "iot:OperationStatusChanged",
+			"@type": "rdfs:Class",
+			"rdfs:subClassOf": "iot:PropertyChangedEvent",
+			"rdfs:label": "OperationStatusChanged",
+			"rdfs:comment": "Specification of an event occurring when some property of type OperationStatus changes."
+		},
+		{
+			"@id": "iot:RampTimeChanged",
+			"@type": "rdfs:Class",
+			"rdfs:subClassOf": "iot:PropertyChangedEvent",
+			"rdfs:label": "RampTimeChanged",
+			"rdfs:comment": "Specification of an event occurring when some property of type RampTime changes."
+		},
+		{
+			"@id": "iot:RunModeChanged",
+			"@type": "rdfs:Class",
+			"rdfs:subClassOf": "iot:PropertyChangedEvent",
+			"rdfs:label": "RunModeChanged",
+			"rdfs:comment": "Specification of an event occurring when some property of type RunMode changes."
+		},
+		{
+			"@id": "iot:SetColourChanged",
+			"@type": "rdfs:Class",
+			"rdfs:subClassOf": "iot:PropertyChangedEvent",
+			"rdfs:label": "SetColourChanged",
+			"rdfs:comment": "Specification of an event occurring when some property of type SetColour changes."
+		},
+		{
+			"@id": "iot:SetDimmerChanged",
+			"@type": "rdfs:Class",
+			"rdfs:subClassOf": "iot:PropertyChangedEvent",
+			"rdfs:label": "SetDimmerChanged",
+			"rdfs:comment": "Specification of an event occurring when some property of type SetDimmer changes."
+		},
+		{
+			"@id": "iot:SwitchStatusChanged",
+			"@type": "rdfs:Class",
+			"rdfs:subClassOf": "iot:PropertyChangedEvent",
+			"rdfs:label": "SwitchStatusChanged",
+			"rdfs:comment": "Specification of an event occurring when some property of type SwitchStatus changes."
+		},
+		{
+			"@id": "iot:TargetHumidityChanged",
+			"@type": "rdfs:Class",
+			"rdfs:subClassOf": "iot:PropertyChangedEvent",
+			"rdfs:label": "TargetHumidityChanged",
+			"rdfs:comment": "Specification of an event occurring when some property of type TargetHumidity changes."
+		},
+		{
+			"@id": "iot:TargetTemperatureChanged",
+			"@type": "rdfs:Class",
+			"rdfs:subClassOf": "iot:PropertyChangedEvent",
+			"rdfs:label": "TargetTemperatureChanged",
+			"rdfs:comment": "Specification of an event occurring when some property of type TargetTemperature changes."
+		},
+		{
+			"@id": "iot:TemperatureChanged",
+			"@type": "rdfs:Class",
+			"rdfs:subClassOf": "iot:PropertyChangedEvent",
+			"rdfs:label": "TemperatureChanged",
+			"rdfs:comment": "Specification of an event occurring when some property of type Temperature changes."
+		},
+		{
+			"@id": "iot:TransitionTimeChanged",
+			"@type": "rdfs:Class",
+			"rdfs:subClassOf": "iot:PropertyChangedEvent",
+			"rdfs:label": "TransitionTimeChanged",
+			"rdfs:comment": "Specification of an event occurring when some property of type TransitionTime changes."
+		},
+		{
+			"@id": "iot:TurnOffChanged",
+			"@type": "rdfs:Class",
+			"rdfs:subClassOf": "iot:PropertyChangedEvent",
+			"rdfs:label": "TurnOffChanged",
+			"rdfs:comment": "Specification of an event occurring when some property of type TurnOff changes."
+		},
+		{
+			"@id": "iot:TurnOnChanged",
+			"@type": "rdfs:Class",
+			"rdfs:subClassOf": "iot:PropertyChangedEvent",
+			"rdfs:label": "TurnOnChanged",
+			"rdfs:comment": "Specification of an event occurring when some property of type TurnOn changes."
+		},
+		{
+			"@id": "iot:WindStrengthChanged",
+			"@type": "rdfs:Class",
+			"rdfs:subClassOf": "iot:PropertyChangedEvent",
+			"rdfs:label": "WindStrengthChanged",
+			"rdfs:comment": "Specification of an event occurring when some property of type WindStrength changes."
+		}
+	]
+}
