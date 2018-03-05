@@ -10,6 +10,9 @@ const ctx = {
     'iot': 'http://iotschema.org/',
     'rdfs:subClassOf': {
         '@type': '@vocab'
+    },
+    'rdfs:seeAlso': {
+        '@type': '@vocab'
     }
 };
 
@@ -28,22 +31,17 @@ function getLocalName(node) {
     return node['@id'].replace('http://iotschema.org/', '');
 }
 
-function getAnchoredName(node) {
-    return '<a href="' + node['@id'] + '">' + getLocalName(node) + '</a>';
-}
-
 function generate(node) {
     if (isProperty(node)) {
         let name = getLocalName(node);
-        let anchored = name;
-        //let anchored = getAnchoredName(node);
         
         let a = {
             '@id': 'iot:Change' + name,
             '@type': 'rdfs:Class',
             'rdfs:subClassOf': 'iot:ChangePropertyAction',
             'rdfs:label': 'Change' + name,
-            'rdfs:comment': 'Specification of an action acting on some property of type ' + anchored + '.'
+            'rdfs:comment': 'Specification of an action acting on some property of type ' + name + '.',
+            'rdfs:seeAlso': node['@id']
         }
         actions.push(a);
         
@@ -52,7 +50,8 @@ function generate(node) {
             '@type': 'rdfs:Class',
             'rdfs:subClassOf': 'iot:PropertyChangedEvent',
             'rdfs:label': name + 'Changed',
-            'rdfs:comment': 'Specification of an event occurring when some property of type ' + anchored + ' changes.'
+            'rdfs:comment': 'Specification of an event occurring when some property of type ' + name + ' changes.',
+            'rdfs:seeAlso': node['@id']
         }
         events.push(e);
     }
