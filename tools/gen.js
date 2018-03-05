@@ -7,7 +7,10 @@ const ctx = {
     'rdf': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#',
     'rdfs': 'http://www.w3.org/2000/01/rdf-schema#',
     'schema': 'http://schema.org/',
-    'iot': 'http://iotschema.org/'
+    'iot': 'http://iotschema.org/',
+    'rdfs:subClassOf': {
+        '@type': '@vocab'
+    }
 };
 
 const actions = [];
@@ -32,7 +35,8 @@ function getAnchoredName(node) {
 function generate(node) {
     if (isProperty(node)) {
         let name = getLocalName(node);
-        let anchored = getAnchoredName(node);
+        let anchored = name;
+        //let anchored = getAnchoredName(node);
         
         let a = {
             '@id': 'iot:Change' + name,
