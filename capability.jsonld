@@ -1,0 +1,122 @@
+{
+    "@context" : [
+	{
+		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+		"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+		"schema": "http://schema.org/",
+		"iot": "http://iotschema.org/"
+	}],
+	"@graph": [
+	{
+		"@id": "iot:AirConditioner",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": { "@id": "iot:Capability" },
+		"rdfs:comment": "A capability for air conditioner",
+		"rdfs:label": "Air conditioner Capability",	  
+		"iot:domain": {"@id": "iot:Home"},
+		"iot:providesInteractionPattern": [
+		{
+			"@id": "iot:Temperature",
+			"@id": "iot:TargetTemperature",
+			"@id": "iot:BinarySwitch",
+			"@id": "iot:RunMode",
+			"@id": "iot:CountDown",
+			"@id": "iot:WindStrength"		
+		}]
+	},
+	{
+		"@id": "iot:HumiditySensing",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": { "@id": "iot:Capability" },
+		"rdfs:comment": "Current sensed value for Humidity.",
+		"rdfs:label": "Humidity Capability",	  
+		"iot:domain": [
+			{"@id": "iot:Home"},
+			{"@id": "iot:Building"}
+			],
+		"iot:providesInteractionPattern": [
+		{
+			"@id": "iot:Humidity",
+			"@id": "iot:TargetHumidity"
+		}]
+	},
+	{
+		"@id": "iot:IlluminanceSensing",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": { "@id": "iot:Capability" },
+		"rdfs:comment": "Sensed luminous flux per unit area in lux.",
+		"rdfs:label": "Illuminance Capability",	  
+		"iot:domain": [
+			{"@id": "iot:Home"},
+			{"@id": "iot:Building"}
+			],
+		"iot:providesInteractionPattern": [
+		{
+			"@id": "iot:Illuminance"
+		}]
+	},
+	{
+		"@id": "iot:LightControl",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": { "@id": "iot:Capability" },
+		"rdfs:comment": "A capability for controling a light source, such as an RGB or other light.",
+		"rdfs:label": "Light Control",	  
+		"iot:domain": [
+			{"@id": "iot:Home"},
+			{"@id": "iot:Building"}
+			],
+		"iot:providesInteractionPattern": [
+		{
+			"@id": "iot:BinarySwitch",
+			"@id": "iot:CurrentColour",
+			"@id": "iot:SetColour",
+			"@id": "iot:CurrentDimmer",
+			"@id": "iot:SetDimmer",
+			"@id": "iot:RampTime"
+		}]
+	},
+	{
+		"@id": "iot:MotionControl",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": { "@id": "iot:Capability" },
+		"rdfs:comment": "Presence (motion) sensing capability",
+		"rdfs:label": "Motion Control",	  
+		"iot:domain": [
+			{"@id": "iot:Home"},
+			{"@id": "iot:Building"}
+			],
+		"iot:providesInteractionPattern": [
+		{
+			"@id": "iot:MotionDetected",
+			"@id": "iot:MotionType"
+		}
+		]
+	},
+	{
+		"@id": "iot:TemperatureSensing",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": { "@id": "iot:Capability" },
+		"rdfs:comment": "A capability for temperature sensing",
+		"rdfs:label": "Temperature Capability",	  
+		"iot:domain": {"@id": "iot:Common"},
+		"iot:providesInteractionPattern": [
+		{
+			"@id": "iot:Temperature"
+		}]
+	},
+	{
+		"@id": "iot:Thermostat",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": { "@id": "iot:Capability" },
+		"rdfs:comment": "A capability for thermostat",
+		"rdfs:label": "Thermostat Capability",	  
+		"iot:domain": {"@id": "iot:Common"},
+		"iot:providesInteractionPattern": [
+			{
+			"@id": "iot:Temperature",
+			"@id": "iot:TargetTemperature"
+			}
+		]
+	}
+	]
+}
