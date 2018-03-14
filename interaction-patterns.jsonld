@@ -558,6 +558,258 @@
 		"rdfs:subClassOf": {
 			"@id": "iot:Property"
 		}
+	},
+	{
+		"@id": "iot:ChangeBinarySwitch",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:ChangePropertyAction",
+		"rdfs:label": "ChangeBinarySwitch",
+		"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/BinarySwitch\">BinarySwitch</a>."
+	},
+	{
+		"@id": "iot:ChangeCountDown",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:ChangePropertyAction",
+		"rdfs:label": "ChangeCountDown",
+		"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/CountDown\">CountDown</a>."
+	},
+	{
+		"@id": "iot:ChangeCurrentColour",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:ChangePropertyAction",
+		"rdfs:label": "ChangeCurrentColour",
+		"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/CurrentColour\">CurrentColour</a>."
+	},
+	{
+		"@id": "iot:ChangeCurrentDimmer",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:ChangePropertyAction",
+		"rdfs:label": "ChangeCurrentDimmer",
+		"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/CurrentDimmer\">CurrentDimmer</a>."
+	},
+	{
+		"@id": "iot:ChangeCurrentLevel",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:ChangePropertyAction",
+		"rdfs:label": "ChangeCurrentLevel",
+		"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/CurrentLevel\">CurrentLevel</a>."
+	},
+	{
+		"@id": "iot:ChangeHumidity",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:ChangePropertyAction",
+		"rdfs:label": "ChangeHumidity",
+		"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/Humidity\">Humidity</a>."
+	},
+	{
+		"@id": "iot:ChangeIlluminance",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:ChangePropertyAction",
+		"rdfs:label": "ChangeIlluminance",
+		"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/Illuminance\">Illuminance</a>."
+	},
+	{
+		"@id": "iot:ChangeMotionDetectedExt",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:ChangePropertyAction",
+		"rdfs:label": "ChangeMotionDetectedExt",
+		"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/MotionDetectedExt\">MotionDetectedExt</a>."
+	},
+	{
+		"@id": "iot:ChangeMotionType",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:ChangePropertyAction",
+		"rdfs:label": "ChangeMotionType",
+		"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/MotionType\">MotionType</a>."
+	},
+	{
+		"@id": "iot:ChangeOperationStatus",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:ChangePropertyAction",
+		"rdfs:label": "ChangeOperationStatus",
+		"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/OperationStatus\">OperationStatus</a>."
+	},
+	{
+		"@id": "iot:ChangeRampTime",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:ChangePropertyAction",
+		"rdfs:label": "ChangeRampTime",
+		"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/RampTime\">RampTime</a>."
+	},
+	{
+		"@id": "iot:ChangeRunMode",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:ChangePropertyAction",
+		"rdfs:label": "ChangeRunMode",
+		"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/RunMode\">RunMode</a>."
+	},
+	{
+		"@id": "iot:ChangeSwitchStatus",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:ChangePropertyAction",
+		"rdfs:label": "ChangeSwitchStatus",
+		"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/SwitchStatus\">SwitchStatus</a>."
+	},
+	{
+		"@id": "iot:ChangeTargetHumidity",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:ChangePropertyAction",
+		"rdfs:label": "ChangeTargetHumidity",
+		"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/TargetHumidity\">TargetHumidity</a>."
+	},
+	{
+		"@id": "iot:ChangeTargetTemperature",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:ChangePropertyAction",
+		"rdfs:label": "ChangeTargetTemperature",
+		"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/TargetTemperature\">TargetTemperature</a>."
+	},
+	{
+		"@id": "iot:ChangeTemperature",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:ChangePropertyAction",
+		"rdfs:label": "ChangeTemperature",
+		"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/Temperature\">Temperature</a>."
+	},
+	{
+		"@id": "iot:ChangeTransitionTime",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:ChangePropertyAction",
+		"rdfs:label": "ChangeTransitionTime",
+		"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/TransitionTime\">TransitionTime</a>."
+	},
+	{
+		"@id": "iot:ChangeWindStrength",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:ChangePropertyAction",
+		"rdfs:label": "ChangeWindStrength",
+		"rdfs:comment": "Specification of an action acting on some property of type <a href=\"http://iotschema.org/WindStrength\">WindStrength</a>."
+	},
+	{
+		"@id": "iot:BinarySwitchChanged",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:PropertyChangedEvent",
+		"rdfs:label": "BinarySwitchChanged",
+		"rdfs:comment": "Specification of an event occurring when some property of type <a href=\"http://iotschema.org/BinarySwitch\">BinarySwitch</a> changes."
+	},
+	{
+		"@id": "iot:CountDownChanged",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:PropertyChangedEvent",
+		"rdfs:label": "CountDownChanged",
+		"rdfs:comment": "Specification of an event occurring when some property of type <a href=\"http://iotschema.org/CountDown\">CountDown</a> changes."
+	},
+	{
+		"@id": "iot:CurrentColourChanged",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:PropertyChangedEvent",
+		"rdfs:label": "CurrentColourChanged",
+		"rdfs:comment": "Specification of an event occurring when some property of type <a href=\"http://iotschema.org/CurrentColour\">CurrentColour</a> changes."
+	},
+	{
+		"@id": "iot:CurrentDimmerChanged",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:PropertyChangedEvent",
+		"rdfs:label": "CurrentDimmerChanged",
+		"rdfs:comment": "Specification of an event occurring when some property of type <a href=\"http://iotschema.org/CurrentDimmer\">CurrentDimmer</a> changes."
+	},
+	{
+		"@id": "iot:CurrentLevelChanged",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:PropertyChangedEvent",
+		"rdfs:label": "CurrentLevelChanged",
+		"rdfs:comment": "Specification of an event occurring when some property of type <a href=\"http://iotschema.org/CurrentLevel\">CurrentLevel</a> changes."
+	},
+	{
+		"@id": "iot:HumidityChanged",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:PropertyChangedEvent",
+		"rdfs:label": "HumidityChanged",
+		"rdfs:comment": "Specification of an event occurring when some property of type <a href=\"http://iotschema.org/Humidity\">Humidity</a> changes."
+	},
+	{
+		"@id": "iot:IlluminanceChanged",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:PropertyChangedEvent",
+		"rdfs:label": "IlluminanceChanged",
+		"rdfs:comment": "Specification of an event occurring when some property of type <a href=\"http://iotschema.org/Illuminance\">Illuminance</a> changes."
+	},
+	{
+		"@id": "iot:MotionDetectedExtChanged",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:PropertyChangedEvent",
+		"rdfs:label": "MotionDetectedExtChanged",
+		"rdfs:comment": "Specification of an event occurring when some property of type <a href=\"http://iotschema.org/MotionDetectedExt\">MotionDetectedExt</a> changes."
+	},
+	{
+		"@id": "iot:MotionTypeChanged",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:PropertyChangedEvent",
+		"rdfs:label": "MotionTypeChanged",
+		"rdfs:comment": "Specification of an event occurring when some property of type <a href=\"http://iotschema.org/MotionType\">MotionType</a> changes."
+	},
+	{
+		"@id": "iot:OperationStatusChanged",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:PropertyChangedEvent",
+		"rdfs:label": "OperationStatusChanged",
+		"rdfs:comment": "Specification of an event occurring when some property of type <a href=\"http://iotschema.org/OperationStatus\">OperationStatus</a> changes."
+	},
+	{
+		"@id": "iot:RampTimeChanged",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:PropertyChangedEvent",
+		"rdfs:label": "RampTimeChanged",
+		"rdfs:comment": "Specification of an event occurring when some property of type <a href=\"http://iotschema.org/RampTime\">RampTime</a> changes."
+	},
+	{
+		"@id": "iot:RunModeChanged",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:PropertyChangedEvent",
+		"rdfs:label": "RunModeChanged",
+		"rdfs:comment": "Specification of an event occurring when some property of type <a href=\"http://iotschema.org/RunMode\">RunMode</a> changes."
+	},
+	{
+		"@id": "iot:SwitchStatusChanged",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:PropertyChangedEvent",
+		"rdfs:label": "SwitchStatusChanged",
+		"rdfs:comment": "Specification of an event occurring when some property of type <a href=\"http://iotschema.org/SwitchStatus\">SwitchStatus</a> changes."
+	},
+	{
+		"@id": "iot:TargetHumidityChanged",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:PropertyChangedEvent",
+		"rdfs:label": "TargetHumidityChanged",
+		"rdfs:comment": "Specification of an event occurring when some property of type <a href=\"http://iotschema.org/TargetHumidity\">TargetHumidity</a> changes."
+	},
+	{
+		"@id": "iot:TargetTemperatureChanged",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:PropertyChangedEvent",
+		"rdfs:label": "TargetTemperatureChanged",
+		"rdfs:comment": "Specification of an event occurring when some property of type <a href=\"http://iotschema.org/TargetTemperature\">TargetTemperature</a> changes."
+	},
+	{
+		"@id": "iot:TemperatureChanged",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:PropertyChangedEvent",
+		"rdfs:label": "TemperatureChanged",
+		"rdfs:comment": "Specification of an event occurring when some property of type <a href=\"http://iotschema.org/Temperature\">Temperature</a> changes."
+	},
+	{
+		"@id": "iot:TransitionTimeChanged",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:PropertyChangedEvent",
+		"rdfs:label": "TransitionTimeChanged",
+		"rdfs:comment": "Specification of an event occurring when some property of type <a href=\"http://iotschema.org/TransitionTime\">TransitionTime</a> changes."
+	},
+	{
+		"@id": "iot:WindStrengthChanged",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": "iot:PropertyChangedEvent",
+		"rdfs:label": "WindStrengthChanged",
+		"rdfs:comment": "Specification of an event occurring when some property of type <a href=\"http://iotschema.org/WindStrength\">WindStrength</a> changes."
 	}
   ]
 }
