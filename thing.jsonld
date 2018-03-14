@@ -1,0 +1,19 @@
+{
+    "@context" : [
+	{
+		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+		"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+		"schema": "http://schema.org/",
+		"iot": "http://iotschema.org/"
+	}],
+	"@graph": [
+	{
+		"@id": "iot:Door",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": { "@id": "iot:FeatureOfInterest" },
+		"rdfs:comment": "A hinged, sliding, or revolving barrier at the entrance to a building, room, or vehicle, or in the framework of a cupboard.",
+		"rdfs:label": "Door",	  
+		"iot:domain": [{"@id": "iot:Home"}, {"@id": "iot:Building"}]
+	}
+	]
+}
