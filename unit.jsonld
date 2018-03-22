@@ -172,8 +172,7 @@
 		"@type": "iot:FlowRateUnit",
 		"rdfs:comment": "unit of measurement of liquid flow rate",
 		"rdfs:label": "GallonsPerMinute",
-		"iot:reference": "",
-		"dct:source": "http://data.nasa.gov/qudt/owl/unit#GallonUSPerMinute"
+		"dct:source":"http://data.nasa.gov/qudt/owl/unit#GallonUSPerMinute"
 	},
     {
 		"@id": "iot:LitrePerMinute",
@@ -181,14 +180,14 @@
 		"rdfs:comment": "Unit of measurement of flow rate of a substance",
 		"rdfs:label": "LitrePerMinute",
 		"iot:reference": "0112/2///62720#UAA659#001"
+	},
+	{
+		"@id": "iot:Decibel",
+		"@type": "iot:SoundPressureUnit",
+		"rdfs:comment": "Sound Pressure Unit",
+		"rdfs:label": "SoundPressureUnit",
+		"iot:reference" : "0112/2///62720#UAA409#001",
+		"dct:source": "http://qudt.org/vocab/unit#Decibel"
 	}
-  {
-  "@id": "iot:Decibel",
-  "@type": "iot:SoundPressureUnit",
-  "rdfs:comment": "Sound Pressure Unit",
-  "rdfs:label": "SoundPressureUnit",
-    "iot:reference" : "",
-    "dct:source": "http://qudt.org/vocab/unit#Decibel"
-  }
   ]
 }
