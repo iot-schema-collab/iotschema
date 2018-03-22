@@ -14,7 +14,7 @@
 		"@id": "iot:TemperatureUnit",
 		"@type": "rdfs:Class",
 		"rdfs:comment": "An enumeration of temperature units.",
-		"rdfs:label": "Temperature Unit",
+		"rdfs:label": "TemperatureUnit",
 		"rdfs:subClassOf": {
 		"@id": "schema:Enumeration"
 		}
@@ -23,7 +23,7 @@
 		"@id": "iot:Celsius",
 		"@type": "iot:TemperatureUnit",
 		"rdfs:comment": "unit of the temperature of which the scale is defined by two fixe-points, the temperatures of freezing and boiling point of water at normal pressure (air pressure of 1 013,25 hPa)",
-		"rdfs:label": "Degree Celsius",
+		"rdfs:label": "Celsius",
 		"iot:reference": "0112/2///62720#UAA033#001",
 		"dct:source": "http://data.nasa.gov/qudt/owl/unit#DegreeCelsius"
 	},
@@ -31,7 +31,7 @@
 		"@id": "iot:Kelvin",
 		"@type": "iot:TemperatureUnit",
 		"rdfs:comment": "unit of thermodynamic temperature is the fraction 1/273,16 of the thermodynamic temperature of the triple point of water",
-		"rdfs:label": "Degree Kelvin",
+		"rdfs:label": "Kelvin",
 		"iot:reference" : "0112/2///62720#UAA185#001",
 		"dct:source": "http://data.nasa.gov/qudt/owl/unit#Kelvin"
     },
@@ -39,7 +39,7 @@
 		"@id": "iot:Fahrenheit",
 		"@type": "iot:TemperatureUnit",
 		"rdfs:comment": "unit of temperature according to the temperature of the freezing and boiling point of water (32 °F and 212 °F)",
-		"rdfs:label": "Degree Fahrenheit",
+		"rdfs:label": "Fahrenheit",
 		"iot:reference" : "0112/2///62720#UAA039#001",
 		"dct:source": "http://data.nasa.gov/qudt/owl/unit#DegreeFahrenheit"
     },
@@ -47,7 +47,7 @@
 		"@id": "iot:TimeUnitType",
 		"@type": "rdfs:Class",
 		"rdfs:comment": "An enumeration of time unit.",
-		"rdfs:label": "Time Unit Type",
+		"rdfs:label": "TimeUnitType",
 		"rdfs:subClassOf": {
 			"@id": "schema:Enumeration"
 		}
@@ -80,17 +80,107 @@
 		"@id": "iot:Lux",
 		"@type": "iot:IlluminanceUnit",
 		"rdfs:comment": "Illuminance Unit",
-		"rdfs:label": "Illuminance Unit",
+		"rdfs:label": "Lux",
 	    "iot:reference" : "0112/2///62720#UAA723#001",
 	    "dct:source": "http://qudt.org/vocab/unit#Lux"		
 	},
+	{
+		"@id": "iot:LevelUnit",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "An enumeration of level units.",
+		"rdfs:label": "LevelUnit",
+		"rdfs:subClassOf": {
+		"@id": "schema:Enumeration"
+		}
+	},
     {	
 		"@id": "iot:Percent",
-		"@type": "iot:PercentUnit",
-		"rdfs:comment": "Percent Unit",
-		"rdfs:label": "Percent Unit",
+		"@type": "iot:LevelUnit",
+		"rdfs:comment": "Unit of measurement for level",
+		"rdfs:label": "Percent",
 	    "iot:reference" : "0112/2///62720#UAA000#001",
 	    "dct:source": "http://qudt.org/vocab/unit#Percent"		
+	},
+    {	
+		"@id": "iot:Millimetre",
+		"@type": "iot:LevelUnit",
+		"rdfs:comment": "Unit of measurement in millimetre",
+		"rdfs:label": "Millimetre",
+	    "iot:reference" : "0112/2///62720#UAA862#001"	
+	},	
+    {	
+		"@id": "iot:Centimetre",
+		"@type": "iot:LevelUnit",
+		"rdfs:comment": "Unit of measurement in centimetre",
+		"rdfs:label": "Centimetre",
+	    "iot:reference" : "0112/2///62720#UAA375#001",
+	    "dct:source": "http://qudt.org/vocab/unit#Centimeter"	
+	},	
+	{
+		"@id": "iot:DensityUnit",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "An enumeration of density units.",
+		"rdfs:label": "DensityUnit",
+		"rdfs:subClassOf": {
+		"@id": "schema:Enumeration"
+		}
+	},
+    {
+		"@id": "iot:KilogramPerCubicMeter",
+		"@type": "iot:DensityUnit",
+		"rdfs:comment": "unit of the density of liquid",
+		"rdfs:label": "KilogramPerCubicMeter",
+		"iot:reference": "0112/2///62720#UAA619#001",
+		"dct:source": "http://data.nasa.gov/qudt/owl/unit#KilogramPerCubicMeter"
+	},
+    {
+		"@id": "iot:PressureUnit",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "An enumeration of pressure units.",
+		"rdfs:label": "PressureUnit",
+		"rdfs:subClassOf": {
+		"@id": "schema:Enumeration"
+		}
+	},
+    {	
+		"@id": "iot:Pascal",
+		"@type": "iot:PressureUnit",
+		"rdfs:comment": "The pascal (symbol: Pa) is the SI derived unit of pressure used to quantify internal pressure, stress, Young's modulus and ultimate tensile strength. It is defined as one newton per square metre.",
+		"rdfs:label": "Pascal",
+		"iot:reference": "0112/2///62720#UAA258#001",
+		"dct:source": "http://data.nasa.gov/qudt/owl/unit#Pascal"
+	},
+    {	
+		"@id": "iot:Bar",
+		"@type": "iot:PressureUnit",
+		"rdfs:comment": "The bar (symbol: bar) is a metric unit of pressure, but is not approved as part of the International System of Units (SI).",
+		"rdfs:label": "Bar",
+		"iot:reference": "0112/2///62720#UAA323#001",
+		"dct:source": "http://data.nasa.gov/qudt/owl/unit#Bar"
+	},
+    {
+		"@id": "iot:FlowRateUnit",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "An enumeration of flow rate units.",
+		"rdfs:label": "FlowRateUnit",
+		"rdfs:subClassOf": {
+		"@id": "schema:Enumeration"
+		}
+	},
+    {	
+		"@id": "iot:GallonsPerMinute",
+		"@type": "iot:FlowRateUnit",
+		"rdfs:comment": "unit of measurement of liquid flow rate",
+		"rdfs:label": "GallonsPerMinute",
+		"iot:reference": "",
+		"dct:source": "http://data.nasa.gov/qudt/owl/unit#GallonUSPerMinute"
+	},
+    {	
+		"@id": "iot:LitrePerMinute",
+		"@type": "iot:FlowRateUnit",
+		"rdfs:comment": "Unit of measurement of flow rate of a substance",
+		"rdfs:label": "LitrePerMinute",
+		"iot:reference": "0112/2///62720#UAA659#001"
 	}
   ]
 }

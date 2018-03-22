@@ -1,0 +1,722 @@
+{
+  "@context": {
+    "iot": "http://iotschema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "http://schema.org/"
+  },
+  "@graph": [
+    {
+		"@id": "iot:Temperature",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Temperature interaction property",
+		"rdfs:label": "Temperature",
+		"rdfs:subClassOf": { "@id": "iot:Property" },
+		"iot:providesOutputData": {
+			"@id": "iot:TemperatureData"
+		},
+		"iot:writable" : "schema:False",
+		"iot:observable" : "schema:Boolean"
+    },
+    {
+		"@id": "iot:TemperatureData",
+		"@type": "rdfs:Class",
+		"rdfs:comment": " Temperature data",
+		"rdfs:label": "TemperatureData",
+		"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+		"schema:propertyType": { "@id": "schema:Float" },
+		"schema:unitCode": { "@id": "iot:TemperatureUnit" },
+		"schema:minValue": "schema:Float",
+		"schema:maxValue": "schema:Float"		
+    },	
+    {
+		"@id": "iot:TargetTemperature",
+		"@type": "rdfs:Class",	
+		"iot:acceptsInputData": {
+		"@id": "iot:TemperatureData"
+		},		  
+		"iot:providesOutputData": {
+			"@id": "iot:TemperatureData"
+		},
+		"rdfs:comment": "Target temperature",
+		"rdfs:label": "TargetTemperature",
+		"rdfs:subClassOf": { "@id": "iot:Property" },
+		"iot:writable" : "schema:True",
+		"iot:observable" : "schema:Boolean"
+    },
+    {
+		"@id": "iot:OperationStatus",
+		"@type": "rdfs:Class",
+		"iot:providesOutputData": {
+			"@id": "iot:StatusData"
+		},
+		"rdfs:comment": "Operation status of a state.",
+		"rdfs:label": "OperationStatus",
+		"rdfs:subClassOf": {
+			"@id": "iot:Property"
+      },
+		"iot:writable" : "schema:False",
+		"iot:observable" : "schema:Boolean"
+    },	
+    {
+		"@id": "iot:StatusData",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "StatusData",
+		"rdfs:label": "StatusData",
+		"rdfs:subClassOf": {
+			"@id": "schema:PropertyValue"
+		},
+		"schema:propertyType": {
+			"@id": "schema:Boolean"
+		}
+    },	
+    {
+		"@id": "iot:BinarySwitch",
+		"@type": "rdfs:Class",
+		"iot:acceptsInputData": {
+			"@id": "iot:Toggle"
+		},
+		"rdfs:comment": "Binary Switch status property",
+		"rdfs:label": "BinarySwitch",
+		"rdfs:subClassOf": {
+			"@id": "iot:Property"
+      },
+		"iot:writable" : "schema:True",
+		"iot:observable" : "schema:Boolean"
+    },
+    {
+		"@id": "iot:Toggle",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Toggle",
+		"rdfs:label": "Toggle",
+		"rdfs:subClassOf": {
+			"@id": "schema:PropertyValue"
+		},
+		"schema:propertyType": {
+			"@id": "schema:Boolean"
+		}
+    },
+	{
+		"@id": "iot:TurnOn",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Turn on a switch",
+		"rdfs:label": "TurnOn",
+		"rdfs:subClassOf": {
+			"@id": "iot:Action"
+		},
+		"iot:acceptsInputData": {
+			"@id": "schema:Boolean"
+		}	
+	},
+	{
+		"@id": "iot:TurnOff",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Turn off a switch",
+		"rdfs:label": "TurnOff",
+		"rdfs:subClassOf": {
+			"@id": "iot:Action"
+		},
+		"iot:acceptsInputData": {
+			"@id": "schema:Boolean"
+		}	
+	},
+	{
+		"@id": "iot:SwitchStatus",
+		"@type": "rdfs:Class",
+		"iot:providesOutputData": {
+			"@id": "schema:Boolean"
+		},		
+		"rdfs:comment": "Status of a switch",
+		"rdfs:label": "SwitchStatus",
+		"rdfs:subClassOf": {
+			"@id": "iot:Property"
+		},
+		"iot:writable" : "schema:False",
+		"iot:observable" : "schema:Boolean"
+	},	
+	{
+		"@id": "iot:SetDimmer",
+		"@type": "rdfs:Class",
+		"iot:acceptsInputData": {
+			"@id": "iot:DimmerData"
+		},		
+		"rdfs:comment": "Set quantized representation for brightness (e.g., in the range 0-100)",
+		"rdfs:label": "SetDimmer",
+		"rdfs:subClassOf": {
+			"@id": "iot:Action"
+		}
+	},	
+	{
+		"@id": "iot:CurrentDimmer",
+		"@type": "rdfs:Class",
+		"iot:providesOutputData": {
+			"@id": "iot:DimmerData"
+		},		
+		"rdfs:comment": "Get quantized representation of the current sensed value for brightness (e.g., in the range 0-100)",
+		"rdfs:label": "CurrentDimmer",
+		"rdfs:subClassOf": {
+			"@id": "iot:Property"
+		},
+		"iot:writable" : "schema:False",
+		"iot:observable" : "schema:Boolean"
+	},	
+	{
+		"@id": "iot:RampTime",
+		"@type": "rdfs:Class",
+		"iot:acceptsInputData": {
+			"@id": "iot:RampTimeData"
+		},
+		"iot:providesOutputData": {
+			"@id": "iot:RampTimeData"
+		},		
+		"rdfs:comment": "Actual speed of changing between 2 dimming values",
+		"rdfs:label": "RampTime",
+		"rdfs:subClassOf": {
+			"@id": "iot:Property"
+		},
+		"iot:writable" : "schema:True",
+		"iot:observable" : "schema:Boolean"
+	},	
+	{
+		"@id": "iot:RampTimeData",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Ramp time data",
+		"rdfs:label": "RampTimeData",
+		"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+		"schema:propertyType": { "@id": "schema:Integer" },
+		"schema:minValue": "schema:Integer",
+		"schema:maxValue": "schema:Integer"		
+    },	
+    {
+		"@id": "iot:RunMode",
+		"@type": "rdfs:Class",
+		"iot:acceptsInputData": {
+			"@id": "iot:RunModeData"
+		},
+		"iot:providesOutputData": {
+			"@id": "iot:RunModeData"
+		},
+		"rdfs:comment": "Run modes of an air conditioner",
+		"rdfs:label": "RunMode",
+		"rdfs:subClassOf": {
+			"@id": "iot:Property"
+      },
+		"iot:writable" : "schema:True",
+		"iot:observable" : "schema:Boolean"
+    },
+    {
+		"@id": "iot:RunModeData",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Run modes",
+		"rdfs:label": "RunModeData",
+		"rdfs:subClassOf": {
+			"@id": "schema:PropertyValue"
+		},
+		"schema:propertyType": {
+			"@id": "iot:RunModeType"
+		}
+    },
+	{
+		"@id": "iot:RunModeType",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "An enumeration of run modes of an air conditioner.",
+		"rdfs:label": "RunModeType",
+		"rdfs:subClassOf": {
+			"@id": "schema:Enumeration"
+		}
+	},
+    {	
+		"@id": "iot:CoolMode",
+		"@type": "iot:RunModeType",
+		"rdfs:comment": "Cool mode",
+		"rdfs:label": "CoolMode"
+	},
+    {	
+		"@id": "iot:FanMode",
+		"@type": "iot:RunModeType",
+		"rdfs:comment": "Fan Mode",
+		"rdfs:label": "FanMode"
+	},	
+    {	
+		"@id": "iot:DryMode",
+		"@type": "iot:RunModeType",
+		"rdfs:comment": "Dry Mode",
+		"rdfs:label": "DryMode"
+	},
+    {	
+		"@id": "iot:EnergyOrPowerSaverMode",
+		"@type": "iot:RunModeType",
+		"rdfs:comment": "Energy Or Power Saver Mode",
+		"rdfs:label": "EnergyOrPowerSaverMode"
+	},
+    {	
+		"@id": "iot:SleepMode",
+		"@type": "iot:RunModeType",
+		"rdfs:comment": "Sleep Mode",
+		"rdfs:label": "SleepMode"
+	},
+    {
+		"@id": "iot:CountDown",
+		"@type": "rdfs:Class",
+		"iot:acceptsInputData": {
+		"@id": "iot:TimeData"
+		},
+		"iot:providesOutputData": {
+			"@id": "iot:TimeData"
+		},
+		"rdfs:comment": "Count-down or Timer",
+		"rdfs:label": "CountDown",
+		"rdfs:subClassOf": {
+			"@id": "iot:Property"
+      },
+		"iot:writable" : "schema:True",
+		"iot:observable" : "schema:Boolean"
+    },	
+    {
+		"@id": "iot:TimeData",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Time data",
+		"rdfs:label": "TimeData",
+		"rdfs:subClassOf": {
+			"@id": "schema:PropertyValue"
+		},
+		"schema:propertyType": {
+			"@id": "schema:Number"
+		},
+		"schema:unitCode": {
+			"@id": "iot:TimeUnitType"
+		}
+    },
+    {
+		"@id": "iot:WindStrength",
+		"@type": "rdfs:Class",
+		"iot:acceptsInputData": {
+		"@id": "iot:WindData"
+		},		
+		"iot:providesOutputData": {
+			"@id": "iot:WindData"
+		},
+		"rdfs:comment": "Wind strength",
+		"rdfs:label": "WindStrength",
+		"rdfs:subClassOf": {
+			"@id": "iot:Property"
+      },
+		"iot:writable" : "schema:True",
+		"iot:observable" : "schema:Boolean"
+    },	
+    {
+		"@id": "iot:WindData",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Wind data",
+		"rdfs:label": "WindData",
+		"rdfs:subClassOf": {
+			"@id": "schema:PropertyValue"
+		},
+		"schema:propertyType": {
+			"@id": "schema:Integer"
+		},
+		"schema:minValue": "schema:Integer",
+		"schema:maxValue": "schema:Integer"
+    },	
+    {
+		"@id": "iot:SetLevel",
+		"@type": "rdfs:Class",
+		"iot:acceptsInputData": [
+		{
+			"@id": "iot:TransitionTimeData"
+		},
+		{
+			"@id": "iot:LevelData"
+		}
+		],
+		"rdfs:comment": "Set level Action",
+		"rdfs:label": "SetLevel",
+		"rdfs:subClassOf": {
+		"@id": "iot:Action"
+      }
+    },
+	{
+		"@id": "iot:MotionDetected",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Detects motion",
+		"rdfs:label": "MotionDetected",
+		"rdfs:subClassOf": { "@id": "iot:Event" },
+		"iot:providesOutputData": {
+			"@id": "iot:StateData"
+		}
+    },
+    {
+		"@id": "iot:TransitionTime",
+		"@type": "rdfs:Class",
+		"iot:acceptsInputData": {
+		"@id": "iot:TransitionTimeData"
+		},
+		"iot:providesOutputData": {
+			"@id": "iot:TransitionTimeData"
+		},
+		"rdfs:comment": "Transition time property",
+		"rdfs:label": "TransitionTime",
+		"rdfs:subClassOf": {
+			"@id": "iot:Property"
+		},
+		"iot:writable" : "schema:True",
+		"iot:observable" : "schema:Boolean"
+    },
+    {
+		"@id": "iot:LevelData",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Level data",
+		"rdfs:label": "LevelData",
+		"rdfs:subClassOf": {
+			"@id": "schema:PropertyValue"
+		},
+		"schema:propertyType": {
+			"@id": "schema:Number"
+		},
+		"schema:unitCode": {
+			"@id": "iot:LevelUnit"
+		},
+		"schema:minValue": "schema:Integer",
+		"schema:maxValue": "schema:Integer"		
+    },
+    {
+		"@id": "iot:CurrentLevel",
+		"@type": "rdfs:Class",
+		"iot:providesOutputData": {
+			"@id": "iot:LevelData"
+		},
+		"rdfs:comment": "Current level property",
+		"rdfs:label": "CurrentLevel",
+		"rdfs:subClassOf": {
+			"@id": "iot:Property"
+		},
+		"iot:writable" : "schema:False",
+		"iot:observable" : "schema:Boolean"
+    },
+	{
+		"@id": "iot:CurrentColour",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "RGB colour",
+		"rdfs:label": "CurrentColour",
+		"rdfs:subClassOf": { "@id": "iot:Property" },
+		"iot:providesOutputData": [
+		{
+			"@id": "iot:RColourData"
+		},
+		{
+			"@id": "iot:GColourData"
+		},
+		{
+			"@id": "iot:BColourData"
+		}
+		],
+		"iot:writable" : "schema:False",
+		"iot:observable" : "schema:Boolean"
+    },
+	{
+		"@id": "iot:SetColour",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "RGB colour",
+		"rdfs:label": "SetColour",
+		"rdfs:subClassOf": { "@id": "iot:Action" },
+		"iot:acceptsInputData": [
+		{
+			"@id": "iot:RColourData"
+		},
+		{
+			"@id": "iot:GColourData"
+		},
+		{
+			"@id": "iot:BColourData"
+		}
+		]
+    },
+    {
+		"@id": "iot:RColourData",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Red component of the RGB colour data",
+		"rdfs:label": "RColourData",
+		"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+		"schema:propertyType": { "@id": "schema:Integer" },
+		"schema:minValue": "schema:Integer",
+		"schema:maxValue": "schema:Integer"		
+    },
+	{
+		"@id": "iot:GColourData",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Green component of the RGB colour data",
+		"rdfs:label": "GColourData",
+		"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+		"schema:propertyType": { "@id": "schema:Integer" },
+		"schema:minValue": "schema:Integer",
+		"schema:maxValue": "schema:Integer"		
+    },
+	{
+		"@id": "iot:BColourData",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Blue component of the RGB colour data",
+		"rdfs:label": "BColourData",
+		"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+		"schema:propertyType": { "@id": "schema:Integer" },
+		"schema:minValue": "schema:Integer",
+		"schema:maxValue": "schema:Integer"		
+    },
+	{
+		"@id": "iot:DimmerData",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Dimmer data",
+		"rdfs:label": "DimmerData",
+		"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+		"schema:propertyType": { "@id": "schema:Integer" },
+		"schema:minValue": "schema:Integer",
+		"schema:maxValue": "schema:Integer"		
+    },
+	{
+		"@id": "iot:StateData",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "State data",
+		"rdfs:label": "StateData",
+		"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+		"schema:propertyType": { "@id": "schema:Boolean" }
+    },
+    {
+		"@id": "iot:MotionType",
+		"@type": "rdfs:Class",
+		"iot:providesOutputData": {
+			"@id": "iot:MotionTypeData"
+		},
+		"rdfs:comment": "The type of the sensor (for instance PIR type)",
+		"rdfs:label": "MotionType",
+		"rdfs:subClassOf": {
+			"@id": "iot:Property"
+      },
+		"iot:writable" : "schema:False",
+		"iot:observable" : "schema:Boolean"
+    },
+    {
+		"@id": "iot:MotionTypeData",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Motion types",
+		"rdfs:label": "MotionTypeData",
+		"rdfs:subClassOf": {
+			"@id": "schema:PropertyValue"
+		},
+		"schema:propertyType": {
+			"@id": "iot:MotionSensorType"
+		}
+    },
+	{
+		"@id": "iot:MotionSensorType",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "The type of the sensor (for instance PIR type).",
+		"rdfs:label": "MotionSensorType",
+		"rdfs:subClassOf": {
+			"@id": "schema:Enumeration"
+		}
+	},
+    {	
+		"@id": "iot:PIR",
+		"@type": "iot:MotionSensorType",
+		"rdfs:comment": "Passive infrared sensor",
+		"rdfs:label": "PIR"
+	},
+	{
+		"@id": "iot:Illuminance",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Illuminance interaction property",
+		"rdfs:label": "Illuminance",
+		"rdfs:subClassOf": { "@id": "iot:Property" },
+		"iot:providesOutputData": [
+		{
+			"@id": "iot:IlluminanceData"
+		}
+		],
+		"iot:writable" : "schema:False",
+		"iot:observable" : "schema:Boolean"
+    },
+    {
+		"@id": "iot:IlluminanceData",
+		"@type": "rdfs:Class",
+		"rdfs:comment": " Illuminance data",
+		"rdfs:label": "IlluminanceData",
+		"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+		"schema:propertyType": { "@id": "schema:Float" },
+		"schema:unitCode": { "@id": "iot:IlluminanceUnit" },
+		"schema:minValue": "schema:Float",
+		"schema:maxValue": "schema:Float"		
+    },
+	{
+		"@id": "iot:Humidity",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Humidity interaction property (e.g., in the range 0-100)",
+		"rdfs:label": "Humidity",
+		"rdfs:subClassOf": { "@id": "iot:Property" },
+		"iot:providesOutputData": [
+		{
+			"@id": "iot:HumidityData"
+		}
+		],
+		"iot:writable" : "schema:False",
+		"iot:observable" : "schema:Boolean"
+    },
+    {
+		"@id": "iot:HumidityData",
+		"@type": "rdfs:Class",
+		"rdfs:comment": " Humidity data",
+		"rdfs:label": "HumidityData",
+		"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+		"schema:propertyType": { "@id": "schema:Float" },
+		"schema:unitCode": { "@id": "iot:PercentUnit" }
+    },	
+	{
+		"@id": "iot:TargetHumidity",
+		"@type": "rdfs:Class",
+		"iot:acceptsInputData": {
+			"@id": "iot:HumidityData"
+		},		
+		"rdfs:comment": "Desired value for Humidity (e.g., in the range 0-100)",
+		"rdfs:label": "TargetHumidity",
+		"rdfs:subClassOf": {
+			"@id": "iot:Property"
+		},
+		"iot:writable" : "schema:True",
+		"iot:observable" : "schema:Boolean"
+	},
+    {
+		"@id": "iot:ExpectedDensity",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Expected density of a substance.",
+		"rdfs:label": "ExpectedDensity",
+		"rdfs:subClassOf": { "@id": "iot:Property" },
+		"iot:providesOutputData": {
+			"@id": "iot:DensityData"
+		},
+		"iot:writable" : "schema:False",
+		"iot:observable" : "schema:Boolean"
+    },
+    {
+		"@id": "iot:DensityData",
+		"@type": "rdfs:Class",
+		"rdfs:comment": " Density data",
+		"rdfs:label": "DensityData",
+		"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+		"schema:propertyType": { "@id": "schema:Float" },
+		"schema:unitCode": { "@id": "iot:DensityUnit" },
+		"schema:minValue": "schema:Float",
+		"schema:maxValue": "schema:Float"		
+    },	
+	{
+		"@id": "iot:ExpectedPressure",
+		"@type": "rdfs:Class",
+		"iot:providesOutputData": {
+			"@id": "iot:PressureData"
+		},		
+		"rdfs:comment": "Expected pressure of a substance.",
+		"rdfs:label": "ExpectedPressure",
+		"rdfs:subClassOf": {
+			"@id": "iot:Property"
+		},
+		"iot:writable" : "schema:False",
+		"iot:observable" : "schema:Boolean"
+	},	
+	{
+		"@id": "iot:ExpectedUpstreamPressure",
+		"@type": "rdfs:Class",
+		"iot:providesOutputData": {
+			"@id": "iot:PressureData"
+		},		
+		"rdfs:comment": "Expected upstream pressure",
+		"rdfs:label": "ExpectedUpstreamPressure",
+		"rdfs:subClassOf": {
+			"@id": "iot:Property"
+		},
+		"iot:writable" : "schema:False",
+		"iot:observable" : "schema:Boolean"
+	},	
+    {
+		"@id": "iot:PressureData",
+		"@type": "rdfs:Class",
+		"rdfs:comment": " Pressure data",
+		"rdfs:label": "PressureData",
+		"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+		"schema:propertyType": { "@id": "schema:Float" },
+		"schema:unitCode": { "@id": "iot:PressureUnit" },
+		"schema:minValue": "schema:Float",
+		"schema:maxValue": "schema:Float"		
+    },
+	{
+		"@id": "iot:OverflowStatus",
+		"@type": "rdfs:Class",
+		"iot:providesOutputData": {
+			"@id": "schema:Boolean"
+		},		
+		"rdfs:comment": "Overflow status",
+		"rdfs:label": "OverflowStatus",
+		"rdfs:subClassOf": {
+			"@id": "iot:Property"
+		},
+		"iot:writable" : "schema:False",
+		"iot:observable" : "schema:Boolean"
+	},
+	{
+		"@id": "iot:ExpectedFlowRate",
+		"@type": "rdfs:Class",
+		"iot:providesOutputData": {
+			"@id": "iot:FlowRateData"
+		},		
+		"rdfs:comment": "Expected flow rate of a substance.",
+		"rdfs:label": "ExpectedFlowRate",
+		"rdfs:subClassOf": {
+			"@id": "iot:Property"
+		},
+		"iot:writable" : "schema:False",
+		"iot:observable" : "schema:Boolean"
+	},
+    {
+		"@id": "iot:FlowRateData",
+		"@type": "rdfs:Class",
+		"rdfs:comment": " Flow rate data",
+		"rdfs:label": "FlowRateData",
+		"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+		"schema:propertyType": { "@id": "schema:Float" },
+		"schema:unitCode": { "@id": "iot:FlowRateUnit" },
+		"schema:minValue": "schema:Float",
+		"schema:maxValue": "schema:Float"		
+    },
+    {
+		"@id": "iot:ExpectedAmbientTemperature",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "The expected temperature of the surrounding environment (air, liquid etc.). ",
+		"rdfs:label": "ExpectedAmbientTemperature",
+		"rdfs:subClassOf": { "@id": "iot:Temperature" },
+		"iot:providesOutputData": {
+			"@id": "iot:TemperatureData"
+		},
+		"iot:writable" : "schema:False"
+    },
+    {
+		"@id": "iot:ExpectedFloatImmersionDepth",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "The expected immersion depth of liquid in float sensor. ",
+		"rdfs:label": "ExpectedFloatImmersionDepth",
+		"rdfs:subClassOf": { "@id": "iot:Property" },
+		"iot:providesOutputData": {
+			"@id": "iot:ImmersionDepthData"
+		},
+		"iot:writable" : "schema:False",
+		"iot:observable" : "schema:Boolean"
+    },
+    {
+		"@id": "iot:ImmersionDepthData",
+		"@type": "rdfs:Class",
+		"rdfs:comment": " Liquid immersion depth data",
+		"rdfs:label": "ImmersionDepthData",
+		"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+		"schema:propertyType": { "@id": "schema:Integer" },
+		"schema:unitCode": { "@id": "iot:LevelUnit" },
+		"schema:minValue": "schema:Integer",
+		"schema:maxValue": "schema:Integer"		
+    }
+  ]
+}
+
