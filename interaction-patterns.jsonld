@@ -716,27 +716,41 @@
 		"schema:unitCode": { "@id": "iot:LevelUnit" },
 		"schema:minValue": "schema:Integer",
 		"schema:maxValue": "schema:Integer"
-  },
-  {
-  "@id": "iot:SoundPressureLevel",
-  "@type": "rdfs:Class",
-  "rdfs:comment": "SPL interaction property",
-  "rdfs:label": "SoundPressureLEvel",
-  "rdfs:subClassOf": { "@id": "iot:Property" },
-  "iot:providesOutputData": {
-    "@id": "iot:SoundPressureData"
-  }
-  },
-  {
-  "@id": "iot:SoundPressureData",
-  "@type": "rdfs:Class",
-  "rdfs:comment": "Sound Pressure data",
-  "rdfs:label": "SoundPressureData",
-  "rdfs:subClassOf": { "@id": "schema:PropertyValue" },
-  "schema:propertyType": { "@id": "schema:Float" },
-  "schema:unitCode": { "@id": "iot:SoundPressureUnit" },
-  "schema:minValue": "schema:Float",
-  "schema:maxValue": "schema:Float"
-  }
+	},
+	{
+		"@id": "iot:SoundPressureLevel",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "SPL interaction property",
+		"rdfs:label": "SoundPressureLEvel",
+		"rdfs:subClassOf": { "@id": "iot:Property" },
+		"iot:providesOutputData": {
+			"@id": "iot:SoundPressureData"
+		},
+		"iot:writable" : "schema:False",
+		"iot:observable" : "schema:Boolean"
+	},
+	{
+		"@id": "iot:SoundPressureData",
+	    "@type": "rdfs:Class",
+		"rdfs:comment": "Sound Pressure data",
+		"rdfs:label": "SoundPressureData",
+		"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+		"schema:propertyType": { "@id": "schema:Float" },
+		"schema:unitCode": { "@id": "iot:SoundPressureUnit" },
+		"schema:minValue": "schema:Float",
+		"schema:maxValue": "schema:Float"
+	},	
+	{
+		"@id": "iot:TemperatureAlarm",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Temperature alarm",
+		"rdfs:label": "TemperatureAlarm",
+		"rdfs:subClassOf": { "@id": "iot:Event" },
+		"iot:providesOutputData": [
+			{"@id": "schema:Boolean", "rdfs:label": "AlarmStatus"},
+			{"@id": "iot:TemperatureData", "rdfs:label": "CurrentTemperature"},
+			{"@id": "iot:TemperatureData", "rdfs:label": "TargerTemperature"}
+		]
+    }
   ]
 }
