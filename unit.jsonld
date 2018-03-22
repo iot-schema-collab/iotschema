@@ -52,37 +52,37 @@
 			"@id": "schema:Enumeration"
 		}
 	},
-    {	
+    {
 		"@id": "iot:Second",
 		"@type": "iot:TimeUnitType",
 		"rdfs:comment": "Second Time Unit",
 		"rdfs:label": "Second",
 	    "iot:reference" : "0112/2///62720#UAA972#001",
-	    "dct:source": "http://data.nasa.gov/qudt/owl/unit#SecondTime"		
+	    "dct:source": "http://data.nasa.gov/qudt/owl/unit#SecondTime"
 	},
-    {	
+    {
 		"@id": "iot:Minute",
 		"@type": "iot:TimeUnitType",
 		"rdfs:comment": "Minute Time Unit",
 		"rdfs:label": "Minute",
 	    "iot:reference" : "0112/2///62720#UAA842#001",
-	    "dct:source": "http://data.nasa.gov/qudt/owl/unit#MinuteTime"		
-	},	
-    {	
+	    "dct:source": "http://data.nasa.gov/qudt/owl/unit#MinuteTime"
+	},
+    {
 		"@id": "iot:Hour",
 		"@type": "iot:TimeUnitType",
 		"rdfs:comment": "Hour Time Unit",
 		"rdfs:label": "Hour",
 	    "iot:reference" : "0112/2///62720#UAA407#001",
-	    "dct:source": "http://data.nasa.gov/qudt/owl/unit#Hour"		
+	    "dct:source": "http://data.nasa.gov/qudt/owl/unit#Hour"
 	},
-    {	
+    {
 		"@id": "iot:Lux",
 		"@type": "iot:IlluminanceUnit",
 		"rdfs:comment": "Illuminance Unit",
 		"rdfs:label": "Lux",
 	    "iot:reference" : "0112/2///62720#UAA723#001",
-	    "dct:source": "http://qudt.org/vocab/unit#Lux"		
+	    "dct:source": "http://qudt.org/vocab/unit#Lux"
 	},
 	{
 		"@id": "iot:LevelUnit",
@@ -93,29 +93,29 @@
 		"@id": "schema:Enumeration"
 		}
 	},
-    {	
+    {
 		"@id": "iot:Percent",
 		"@type": "iot:LevelUnit",
 		"rdfs:comment": "Unit of measurement for level",
 		"rdfs:label": "Percent",
 	    "iot:reference" : "0112/2///62720#UAA000#001",
-	    "dct:source": "http://qudt.org/vocab/unit#Percent"		
+	    "dct:source": "http://qudt.org/vocab/unit#Percent"
 	},
-    {	
+    {
 		"@id": "iot:Millimetre",
 		"@type": "iot:LevelUnit",
 		"rdfs:comment": "Unit of measurement in millimetre",
 		"rdfs:label": "Millimetre",
-	    "iot:reference" : "0112/2///62720#UAA862#001"	
-	},	
-    {	
+	    "iot:reference" : "0112/2///62720#UAA862#001"
+	},
+    {
 		"@id": "iot:Centimetre",
 		"@type": "iot:LevelUnit",
 		"rdfs:comment": "Unit of measurement in centimetre",
 		"rdfs:label": "Centimetre",
 	    "iot:reference" : "0112/2///62720#UAA375#001",
-	    "dct:source": "http://qudt.org/vocab/unit#Centimeter"	
-	},	
+	    "dct:source": "http://qudt.org/vocab/unit#Centimeter"
+	},
 	{
 		"@id": "iot:DensityUnit",
 		"@type": "rdfs:Class",
@@ -142,7 +142,7 @@
 		"@id": "schema:Enumeration"
 		}
 	},
-    {	
+    {
 		"@id": "iot:Pascal",
 		"@type": "iot:PressureUnit",
 		"rdfs:comment": "The pascal (symbol: Pa) is the SI derived unit of pressure used to quantify internal pressure, stress, Young's modulus and ultimate tensile strength. It is defined as one newton per square metre.",
@@ -150,7 +150,7 @@
 		"iot:reference": "0112/2///62720#UAA258#001",
 		"dct:source": "http://data.nasa.gov/qudt/owl/unit#Pascal"
 	},
-    {	
+    {
 		"@id": "iot:Bar",
 		"@type": "iot:PressureUnit",
 		"rdfs:comment": "The bar (symbol: bar) is a metric unit of pressure, but is not approved as part of the International System of Units (SI).",
@@ -167,7 +167,7 @@
 		"@id": "schema:Enumeration"
 		}
 	},
-    {	
+    {
 		"@id": "iot:GallonsPerMinute",
 		"@type": "iot:FlowRateUnit",
 		"rdfs:comment": "unit of measurement of liquid flow rate",
@@ -175,12 +175,20 @@
 		"iot:reference": "",
 		"dct:source": "http://data.nasa.gov/qudt/owl/unit#GallonUSPerMinute"
 	},
-    {	
+    {
 		"@id": "iot:LitrePerMinute",
 		"@type": "iot:FlowRateUnit",
 		"rdfs:comment": "Unit of measurement of flow rate of a substance",
 		"rdfs:label": "LitrePerMinute",
 		"iot:reference": "0112/2///62720#UAA659#001"
 	}
+  {
+  "@id": "iot:Decibel",
+  "@type": "iot:SoundPressureUnit",
+  "rdfs:comment": "Sound Pressure Unit",
+  "rdfs:label": "SoundPressureUnit",
+    "iot:reference" : "",
+    "dct:source": "http://qudt.org/vocab/unit#Decibel"
+  }
   ]
 }
