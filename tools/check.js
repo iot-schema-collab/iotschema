@@ -1,3 +1,5 @@
+'use strict'
+
 const fs = require('fs');
 const sep = require('path').sep;
 
