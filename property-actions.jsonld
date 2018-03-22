@@ -1,0 +1,80 @@
+{
+	"@context": {
+		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+		"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+		"schema": "http://schema.org/",
+		"iot": "http://iotschema.org/",
+		"rdfs:subClassOf": {
+			"@type": "@vocab"
+		},
+		"rdfs:seeAlso": {
+			"@type": "@vocab"
+		}
+	},
+	"@graph": [
+		{
+			"@id": "iot:SetBinarySwitch",
+			"@type": "rdfs:Class",
+			"rdfs:subClassOf": "iot:ChangePropertyAction",
+			"rdfs:label": "SetBinarySwitch",
+			"rdfs:comment": "Specification of an action acting on some property of type BinarySwitch.",
+			"rdfs:seeAlso": "http://iotschema.org/BinarySwitch"
+		},
+		{
+			"@id": "iot:SetCountDown",
+			"@type": "rdfs:Class",
+			"rdfs:subClassOf": "iot:ChangePropertyAction",
+			"rdfs:label": "SetCountDown",
+			"rdfs:comment": "Specification of an action acting on some property of type CountDown.",
+			"rdfs:seeAlso": "http://iotschema.org/CountDown"
+		},
+		{
+			"@id": "iot:SetRampTime",
+			"@type": "rdfs:Class",
+			"rdfs:subClassOf": "iot:ChangePropertyAction",
+			"rdfs:label": "SetRampTime",
+			"rdfs:comment": "Specification of an action acting on some property of type RampTime.",
+			"rdfs:seeAlso": "http://iotschema.org/RampTime"
+		},
+		{
+			"@id": "iot:SetRunMode",
+			"@type": "rdfs:Class",
+			"rdfs:subClassOf": "iot:ChangePropertyAction",
+			"rdfs:label": "SetRunMode",
+			"rdfs:comment": "Specification of an action acting on some property of type RunMode.",
+			"rdfs:seeAlso": "http://iotschema.org/RunMode"
+		},
+		{
+			"@id": "iot:SetTargetHumidity",
+			"@type": "rdfs:Class",
+			"rdfs:subClassOf": "iot:ChangePropertyAction",
+			"rdfs:label": "SetTargetHumidity",
+			"rdfs:comment": "Specification of an action acting on some property of type TargetHumidity.",
+			"rdfs:seeAlso": "http://iotschema.org/TargetHumidity"
+		},
+		{
+			"@id": "iot:SetTargetTemperature",
+			"@type": "rdfs:Class",
+			"rdfs:subClassOf": "iot:ChangePropertyAction",
+			"rdfs:label": "SetTargetTemperature",
+			"rdfs:comment": "Specification of an action acting on some property of type TargetTemperature.",
+			"rdfs:seeAlso": "http://iotschema.org/TargetTemperature"
+		},
+		{
+			"@id": "iot:SetTransitionTime",
+			"@type": "rdfs:Class",
+			"rdfs:subClassOf": "iot:ChangePropertyAction",
+			"rdfs:label": "SetTransitionTime",
+			"rdfs:comment": "Specification of an action acting on some property of type TransitionTime.",
+			"rdfs:seeAlso": "http://iotschema.org/TransitionTime"
+		},
+		{
+			"@id": "iot:SetWindStrength",
+			"@type": "rdfs:Class",
+			"rdfs:subClassOf": "iot:ChangePropertyAction",
+			"rdfs:label": "SetWindStrength",
+			"rdfs:comment": "Specification of an action acting on some property of type WindStrength.",
+			"rdfs:seeAlso": "http://iotschema.org/WindStrength"
+		}
+	]
+}
