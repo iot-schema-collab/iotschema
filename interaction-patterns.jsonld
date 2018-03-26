@@ -27,14 +27,14 @@
 		"schema:propertyType": { "@id": "schema:Float" },
 		"schema:unitCode": { "@id": "iot:TemperatureUnit" },
 		"schema:minValue": "schema:Float",
-		"schema:maxValue": "schema:Float"		
-    },	
+		"schema:maxValue": "schema:Float"
+    },
     {
 		"@id": "iot:TargetTemperature",
-		"@type": "rdfs:Class",	
+		"@type": "rdfs:Class",
 		"iot:acceptsInputData": {
 		"@id": "iot:TemperatureData"
-		},		  
+		},
 		"iot:providesOutputData": {
 			"@id": "iot:TemperatureData"
 		},
@@ -57,7 +57,7 @@
       },
 		"iot:writable" : "schema:False",
 		"iot:observable" : "schema:Boolean"
-    },	
+    },
     {
 		"@id": "iot:StatusData",
 		"@type": "rdfs:Class",
@@ -69,7 +69,7 @@
 		"schema:propertyType": {
 			"@id": "schema:Boolean"
 		}
-    },	
+    },
     {
 		"@id": "iot:BinarySwitch",
 		"@type": "rdfs:Class",
@@ -106,7 +106,7 @@
 		},
 		"iot:acceptsInputData": {
 			"@id": "schema:Boolean"
-		}	
+		}
 	},
 	{
 		"@id": "iot:TurnOff",
@@ -118,14 +118,14 @@
 		},
 		"iot:acceptsInputData": {
 			"@id": "schema:Boolean"
-		}	
+		}
 	},
 	{
 		"@id": "iot:SwitchStatus",
 		"@type": "rdfs:Class",
 		"iot:providesOutputData": {
 			"@id": "schema:Boolean"
-		},		
+		},
 		"rdfs:comment": "Status of a switch",
 		"rdfs:label": "SwitchStatus",
 		"rdfs:subClassOf": {
@@ -133,25 +133,25 @@
 		},
 		"iot:writable" : "schema:False",
 		"iot:observable" : "schema:Boolean"
-	},	
+	},
 	{
 		"@id": "iot:SetDimmer",
 		"@type": "rdfs:Class",
 		"iot:acceptsInputData": {
 			"@id": "iot:DimmerData"
-		},		
+		},
 		"rdfs:comment": "Set quantized representation for brightness (e.g., in the range 0-100)",
 		"rdfs:label": "SetDimmer",
 		"rdfs:subClassOf": {
 			"@id": "iot:Action"
 		}
-	},	
+	},
 	{
 		"@id": "iot:CurrentDimmer",
 		"@type": "rdfs:Class",
 		"iot:providesOutputData": {
 			"@id": "iot:DimmerData"
-		},		
+		},
 		"rdfs:comment": "Get quantized representation of the current sensed value for brightness (e.g., in the range 0-100)",
 		"rdfs:label": "CurrentDimmer",
 		"rdfs:subClassOf": {
@@ -159,7 +159,7 @@
 		},
 		"iot:writable" : "schema:False",
 		"iot:observable" : "schema:Boolean"
-	},	
+	},
 	{
 		"@id": "iot:RampTime",
 		"@type": "rdfs:Class",
@@ -168,7 +168,7 @@
 		},
 		"iot:providesOutputData": {
 			"@id": "iot:RampTimeData"
-		},		
+		},
 		"rdfs:comment": "Actual speed of changing between 2 dimming values",
 		"rdfs:label": "RampTime",
 		"rdfs:subClassOf": {
@@ -176,7 +176,7 @@
 		},
 		"iot:writable" : "schema:True",
 		"iot:observable" : "schema:Boolean"
-	},	
+	},
 	{
 		"@id": "iot:RampTimeData",
 		"@type": "rdfs:Class",
@@ -185,8 +185,8 @@
 		"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
 		"schema:propertyType": { "@id": "schema:Integer" },
 		"schema:minValue": "schema:Integer",
-		"schema:maxValue": "schema:Integer"		
-    },	
+		"schema:maxValue": "schema:Integer"
+    },
     {
 		"@id": "iot:RunMode",
 		"@type": "rdfs:Class",
@@ -225,31 +225,31 @@
 			"@id": "schema:Enumeration"
 		}
 	},
-    {	
+    {
 		"@id": "iot:CoolMode",
 		"@type": "iot:RunModeType",
 		"rdfs:comment": "Cool mode",
 		"rdfs:label": "CoolMode"
 	},
-    {	
+    {
 		"@id": "iot:FanMode",
 		"@type": "iot:RunModeType",
 		"rdfs:comment": "Fan Mode",
 		"rdfs:label": "FanMode"
-	},	
-    {	
+	},
+    {
 		"@id": "iot:DryMode",
 		"@type": "iot:RunModeType",
 		"rdfs:comment": "Dry Mode",
 		"rdfs:label": "DryMode"
 	},
-    {	
+    {
 		"@id": "iot:EnergyOrPowerSaverMode",
 		"@type": "iot:RunModeType",
 		"rdfs:comment": "Energy Or Power Saver Mode",
 		"rdfs:label": "EnergyOrPowerSaverMode"
 	},
-    {	
+    {
 		"@id": "iot:SleepMode",
 		"@type": "iot:RunModeType",
 		"rdfs:comment": "Sleep Mode",
@@ -271,7 +271,7 @@
       },
 		"iot:writable" : "schema:True",
 		"iot:observable" : "schema:Boolean"
-    },	
+    },
     {
 		"@id": "iot:TimeData",
 		"@type": "rdfs:Class",
@@ -292,7 +292,7 @@
 		"@type": "rdfs:Class",
 		"iot:acceptsInputData": {
 		"@id": "iot:WindData"
-		},		
+		},
 		"iot:providesOutputData": {
 			"@id": "iot:WindData"
 		},
@@ -303,7 +303,7 @@
       },
 		"iot:writable" : "schema:True",
 		"iot:observable" : "schema:Boolean"
-    },	
+    },
     {
 		"@id": "iot:WindData",
 		"@type": "rdfs:Class",
@@ -317,7 +317,7 @@
 		},
 		"schema:minValue": "schema:Integer",
 		"schema:maxValue": "schema:Integer"
-    },	
+    },
     {
 		"@id": "iot:SetLevel",
 		"@type": "rdfs:Class",
@@ -377,7 +377,7 @@
 			"@id": "iot:LevelUnit"
 		},
 		"schema:minValue": "schema:Integer",
-		"schema:maxValue": "schema:Integer"		
+		"schema:maxValue": "schema:Integer"
     },
     {
 		"@id": "iot:CurrentLevel",
@@ -439,7 +439,7 @@
 		"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
 		"schema:propertyType": { "@id": "schema:Integer" },
 		"schema:minValue": "schema:Integer",
-		"schema:maxValue": "schema:Integer"		
+		"schema:maxValue": "schema:Integer"
     },
 	{
 		"@id": "iot:GColourData",
@@ -449,7 +449,7 @@
 		"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
 		"schema:propertyType": { "@id": "schema:Integer" },
 		"schema:minValue": "schema:Integer",
-		"schema:maxValue": "schema:Integer"		
+		"schema:maxValue": "schema:Integer"
     },
 	{
 		"@id": "iot:BColourData",
@@ -459,7 +459,7 @@
 		"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
 		"schema:propertyType": { "@id": "schema:Integer" },
 		"schema:minValue": "schema:Integer",
-		"schema:maxValue": "schema:Integer"		
+		"schema:maxValue": "schema:Integer"
     },
 	{
 		"@id": "iot:DimmerData",
@@ -469,7 +469,7 @@
 		"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
 		"schema:propertyType": { "@id": "schema:Integer" },
 		"schema:minValue": "schema:Integer",
-		"schema:maxValue": "schema:Integer"		
+		"schema:maxValue": "schema:Integer"
     },
 	{
 		"@id": "iot:StateData",
@@ -514,7 +514,7 @@
 			"@id": "schema:Enumeration"
 		}
 	},
-    {	
+    {
 		"@id": "iot:PIR",
 		"@type": "iot:MotionSensorType",
 		"rdfs:comment": "Passive infrared sensor",
@@ -543,7 +543,7 @@
 		"schema:propertyType": { "@id": "schema:Float" },
 		"schema:unitCode": { "@id": "iot:IlluminanceUnit" },
 		"schema:minValue": "schema:Float",
-		"schema:maxValue": "schema:Float"		
+		"schema:maxValue": "schema:Float"
     },
 	{
 		"@id": "iot:Humidity",
@@ -567,13 +567,13 @@
 		"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
 		"schema:propertyType": { "@id": "schema:Float" },
 		"schema:unitCode": { "@id": "iot:PercentUnit" }
-    },	
+    },
 	{
 		"@id": "iot:TargetHumidity",
 		"@type": "rdfs:Class",
 		"iot:acceptsInputData": {
 			"@id": "iot:HumidityData"
-		},		
+		},
 		"rdfs:comment": "Desired value for Humidity (e.g., in the range 0-100)",
 		"rdfs:label": "TargetHumidity",
 		"rdfs:subClassOf": {
@@ -603,14 +603,14 @@
 		"schema:propertyType": { "@id": "schema:Float" },
 		"schema:unitCode": { "@id": "iot:DensityUnit" },
 		"schema:minValue": "schema:Float",
-		"schema:maxValue": "schema:Float"		
-    },	
+		"schema:maxValue": "schema:Float"
+    },
 	{
 		"@id": "iot:ExpectedPressure",
 		"@type": "rdfs:Class",
 		"iot:providesOutputData": {
 			"@id": "iot:PressureData"
-		},		
+		},
 		"rdfs:comment": "Expected pressure of a substance.",
 		"rdfs:label": "ExpectedPressure",
 		"rdfs:subClassOf": {
@@ -618,13 +618,13 @@
 		},
 		"iot:writable" : "schema:False",
 		"iot:observable" : "schema:Boolean"
-	},	
+	},
 	{
 		"@id": "iot:ExpectedUpstreamPressure",
 		"@type": "rdfs:Class",
 		"iot:providesOutputData": {
 			"@id": "iot:PressureData"
-		},		
+		},
 		"rdfs:comment": "Expected upstream pressure",
 		"rdfs:label": "ExpectedUpstreamPressure",
 		"rdfs:subClassOf": {
@@ -632,7 +632,7 @@
 		},
 		"iot:writable" : "schema:False",
 		"iot:observable" : "schema:Boolean"
-	},	
+	},
     {
 		"@id": "iot:PressureData",
 		"@type": "rdfs:Class",
@@ -642,14 +642,14 @@
 		"schema:propertyType": { "@id": "schema:Float" },
 		"schema:unitCode": { "@id": "iot:PressureUnit" },
 		"schema:minValue": "schema:Float",
-		"schema:maxValue": "schema:Float"		
+		"schema:maxValue": "schema:Float"
     },
 	{
 		"@id": "iot:OverflowStatus",
 		"@type": "rdfs:Class",
 		"iot:providesOutputData": {
 			"@id": "schema:Boolean"
-		},		
+		},
 		"rdfs:comment": "Overflow status",
 		"rdfs:label": "OverflowStatus",
 		"rdfs:subClassOf": {
@@ -663,7 +663,7 @@
 		"@type": "rdfs:Class",
 		"iot:providesOutputData": {
 			"@id": "iot:FlowRateData"
-		},		
+		},
 		"rdfs:comment": "Expected flow rate of a substance.",
 		"rdfs:label": "ExpectedFlowRate",
 		"rdfs:subClassOf": {
@@ -681,7 +681,7 @@
 		"schema:propertyType": { "@id": "schema:Float" },
 		"schema:unitCode": { "@id": "iot:FlowRateUnit" },
 		"schema:minValue": "schema:Float",
-		"schema:maxValue": "schema:Float"		
+		"schema:maxValue": "schema:Float"
     },
     {
 		"@id": "iot:ExpectedAmbientTemperature",
@@ -715,8 +715,42 @@
 		"schema:propertyType": { "@id": "schema:Integer" },
 		"schema:unitCode": { "@id": "iot:LevelUnit" },
 		"schema:minValue": "schema:Integer",
-		"schema:maxValue": "schema:Integer"		
+		"schema:maxValue": "schema:Integer"
+	},
+	{
+		"@id": "iot:SoundPressureLevel",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "SPL interaction property",
+		"rdfs:label": "SoundPressureLEvel",
+		"rdfs:subClassOf": { "@id": "iot:Property" },
+		"iot:providesOutputData": {
+			"@id": "iot:SoundPressureData"
+		},
+		"iot:writable" : "schema:False",
+		"iot:observable" : "schema:Boolean"
+	},
+	{
+		"@id": "iot:SoundPressureData",
+	    "@type": "rdfs:Class",
+		"rdfs:comment": "Sound Pressure data",
+		"rdfs:label": "SoundPressureData",
+		"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+		"schema:propertyType": { "@id": "schema:Float" },
+		"schema:unitCode": { "@id": "iot:SoundPressureUnit" },
+		"schema:minValue": "schema:Float",
+		"schema:maxValue": "schema:Float"
+	},	
+	{
+		"@id": "iot:TemperatureAlarm",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Temperature alarm",
+		"rdfs:label": "TemperatureAlarm",
+		"rdfs:subClassOf": { "@id": "iot:Event" },
+		"iot:providesOutputData": [
+			{"@id": "schema:Boolean", "rdfs:label": "AlarmStatus"},
+			{"@id": "iot:TemperatureData", "rdfs:label": "CurrentTemperature"},
+			{"@id": "iot:TemperatureData", "rdfs:label": "TargerTemperature"}
+		]
     }
   ]
 }
-

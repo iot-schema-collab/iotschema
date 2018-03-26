@@ -12,7 +12,7 @@
 		"@type": "rdfs:Class",
 		"rdfs:subClassOf": { "@id": "iot:Capability" },
 		"rdfs:comment": "A capability for air conditioner",
-		"rdfs:label": "AirCnditioner",	  
+		"rdfs:label": "AirCnditioner",
 		"iot:domain": {"@id": "iot:Home"},
 		"iot:providesInteractionPattern": [
 		{
@@ -21,7 +21,7 @@
 			"@id": "iot:BinarySwitch",
 			"@id": "iot:RunMode",
 			"@id": "iot:CountDown",
-			"@id": "iot:WindStrength"		
+			"@id": "iot:WindStrength"
 		}]
 	},
 	{
@@ -29,7 +29,7 @@
 		"@type": "rdfs:Class",
 		"rdfs:subClassOf": { "@id": "iot:Capability" },
 		"rdfs:comment": "Current sensed value for Humidity.",
-		"rdfs:label": "HumiditySensing",	  
+		"rdfs:label": "HumiditySensing",
 		"iot:domain": [
 			{"@id": "iot:Home"},
 			{"@id": "iot:Building"}
@@ -45,7 +45,7 @@
 		"@type": "rdfs:Class",
 		"rdfs:subClassOf": { "@id": "iot:Capability" },
 		"rdfs:comment": "Sensed luminous flux per unit area in lux.",
-		"rdfs:label": "IlluminanceSensing",	  
+		"rdfs:label": "IlluminanceSensing",
 		"iot:domain": [
 			{"@id": "iot:Home"},
 			{"@id": "iot:Building"}
@@ -60,7 +60,7 @@
 		"@type": "rdfs:Class",
 		"rdfs:subClassOf": { "@id": "iot:Capability" },
 		"rdfs:comment": "A capability for controlling a light source, such as an RGB or other light.",
-		"rdfs:label": "LightControl",	  
+		"rdfs:label": "LightControl",
 		"iot:domain": [
 			{"@id": "iot:Home"},
 			{"@id": "iot:Building"}
@@ -83,7 +83,7 @@
 		"@type": "rdfs:Class",
 		"rdfs:subClassOf": { "@id": "iot:Capability" },
 		"rdfs:comment": "Presence (motion) sensing capability",
-		"rdfs:label": "MotionControl",	  
+		"rdfs:label": "MotionControl",
 		"iot:domain": [
 			{"@id": "iot:Home"},
 			{"@id": "iot:Building"}
@@ -100,7 +100,7 @@
 		"@type": "rdfs:Class",
 		"rdfs:subClassOf": { "@id": "iot:Capability" },
 		"rdfs:comment": "A capability for temperature sensing",
-		"rdfs:label": "TemperatureSensing",	  
+		"rdfs:label": "TemperatureSensing",
 		"iot:domain": {"@id": "iot:Common"},
 		"iot:providesInteractionPattern": [
 		{
@@ -112,7 +112,7 @@
 		"@type": "rdfs:Class",
 		"rdfs:subClassOf": { "@id": "iot:Capability" },
 		"rdfs:comment": "A capability for thermostat",
-		"rdfs:label": "Thermostat",	  
+		"rdfs:label": "Thermostat",
 		"iot:domain": {"@id": "iot:Common"},
 		"iot:providesInteractionPattern": [
 			{
@@ -126,15 +126,15 @@
 		"@type": "rdfs:Class",
 		"rdfs:subClassOf": { "@id": "iot:Capability" },
 		"rdfs:comment": "A capability of a level switch",
-		"rdfs:label": "LevelSwitch",	  
+		"rdfs:label": "LevelSwitch",
 		"iot:domain": {"@id": "iot:Industry"}
-	},	
+	},
 	{
 		"@id": "iot:FloatSwitch",
 		"@type": "rdfs:Class",
 		"rdfs:subClassOf": { "@id": "iot:LevelSwitch" },
 		"rdfs:comment": "A capability of a float switch",
-		"rdfs:label": "FloatSwitch",	  
+		"rdfs:label": "FloatSwitch",
 		"iot:domain": {"@id": "iot:Industry"},
 		"iot:providesInteractionPattern": [
 		{
@@ -143,14 +143,14 @@
 			"@id": "iot:ExpectedDensity",
 			"@id": "iot:ExpectedAmbientTemperature",
 			"@id": "iot:ExpectedFloatImmersionDepth"
-		}]	
+		}]
 	},
 	{
 		"@id": "iot:Valve",
 		"@type": "rdfs:Class",
 		"rdfs:subClassOf": { "@id": "iot:Capability" },
 		"rdfs:comment": "A capability of a valve",
-		"rdfs:label": "Valve",	  
+		"rdfs:label": "Valve",
 		"iot:domain": {"@id": "iot:Industry"},
 		"iot:providesInteractionPattern": [
 		{
@@ -159,15 +159,15 @@
 			"@id": "iot:OperationStatus",
 			"@id": "iot:ExpectedFlowRate",
 			"@id": "iot:ExpectedUpstreamPressure",
-			"@id": "iot:ExpectedPressure"			
-		}]	
+			"@id": "iot:ExpectedPressure"
+		}]
 	},
 	{
 		"@id": "iot:Pump",
 		"@type": "rdfs:Class",
 		"rdfs:subClassOf": { "@id": "iot:Capability" },
 		"rdfs:comment": "A capability of a pump",
-		"rdfs:label": "Pump",	  
+		"rdfs:label": "Pump",
 		"iot:domain": {"@id": "iot:Industry"},
 		"iot:providesInteractionPattern": [
 		{
@@ -176,35 +176,51 @@
 			"@id": "iot:OperationStatus",
 			"@id": "iot:ExpectedFlowRate",
 			"@id": "iot:ExpectedPressure",
-			"@id": "iot:ExpectedAmbientTemperature"			
-		}]	
-	},	
+			"@id": "iot:ExpectedAmbientTemperature"
+		}]
+	},
 	{
 		"@id": "iot:UltrasonicSensing",
 		"@type": "rdfs:Class",
 		"rdfs:subClassOf": { "@id": "iot:Capability" },
 		"rdfs:comment": "A capability of an ultrasonic sensor",
-		"rdfs:label": "UltrasonicSensing",	  
+		"rdfs:label": "UltrasonicSensing",
 		"iot:domain": {"@id": "iot:Industry"},
 		"iot:providesInteractionPattern": [
 		{
 			"@id": "iot:CurrentLevel",
 			"@id": "iot:ExpectedAmbientTemperature"
-		}]	
-	},	
+		}]
+	},
 	{
 		"@id": "iot:ProximitySensing",
 		"@type": "rdfs:Class",
 		"rdfs:subClassOf": { "@id": "iot:Capability" },
 		"rdfs:comment": "A proximity sensing capability",
-		"rdfs:label": "ProximitySensing",	  
+		"rdfs:label": "ProximitySensing",
 		"iot:domain": {"@id": "iot:Industry"},
 		"iot:providesInteractionPattern": [
 		{
 			"@id": "iot:OperationStatus",
 			"@id": "iot:ExpectedAmbientTemperature",
 			"@id": "iot:ExpectedPressure"
-		}]	
-	}	
+		}]
+	},
+  {
+  	"@id": "iot:SoundPressure",
+  	"@type": "rdfs:Class",
+  	"rdfs:subClassOf": { "@id": "iot:Capability" },
+  	"rdfs:comment": "Sensed Sound Pressure Level, e.g. using a microphone",
+  	"rdfs:label": "Sound Pressure Capability",
+  	"iot:domain": [
+  		{"@id": "iot:Home"},
+  		{"@id": "iot:Building"}
+  		],
+  	"iot:providesInteractionPattern": [
+  	  {
+  		"@id": "iot:SoundPressureLevel"
+  	  }
+    ]
+  }	
 	]
 }

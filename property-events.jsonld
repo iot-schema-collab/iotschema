@@ -149,6 +149,14 @@
 			"rdfs:seeAlso": "http://iotschema.org/RunMode"
 		},
 		{
+			"@id": "iot:SoundPressureLevelChanged",
+			"@type": "rdfs:Class",
+			"rdfs:subClassOf": "iot:PropertyChangedEvent",
+			"rdfs:label": "SoundPressureLevelChanged",
+			"rdfs:comment": "Specification of an event occurring when some property of type SoundPressureLevel changes.",
+			"rdfs:seeAlso": "http://iotschema.org/SoundPressureLevel"
+		},
+		{
 			"@id": "iot:SwitchStatusChanged",
 			"@type": "rdfs:Class",
 			"rdfs:subClassOf": "iot:PropertyChangedEvent",
