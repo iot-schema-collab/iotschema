@@ -12,7 +12,7 @@
 		"@type": "rdfs:Class",
 		"rdfs:subClassOf": { "@id": "iot:Capability" },
 		"rdfs:comment": "A capability for air conditioner",
-		"rdfs:label": "AirCnditioner",
+		"rdfs:label": "AirConditioner",
 		"iot:domain": {"@id": "iot:Home"},
 		"iot:providesInteractionPattern": [
 		{
