@@ -211,7 +211,7 @@
   	"@type": "rdfs:Class",
   	"rdfs:subClassOf": { "@id": "iot:Capability" },
   	"rdfs:comment": "Sensed Sound Pressure Level, e.g. using a microphone",
-  	"rdfs:label": "Sound Pressure Capability",
+  	"rdfs:label": "SoundPressureCapability",
   	"iot:domain": [
   		{"@id": "iot:Home"},
   		{"@id": "iot:Building"}
@@ -221,6 +221,6 @@
   		"@id": "iot:SoundPressureLevel"
   	  }
     ]
-  }	
+  }
 	]
 }
