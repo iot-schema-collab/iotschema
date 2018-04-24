@@ -21,8 +21,8 @@
 	{
 		"@id": "iot:AirTemperature",
 		"@type": "rdfs:Class",
-		"rdfs:comment": "Temperature interaction property",
-		"rdfs:label": "Temperature",
+		"rdfs:comment": "Air temperature interaction property",
+		"rdfs:label": "Air Temperature",
 		"rdfs:subClassOf": { "@id": "iot:Temperature" },
 		"iot:providesOutputData": {
 			"@id": "iot:TemperatureData"
