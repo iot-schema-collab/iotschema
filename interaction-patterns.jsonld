@@ -18,6 +18,18 @@
 		"iot:writable" : "schema:False",
 		"iot:observable" : "schema:Boolean"
     },
+	{
+		"@id": "iot:AirTemperature",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Air temperature interaction property",
+		"rdfs:label": "Air Temperature",
+		"rdfs:subClassOf": { "@id": "iot:Temperature" },
+		"iot:providesOutputData": {
+			"@id": "iot:TemperatureData"
+		},
+		"iot:writable" : "schema:False",
+		"iot:observable" : "schema:Boolean"
+    },
     {
 		"@id": "iot:TemperatureData",
 		"@type": "rdfs:Class",
