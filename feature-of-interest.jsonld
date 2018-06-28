@@ -11,6 +11,16 @@
   },
   "@graph": [
     {
+		"@id": "iot:Door",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "A hinged, sliding, or revolving barrier at the entrance to a building, room, or vehicle, or in the framework of a cupboard.",
+		"rdfs:label": "Door",
+		"rdfs:subClassOf": {
+		"@id": "iot:Equipment"
+		},
+		"iot:domain": [{"@id": "iot:Home"}, {"@id": "iot:Building"}]
+	},
+	{
 		"@id": "iot:LiquidMixingSystem",
 		"@type": "rdfs:Class",
 		"rdfs:comment": "A LiquidMixingSystem is an Equipment .",
