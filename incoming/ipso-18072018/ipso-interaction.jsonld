@@ -1,0 +1,41 @@
+{
+"@id": "iot:MinimumObservedValue",
+"@type": "rdfs:Class",
+"rdfs:comment": "Minimum Value Tracking Property",
+"rdfs:label": "MinimumValueTrackingProperty",
+"rdfs:subClassOf": { "@id": "iot:Property" },
+"iot:providesOutputData": {
+  "@id": "iot:MinimumObservedValue",
+  }
+},
+{
+"@id": "iot:MinimumObservedValueData",
+"@type": "rdfs:Class",
+"rdfs:comment": "MinimumObservedValue",
+"rdfs:label": "MinimumObservedValue",
+"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+},
+{
+"@id": "iot:MaximumObservedValue",
+"@type": "rdfs:Class",
+"rdfs:comment": "Maximum Value Tracking Property",
+"rdfs:label": "MaximumValueTrackingProperty",
+"rdfs:subClassOf": { "@id": "iot:Property" },
+"iot:providesOutputData": {
+  "@id": "iot:MaximumObservedValue",
+  }
+},
+{
+"@id": "iot:MaximumObservedValueData",
+"@type": "rdfs:Class",
+"rdfs:comment": "MaximumObservedValueData",
+"rdfs:label": "Maximum Observed MaximumObservedValueData",
+"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+},
+{
+"@id": "iot:ResetMinMax",
+"@type": "rdfs:Class",
+"rdfs:comment": "Reset Value Tracking",
+"rdfs:label": "ResetMinMax",
+"rdfs:subClassOf": { "@id": "iot:Action" }
+}

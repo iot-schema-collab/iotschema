@@ -1,0 +1,13 @@
+{
+  "@id": "iot:ValueTrackingCapability",
+  "@type": "rdfs:Class",
+  "rdfs:subClassOf": { "@id": "iot:Capability" },
+  "rdfs:comment": "Min/Max Value Tracking",
+  "rdfs:label": "ValueTrackingCapability",
+  "iot:providesInteractionPattern": [
+    {
+    "@id": "iot:ValueTracking",
+    "@id": "iot:ResetMinMax"
+    }
+  ]
+}

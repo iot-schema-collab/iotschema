@@ -1,0 +1,163 @@
+
+{
+  "@id": "iot:BinarySwitch",
+  "@type": "rdfs:Class",
+  "iot:acceptsInputData": {
+    "@id": "iot:Toggle"
+  },
+  "rdfs:comment": "Binary Switch status property",
+  "rdfs:label": "BinarySwitch",
+  "rdfs:subClassOf": {
+    "@id": "iot:Property"
+    },
+  "iot:writable" : "schema:True",
+  "iot:observable" : "schema:Boolean"
+},
+{
+  "@id": "iot:Toggle",
+  "@type": "rdfs:Class",
+  "rdfs:comment": "Toggle",
+  "rdfs:label": "Toggle",
+  "rdfs:subClassOf": {
+    "@id": "schema:PropertyValue"
+  },
+  "schema:propertyType": {
+    "@id": "schema:Boolean"
+  }
+},
+  {
+  "@id": "iot:TurnOnAction",
+  "@type": "rdfs:Class",
+  "rdfs:comment": "Turn on a switch",
+  "rdfs:label": "TurnOnAction",
+  "rdfs:subClassOf": {
+    "@id": "iot:Action"
+  },
+  "iot:acceptsInputData": {
+    "@id": "schema:Boolean"
+  }
+},
+  {
+  "@id": "iot:TurnOffAction",
+  "@type": "rdfs:Class",
+  "rdfs:comment": "Turn off a switch",
+  "rdfs:label": "TurnOffAction",
+  "rdfs:subClassOf": {
+    "@id": "iot:Action"
+  },
+  "iot:acceptsInputData": {
+    "@id": "schema:Boolean"
+  }
+},
+{
+  "@id": "iot:SwitchStatus",
+  "@type": "rdfs:Class",
+  "iot:providesOutputData": {
+    "@id": "schema:Boolean"
+  },
+  "rdfs:comment": "Status of a switch",
+  "rdfs:label": "SwitchStatus",
+  "rdfs:subClassOf": {
+    "@id": "iot:Property"
+  },
+  "iot:writable" : "schema:False",
+  "iot:observable" : "schema:Boolean"
+},
+{
+  "@id": "iot:SetDimmerAction",
+  "@type": "rdfs:Class",
+  "iot:acceptsInputData": {
+    "@id": "iot:DimmerData"
+  },
+  "rdfs:comment": "Set quantized representation for brightness (e.g., in the range 0-100)",
+  "rdfs:label": "SetDimmerAction",
+  "rdfs:subClassOf": {
+    "@id": "iot:Action"
+  }
+},
+{
+  "@id": "iot:CurrentLevel",
+  "@type": "rdfs:Class",
+  "iot:providesOutputData": {
+    "@id": "iot:LevelData"
+  },
+  "rdfs:comment": "Current level property",
+  "rdfs:label": "CurrentLevel",
+  "rdfs:subClassOf": {
+    "@id": "iot:Property"
+  },
+  "iot:writable" : "schema:False",
+  "iot:observable" : "schema:Boolean"
+},
+{
+  "@id": "iot:SetLevelAction",
+  "@type": "rdfs:Class",
+  "iot:acceptsInputData": [
+  {
+    "@id": "iot:TransitionTimeData"
+  },
+  {
+    "@id": "iot:LevelData"
+  }
+  ],
+  "rdfs:comment": "Set level Action",
+  "rdfs:label": "SetLevel",
+  "rdfs:subClassOf": {
+  "@id": "iot:Action"
+  }
+},
+{
+  "@id": "iot:LevelData",
+  "@type": "rdfs:Class",
+  "rdfs:comment": "Level data",
+  "rdfs:label": "LevelData",
+  "rdfs:subClassOf": {
+    "@id": "schema:PropertyValue"
+  },
+  "schema:propertyType": {
+    "@id": "schema:Number"
+  },
+  "schema:unitCode": {
+    "@id": "iot:LevelUnit"
+  },
+  "schema:minValue": "schema:Integer",
+  "schema:maxValue": "schema:Integer"
+},
+{
+  "@id": "iot:CurrentRGBColour",
+  "@type": "rdfs:Class",
+  "rdfs:comment": "Current RGB colour",
+  "rdfs:label": "CurrentRGBColour",
+  "rdfs:subClassOf": { "@id": "iot:Property" },
+  "iot:providesOutputData": [
+  {
+    "@id": "iot:RColourData"
+  },
+  {
+    "@id": "iot:GColourData"
+  },
+  {
+    "@id": "iot:BColourData"
+  }
+  ],
+  "iot:writable" : "schema:False",
+  "iot:observable" : "schema:Boolean"
+},
+{
+  "@id": "iot:SetRGBColourAction",
+  "@type": "rdfs:Class",
+  "rdfs:comment": "Set GB colour action",
+  "rdfs:label": "SetRGBColourAction",
+  "rdfs:subClassOf": { "@id": "iot:Action" },
+  "iot:acceptsInputData": [
+    {
+      "@id": "iot:RColourData"
+    },
+    {
+      "@id": "iot:GColourData"
+    },
+    {
+      "@id": "iot:BColourData"
+    }
+  ]
+}
