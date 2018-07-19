@@ -1,0 +1,39 @@
+@prefix dash: <http://datashapes.org/dash#> . @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . @prefix schema: <http://schema.org/> . @prefix sh: <http://www.w3.org/ns/shacl#> . @prefix xsd: <http://www.w3.org/2001/XMLSchema#> . @prefix iot: <http://iotschema.org/> . @prefix iotsh: <http://iotschema.org/shapes/> . 
+
+ iotsh:RColourDataShape a sh:NodeShape ;
+ sh:targetClass iot:RColourData ;
+ sh:and (
+[ sh:property [
+ sh:path schema:propertyType ;
+ sh:minCount 1 ;
+ sh:maxCount 1 ;
+ sh:datatype xsd:integer ; ]; ]
+[  sh:property [
+ sh:path schema:minValue ;
+ sh:minCount 1 ;
+ sh:maxCount 1 ;
+ sh:datatype xsd:integer ; ]; ]
+[  sh:property [
+ sh:path schema:maxValue ;
+ sh:minCount 1 ;
+ sh:maxCount 1 ;
+ sh:datatype xsd:integer ; ]; ] ).
+
+ iotsh:SetColourShape a sh:NodeShape ;
+ sh:targetClass iot:SetColour ;
+ sh:and (
+[sh:property [
+ sh:path iot:acceptsInputData;
+ sh:minCount 1 ;
+ sh:maxCount 1 ;
+ sh:node iot:RColourData ; ]; ]
+[sh:property [
+ sh:path iot:acceptsInputData;
+ sh:minCount 1 ;
+ sh:maxCount 1 ;
+ sh:node iot:GColourData ; ]; ]
+[sh:property [
+ sh:path iot:acceptsInputData;
+ sh:minCount 1 ;
+ sh:maxCount 1 ;
+ sh:node iot:BColourData ; ]; ] ).
