@@ -1,0 +1,29 @@
+{
+	"@id": "iot:PowerMonitoring",
+	"@type": "rdfs:Class",
+	"rdfs:subClassOf": { "@id": "iot:Capability" },
+	"rdfs:comment": "A capability for monitoring power in an electric circuit.",
+	"rdfs:label": "PowerMonitoring",
+	"iot:domain": [
+			{"@id": "iot:Energy"},
+			{"@id": "iot:Building"},
+			{"@id": "iot:Industry"},
+			{"@id": "iot:Home"}
+			],
+	"iot:providesInteractionPattern": [
+	{
+		"@id": "iot:ApparentPowerA",
+		"@id": "iot:ApparentPowerB",
+		"@id": "iot:BinarySwitch",
+		"@id": "iot:ApparentPowerC",
+		"@id": "iot:TotalApparentPower",
+		"@id": "iot:ActivePowerA",
+		"@id": "iot:ActivePowerB",
+		"@id": "iot:ActivePowerC",
+		"@id": "iot:TotalActivePower",
+		"@id": "iot:ReactivePowerA",
+		"@id": "iot:ReactivePowerB",
+		"@id": "iot:ReactivePowerC",
+		"@id": "iot:TotalReactivePower"
+	}]
+}
