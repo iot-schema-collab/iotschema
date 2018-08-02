@@ -1,0 +1,21 @@
+{
+	"@id": "iot:EnergyMonitoring",
+	"@type": "rdfs:Class",
+	"rdfs:subClassOf": { "@id": "iot:Capability" },
+	"rdfs:comment": "A capability for energy monitoring in an electric circuit.",
+	"rdfs:label": "EnergyMonitoring",
+	"iot:domain": [
+			{"@id": "iot:Energy"},
+			{"@id": "iot:Building"},
+			{"@id": "iot:Industry"},
+			{"@id": "iot:Home"}
+			],
+	"iot:providesInteractionPattern": [
+	{
+		"@id": "iot:ApparentEnergy",
+		"@id": "iot:ActiveEnergyImported",
+		"@id": "iot:ActiveEnergyExported",
+		"@id": "iot:ReactiveEnergyImported",
+		"@id": "iot:ReactiveEnergyExported"
+	}]
+}

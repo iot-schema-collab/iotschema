@@ -1,0 +1,87 @@
+{
+	"@id": "iot:ApparentEnergy",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The electric energy derived from apparent power over a period of time.",
+	"rdfs:label": "ApparentEnergy",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:ApparentEnergyData"
+	},
+	"iot:writable" : "schema:True",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:ApparentEnergyData",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "Apparent energy data.",
+	"rdfs:label": "ApparentEnergyData",
+	"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+	"schema:propertyType": { "@id": "schema:Float" },
+	"schema:unitCode": { "@id": "iot:ApparentEnergyUnit" }
+},
+{
+	"@id": "iot:ActiveEnergyImported",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The electric energy derived from active power over a period of time, and imported (received).",
+	"rdfs:label": "ActiveEnergyImported",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:ActiveEnergyData"
+	},
+	"iot:writable" : "schema:True",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:ActiveEnergyData",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "Active energy data.",
+	"rdfs:label": "ActiveEnergyData",
+	"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+	"schema:propertyType": { "@id": "schema:Float" },
+	"schema:unitCode": { "@id": "iot:ActiveEnergyUnit" }
+},
+{
+	"@id": "iot:ActiveEnergyExported",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The electric energy derived from active power over a period of time, and exported (delivered).",
+	"rdfs:label": "ActiveEnergyExported",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:ActiveEnergyData"
+	},
+	"iot:writable" : "schema:True",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:ReactiveEnergyImported",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The electric energy derived from reactive power over a period of time, and imported (received).",
+	"rdfs:label": "ReactiveEnergyImported",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:ReactiveEnergyData"
+	},
+	"iot:writable" : "schema:True",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:ReactiveEnergyData",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "Reactive energy data.",
+	"rdfs:label": "ReactiveEnergyData",
+	"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+	"schema:propertyType": { "@id": "schema:Float" },
+	"schema:unitCode": { "@id": "iot:ReactiveEnergyUnit" }
+},
+{
+	"@id": "iot:ReactiveEnergyExported",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The electric energy derived from reactive power over a period of time, and exported (delivered).",
+	"rdfs:label": "ReactiveEnergyExported",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:ReactiveEnergyData"
+	},
+	"iot:writable" : "schema:True",
+	"iot:observable" : "schema:Boolean"
+}
