@@ -1,0 +1,59 @@
+{
+	"@id": "iot:ElectricCurrentA",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The current which flows through the phase (line) A (there exist phases A, B, and C).",
+	"rdfs:label": "ElectricCurrentA",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:ElectricCurrentData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:ElectricCurrentData",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "Electric current data.",
+	"rdfs:label": "ElectricCurrentData",
+	"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+	"schema:propertyType": { "@id": "schema:Float" },
+	"schema:unitCode": { "@id": "iot:ElectricCurrentUnit" },
+	"schema:minValue": "schema:Float",
+	"schema:maxValue": "schema:Float"
+},
+{
+	"@id": "iot:ElectricCurrentB",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The current which flows through the phase (line) B (there exist phases A, B, and C).",
+	"rdfs:label": "ElectricCurrentB",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:ElectricCurrentData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:ElectricCurrentC",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The current which flows through the phase (line) C (there exist phases A, B, and C).",
+	"rdfs:label": "ElectricCurrentC",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:ElectricCurrentData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:AverageElectricCurrent",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The average electric current.",
+	"rdfs:label": "AverageElectricCurrent",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:ElectricCurrentData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+}

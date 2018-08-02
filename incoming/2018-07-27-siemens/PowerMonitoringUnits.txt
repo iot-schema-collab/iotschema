@@ -10,29 +10,29 @@
 {
 	"@id": "iot:VoltAmpere",
 	"@type": "iot:ApparentPowerUnit",
-	"rdfs:comment": "Unit of the apparent power.",
+	"rdfs:comment": "The unit of the apparent power.",
 	"rdfs:label": "volt-ampere",
 	"iot:reference": "0112/2///62720#UAA298#001"
 },
 {
-	"@id": "iot:kiloVoltAmpere",
+	"@id": "iot:KiloVoltAmpere",
 	"@type": "iot:ApparentPowerUnit",
-	"rdfs:comment": "Unit of the apparent power, expressed in kilo (one thousand) as a decimal unit prefix.",
+	"rdfs:comment": "The unit of the apparent power, expressed in kilo (one thousand) as a decimal unit prefix.",
 	"rdfs:label": "kilovolt-ampere",
 	"iot:reference": "0112/2///62720#UAA581#001"
 },
 {
 	"@id": "iot:MegaVoltAmpere",
 	"@type": "iot:ApparentPowerUnit",
-	"rdfs:comment": "Unit of the apparent power, expressed in mega (one million) as a decimal unit prefix.",
-	"rdfs:label": "Megavolt-ampere",
+	"rdfs:comment": "The unit of the apparent power, expressed in mega (one million) as a decimal unit prefix.",
+	"rdfs:label": "megavolt-ampere",
 	"iot:reference": "0112/2///62720#UAA222#001"
 },
 {
 	"@id": "iot:GigaVoltAmpere",
 	"@type": "iot:ApparentPowerUnit",
-	"rdfs:comment": "Unit of the apparent power, expressed in giga (one billion) as a decimal unit prefix.",
-	"rdfs:label": "Gigavolt-ampere", 
+	"rdfs:comment": "The unit of the apparent power, expressed in giga (one billion) as a decimal unit prefix.",
+	"rdfs:label": "gigavolt-ampere", 
 	"iot:reference": "0112/2///62720#UAB534#001"
 },
 {
@@ -47,30 +47,30 @@
 {
 	"@id": "iot:Watt",
 	"@type": "iot:ActivePowerUnit",
-	"rdfs:comment": "Unit of the active power.",
-	"rdfs:label": "Watt",
+	"rdfs:comment": "The unit of the active power.",
+	"rdfs:label": "watt",
 	"dct:source": "http://www.qudt.org/qudt/owl/1.0.0/unit/Instances.html#Watt",
 	"iot:reference": "0112/2///62720#UAA306#001"
 },
 {
 	"@id": "iot:KiloWatt",
 	"@type": "iot:ActivePowerUnit",
-	"rdfs:comment": "Unit of the active power, expressed in kilo (one thousand) as a decimal unit prefix.",
+	"rdfs:comment": "The unit of the active power, expressed in kilo (one thousand) as a decimal unit prefix.",
 	"rdfs:label": "kilowatt",
 	"iot:reference": "0112/2///62720#UAA583#001"
 },
 {
-	"@id": "iot:Megawatt",
+	"@id": "iot:MegaWatt",
 	"@type": "iot:ActivePowerUnit",
-	"rdfs:comment": "Unit of the active power, expressed in mega (one million) as a decimal unit prefix.",
-	"rdfs:label": "Megawatt",
+	"rdfs:comment": "The unit of the active power, expressed in mega (one million) as a decimal unit prefix.",
+	"rdfs:label": "megawatt",
 	"iot:reference": "0112/2///62720#UAA224#001"
 },
 {
-	"@id": "iot:Gigawatt",
+	"@id": "iot:GigaWatt",
 	"@type": "iot:ActivePowerUnit",
-	"rdfs:comment": "Unit of the active power, expressed in giga (one billion) as a decimal unit prefix.",
-	"rdfs:label": "Gigawatt",
+	"rdfs:comment": "The unit of the active power, expressed in giga (one billion) as a decimal unit prefix.",
+	"rdfs:label": "gigawatt",
 	"iot:reference": "0112/2///62720#UAA154#001"
 },
 {
@@ -85,27 +85,27 @@
 {
 	"@id": "iot:VoltAmpereReactive",
 	"@type": "iot:ReactivePowerUnit",
-	"rdfs:comment": "Unit of the reactive power.",
-	"rdfs:label": "VoltAmpereReactive",
+	"rdfs:comment": "The unit of reactive power.",
+	"rdfs:label": "volt-ampere-reactive",
 	"iot:reference": "0112/2///62720#UAB023#001"
 },
 {
 	"@id": "iot:KiloVoltAmpereReactive",
 	"@type": "iot:ReactivePowerUnit",
-	"rdfs:comment": "Unit of the reactive power, expressed in kilo (one thousand) as a decimal unit prefix.",
-	"rdfs:label": "kiloVoltAmpereReactive",
+	"rdfs:comment": "The unit of reactive power, expressed in kilo (one thousand) as a decimal unit prefix.",
+	"rdfs:label": "kilovolt-ampere-reactive",
 	"iot:reference": "0112/2///62720#UAB195#001"
 },
 {
 	"@id": "iot:MegaVoltAmpereReactive",
 	"@type": "iot:ReactivePowerUnit",
-	"rdfs:comment": "Unit of the reactive power, expressed in mega (one million) as a decimal unit prefix.",
-	"rdfs:label": "MegaVoltAmpereReactive",
+	"rdfs:comment": "The unit of reactive power, expressed in mega (one million) as a decimal unit prefix.",
+	"rdfs:label": "megavolt-ampere-reactive",
 	"iot:reference": "0112/2///62720#UAB199#001"
 },
 {
 	"@id": "iot:GigaVoltAmpereReactive",
 	"@type": "iot:ReactivePowerUnit",
-	"rdfs:comment": "Unit of the reactive power, expressed in giga (one billion) as a decimal unit prefix.",
-	"rdfs:label": "GigaVoltAmpereReactive"
+	"rdfs:comment": "The unit of reactive power, expressed in giga (one billion) as a decimal unit prefix.",
+	"rdfs:label": "gigavolt-ampere-reactive"
 }
