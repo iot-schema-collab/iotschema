@@ -21,4 +21,13 @@ sh:minCount 1 ; ]]; ]
  sh:path iot:observable;
  sh:minCount 1 ;
  sh:maxCount 1 ;
- sh:datatype xsd:boolean ; ]; ] ).
+ sh:hasValue xsd:boolean ; ]; ] ).
+ 
+ iotsh:StatusDataShape a sh:NodeShape ;
+ sh:targetClass iot:StatusData ;
+ sh:and (
+[ sh:property [
+ sh:path schema:propertyType ;
+ sh:minCount 1 ;
+ sh:maxCount 1 ;
+ sh:datatype xsd:boolean ; ]; ] ). 

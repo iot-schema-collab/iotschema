@@ -15,13 +15,12 @@
 		"rdfs:label": "AirConditioner",
 		"iot:domain": {"@id": "iot:Home"},
 		"iot:providesInteractionPattern": [
-		{
-			"@id": "iot:Temperature",
-			"@id": "iot:TargetTemperature",
-			"@id": "iot:BinarySwitch",
-			"@id": "iot:RunMode",
-			"@id": "iot:CountDown",
-			"@id": "iot:WindStrength"
+		{	"@id": "iot:Temperature" },
+		{	"@id": "iot:TargetTemperature" },
+		{	"@id": "iot:BinarySwitch" },
+		{	"@id": "iot:RunMode" },
+		{	"@id": "iot:CountDown" },
+		{	"@id": "iot:WindStrength"
 		}]
 	},
 	{
@@ -35,9 +34,8 @@
 			{"@id": "iot:Building"}
 			],
 		"iot:providesInteractionPattern": [
-		{
-			"@id": "iot:Humidity",
-			"@id": "iot:TargetHumidity"
+		{	"@id": "iot:Humidity" },
+		{	"@id": "iot:TargetHumidity"
 		}]
 	},
 	{
@@ -66,17 +64,15 @@
 			{"@id": "iot:Building"}
 			],
 		"iot:providesInteractionPattern": [
-		{
-			"@id": "iot:BinarySwitch",
-			"@id": "iot:SwitchStatus",
-			"@id": "iot:TurnOn",
-			"@id": "iot:TurnOff",
-			"@id": "iot:CurrentColour",
-			"@id": "iot:SetColour",
-			"@id": "iot:CurrentDimmer",
-			"@id": "iot:SetDimmer",
-			"@id": "iot:RampTime"
-		}]
+		{	"@id": "iot:BinarySwitch" },
+		{	"@id": "iot:SwitchStatus" },
+		{	"@id": "iot:TurnOn" },
+		{	"@id": "iot:TurnOff" },
+		{	"@id": "iot:CurrentColour" },
+		{	"@id": "iot:SetColour" },
+		{	"@id": "iot:CurrentDimmer" },
+		{	"@id": "iot:SetDimmer" },
+		{	"@id": "iot:RampTime" }]
 	},
 	{
 		"@id": "iot:MotionControl",
@@ -89,9 +85,8 @@
 			{"@id": "iot:Building"}
 			],
 		"iot:providesInteractionPattern": [
-		{
-			"@id": "iot:MotionDetected",
-			"@id": "iot:MotionType"
+		{	"@id": "iot:MotionDetected" },
+		{	"@id": "iot:MotionType"
 		}
 		]
 	},
@@ -115,10 +110,8 @@
 		"rdfs:label": "Thermostat",
 		"iot:domain": {"@id": "iot:Common"},
 		"iot:providesInteractionPattern": [
-			{
-			"@id": "iot:Temperature",
-			"@id": "iot:TargetTemperature"
-			}
+			{	"@id": "iot:Temperature" },
+		{   	"@id": "iot:TargetTemperature" }
 		]
 	},
 	{
@@ -137,13 +130,12 @@
 		"rdfs:label": "FloatSwitch",
 		"iot:domain": {"@id": "iot:Industry"},
 		"iot:providesInteractionPattern": [
-		{
-			"@id": "iot:OverflowStatus",
-			"@id": "iot:ExpectedPressure",
-			"@id": "iot:ExpectedDensity",
-			"@id": "iot:ExpectedAmbientTemperature",
-			"@id": "iot:ExpectedFloatImmersionDepth"
-		}]
+		{	"@id": "iot:OverflowStatus" },
+		{	"@id": "iot:ExpectedPressure" },
+		{	"@id": "iot:ExpectedDensity" },
+		{	"@id": "iot:ExpectedAmbientTemperature" },
+		{	"@id": "iot:ExpectedFloatImmersionDepth" }
+		]
 	},
 	{
 		"@id": "iot:Valve",
@@ -153,14 +145,13 @@
 		"rdfs:label": "Valve",
 		"iot:domain": {"@id": "iot:Industry"},
 		"iot:providesInteractionPattern": [
-		{
-			"@id": "iot:TurnOn",
-			"@id": "iot:TurnOff",
-			"@id": "iot:OperationStatus",
-			"@id": "iot:ExpectedFlowRate",
-			"@id": "iot:ExpectedUpstreamPressure",
-			"@id": "iot:ExpectedPressure"
-		}]
+		{	"@id": "iot:TurnOn" },
+		{	"@id": "iot:TurnOff" },
+		{	"@id": "iot:OperationStatus" },
+		{	"@id": "iot:ExpectedFlowRate" },
+		{	"@id": "iot:ExpectedUpstreamPressure" },
+		{	"@id": "iot:ExpectedPressure" }
+		]
 	},
 	{
 		"@id": "iot:Pump",
@@ -170,14 +161,13 @@
 		"rdfs:label": "Pump",
 		"iot:domain": {"@id": "iot:Industry"},
 		"iot:providesInteractionPattern": [
-		{
-			"@id": "iot:TurnOn",
-			"@id": "iot:TurnOff",
-			"@id": "iot:OperationStatus",
-			"@id": "iot:ExpectedFlowRate",
-			"@id": "iot:ExpectedPressure",
-			"@id": "iot:ExpectedAmbientTemperature"
-		}]
+		{	"@id": "iot:TurnOn" },
+		{	"@id": "iot:TurnOff" },
+		{	"@id": "iot:OperationStatus" },
+		{	"@id": "iot:ExpectedFlowRate" },
+		{	"@id": "iot:ExpectedPressure" },
+		{	"@id": "iot:ExpectedAmbientTemperature" }
+		]
 	},
 	{
 		"@id": "iot:UltrasonicSensing",
@@ -187,10 +177,9 @@
 		"rdfs:label": "UltrasonicSensing",
 		"iot:domain": {"@id": "iot:Industry"},
 		"iot:providesInteractionPattern": [
-		{
-			"@id": "iot:CurrentLevel",
-			"@id": "iot:ExpectedAmbientTemperature"
-		}]
+		{	"@id": "iot:CurrentLevel" },
+		{	"@id": "iot:ExpectedAmbientTemperature" }
+		]
 	},
 	{
 		"@id": "iot:ProximitySensing",
@@ -200,11 +189,10 @@
 		"rdfs:label": "ProximitySensing",
 		"iot:domain": {"@id": "iot:Industry"},
 		"iot:providesInteractionPattern": [
-		{
-			"@id": "iot:OperationStatus",
-			"@id": "iot:ExpectedAmbientTemperature",
-			"@id": "iot:ExpectedPressure"
-		}]
+		{	"@id": "iot:OperationStatus" },
+		{	"@id": "iot:ExpectedAmbientTemperature" },
+		{	"@id": "iot:ExpectedPressure" }
+		]
 	},
   {
   	"@id": "iot:SoundPressure",
