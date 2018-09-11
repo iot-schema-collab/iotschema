@@ -1,0 +1,79 @@
+{
+	"@id": "iot:ElectricCurrentUnit",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "An enumeration of electric current units.",
+	"rdfs:label": "ElectricCurrentUnit",
+	"rdfs:subClassOf": {
+	"@id": "schema:Enumeration"
+	}
+},
+{
+	"@id": "iot:Ampere",
+	"@type": "iot:ElectricCurrentUnit",
+	"rdfs:comment": "The unit of electric current.",
+	"rdfs:label": "ampere",
+	"iot:reference": "0112/2///62720#UAA101#001",
+	"dct:source": "http://www.qudt.org/qudt/owl/1.0.0/unit/Instances.html#Ampere"
+},
+{
+	"@id": "iot:FemtoAmpere",
+	"@type": "iot:ElectricCurrentUnit",
+	"rdfs:comment": "The unit of electric current, expressed in a unit prefix meaning "one 0.000000000000001".",
+	"rdfs:label": "femtoampere",
+	"iot:reference": "0112/2///62720#UAB638#001"
+},
+{
+	"@id": "iot:PicoAmpere",
+	"@type": "iot:ElectricCurrentUnit",
+	"rdfs:comment": "The unit of electric current, expressed in a unit prefix meaning "one trillionth".",
+	"rdfs:label": "picoampere",
+	"iot:reference": "0112/2///62720#UAA928#001"
+},
+{
+	"@id": "iot:NanoAmpere",
+	"@type": "iot:ElectricCurrentUnit",
+	"rdfs:comment": "The unit of electric current, expressed in a unit prefix meaning "one billionth".",
+	"rdfs:label": "nanoampere",
+	"iot:reference": "0112/2///62720#UAA901#001"
+},
+{
+	"@id": "iot:MicroAmpere",
+	"@type": "iot:ElectricCurrentUnit",
+	"rdfs:comment": "The unit of electric current, expressed in a unit prefix meaning "one millionth".",
+	"rdfs:label": "microampere",
+	"iot:reference": "0112/2///62720#UAA057#001"
+},
+{
+	"@id": "iot:MilliAmpere",
+	"@type": "iot:ElectricCurrentUnit",
+	"rdfs:comment": "The unit of electric current, expressed in a unit prefix meaning "one thousandth".",
+	"rdfs:label": "milliampere",
+	"iot:reference": "0112/2///62720#UAA775#001"
+},
+{
+	"@id": "iot:KiloAmpere",
+	"@type": "iot:ElectricCurrentUnit",
+	"rdfs:comment": "The unit of electric current, expressed in a unit prefix meaning "one thousand".",
+	"rdfs:label": "kiloampere",
+	"iot:reference": "0112/2///62720#UAA557#001"
+},
+{
+	"@id": "iot:MegaAmpere",
+	"@type": "iot:ElectricCurrentUnit",
+	"rdfs:comment": "The unit of electric current, expressed in a unit prefix meaning "one million".",
+	"rdfs:label": "megaampere",
+	"iot:reference": "0112/2///62720#UAA202#001"
+},
+{
+	"@id": "iot:GigaAmpere",
+	"@type": "iot:ElectricCurrentUnit",
+	"rdfs:comment": "The unit of electric current, expressed in a unit prefix meaning "one billion".",
+	"rdfs:label": "gigaampere"
+},
+{
+	"@id": "iot:TeraAmpere",
+	"@type": "iot:ElectricCurrentUnit",
+	"rdfs:comment": "The unit of electric current, expressed in a unit prefix meaning "one trillion".",
+	"rdfs:label": "teraampere",
+	"iot:reference": "0112/2///62720#UAB640#001"
+}

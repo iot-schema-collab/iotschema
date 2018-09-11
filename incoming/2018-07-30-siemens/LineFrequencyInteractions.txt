@@ -1,0 +1,23 @@
+{
+	"@id": "iot:LineFrequency",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The nominal frequency of the oscillations of alternating current (AC) in an electric power grid.",
+	"rdfs:label": "LineFrequency",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:LineFrequencyData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:LineFrequencyData",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "Line frequency  data.",
+	"rdfs:label": "LineFrequencyData",
+	"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+	"schema:propertyType": { "@id": "schema:Float" },
+	"schema:unitCode": { "@id": "iot:LineFrequencyUnit" },
+	"schema:minValue": "schema:Float",
+	"schema:maxValue": "schema:Float"
+}

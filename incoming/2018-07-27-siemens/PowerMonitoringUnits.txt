@@ -1,0 +1,111 @@
+{
+	"@id": "iot:ApparentPowerUnit",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "An enumeration of apparent power units.",
+	"rdfs:label": "ApparentPowerUnit",
+	"rdfs:subClassOf": {
+	"@id": "schema:Enumeration"
+	}
+},
+{
+	"@id": "iot:VoltAmpere",
+	"@type": "iot:ApparentPowerUnit",
+	"rdfs:comment": "The unit of the apparent power.",
+	"rdfs:label": "volt-ampere",
+	"iot:reference": "0112/2///62720#UAA298#001"
+},
+{
+	"@id": "iot:KiloVoltAmpere",
+	"@type": "iot:ApparentPowerUnit",
+	"rdfs:comment": "The unit of the apparent power, expressed in kilo (one thousand) as a decimal unit prefix.",
+	"rdfs:label": "kilovolt-ampere",
+	"iot:reference": "0112/2///62720#UAA581#001"
+},
+{
+	"@id": "iot:MegaVoltAmpere",
+	"@type": "iot:ApparentPowerUnit",
+	"rdfs:comment": "The unit of the apparent power, expressed in mega (one million) as a decimal unit prefix.",
+	"rdfs:label": "megavolt-ampere",
+	"iot:reference": "0112/2///62720#UAA222#001"
+},
+{
+	"@id": "iot:GigaVoltAmpere",
+	"@type": "iot:ApparentPowerUnit",
+	"rdfs:comment": "The unit of the apparent power, expressed in giga (one billion) as a decimal unit prefix.",
+	"rdfs:label": "gigavolt-ampere", 
+	"iot:reference": "0112/2///62720#UAB534#001"
+},
+{
+	"@id": "iot:ActivePowerUnit",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "An enumeration of active power units.",
+	"rdfs:label": "ActivePowerUnit",
+	"rdfs:subClassOf": {
+	"@id": "schema:Enumeration"
+	}
+},
+{
+	"@id": "iot:Watt",
+	"@type": "iot:ActivePowerUnit",
+	"rdfs:comment": "The unit of the active power.",
+	"rdfs:label": "watt",
+	"dct:source": "http://www.qudt.org/qudt/owl/1.0.0/unit/Instances.html#Watt",
+	"iot:reference": "0112/2///62720#UAA306#001"
+},
+{
+	"@id": "iot:KiloWatt",
+	"@type": "iot:ActivePowerUnit",
+	"rdfs:comment": "The unit of the active power, expressed in kilo (one thousand) as a decimal unit prefix.",
+	"rdfs:label": "kilowatt",
+	"iot:reference": "0112/2///62720#UAA583#001"
+},
+{
+	"@id": "iot:MegaWatt",
+	"@type": "iot:ActivePowerUnit",
+	"rdfs:comment": "The unit of the active power, expressed in mega (one million) as a decimal unit prefix.",
+	"rdfs:label": "megawatt",
+	"iot:reference": "0112/2///62720#UAA224#001"
+},
+{
+	"@id": "iot:GigaWatt",
+	"@type": "iot:ActivePowerUnit",
+	"rdfs:comment": "The unit of the active power, expressed in giga (one billion) as a decimal unit prefix.",
+	"rdfs:label": "gigawatt",
+	"iot:reference": "0112/2///62720#UAA154#001"
+},
+{
+	"@id": "iot:ReactivePowerUnit",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "An enumeration of reactive power units.",
+	"rdfs:label": "ReactivePowerUnit",
+	"rdfs:subClassOf": {
+	"@id": "schema:Enumeration"
+	}
+},
+{
+	"@id": "iot:VoltAmpereReactive",
+	"@type": "iot:ReactivePowerUnit",
+	"rdfs:comment": "The unit of reactive power.",
+	"rdfs:label": "volt-ampere-reactive",
+	"iot:reference": "0112/2///62720#UAB023#001"
+},
+{
+	"@id": "iot:KiloVoltAmpereReactive",
+	"@type": "iot:ReactivePowerUnit",
+	"rdfs:comment": "The unit of reactive power, expressed in kilo (one thousand) as a decimal unit prefix.",
+	"rdfs:label": "kilovolt-ampere-reactive",
+	"iot:reference": "0112/2///62720#UAB195#001"
+},
+{
+	"@id": "iot:MegaVoltAmpereReactive",
+	"@type": "iot:ReactivePowerUnit",
+	"rdfs:comment": "The unit of reactive power, expressed in mega (one million) as a decimal unit prefix.",
+	"rdfs:label": "megavolt-ampere-reactive",
+	"iot:reference": "0112/2///62720#UAB199#001"
+},
+{
+	"@id": "iot:GigaVoltAmpereReactive",
+	"@type": "iot:ReactivePowerUnit",
+	"rdfs:comment": "The unit of reactive power, expressed in giga (one billion) as a decimal unit prefix.",
+	"rdfs:label": "gigavolt-ampere-reactive"
+}

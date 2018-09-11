@@ -1,0 +1,21 @@
+{
+	"@id": "iot:ElectricCurrentMonitoring",
+	"@type": "rdfs:Class",
+	"rdfs:subClassOf": { "@id": "iot:Capability" },
+	"rdfs:comment": "A capability for current monitoring in an electric circuit.",
+	"rdfs:label": "ElectricCurrentMonitoring",
+	"iot:domain": [
+			{"@id": "iot:Energy"},
+			{"@id": "iot:Building"},
+			{"@id": "iot:Industry"},
+			{"@id": "iot:Home"}
+			],
+	"iot:providesInteractionPattern": [
+	{
+		"@id": "iot:ElectricCurrentA",
+		"@id": "iot:ElectricCurrentB",
+		"@id": "iot:ElectricCurrentC",
+		"@id": "iot:AverageElectricCurrent",
+		"@id": "iot:LineFrequency"
+	}]
+}
