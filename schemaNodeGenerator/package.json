@@ -1,0 +1,13 @@
+{
+  "name": "Node_Generator",
+  "description": "",
+  "version": "0.0.1",
+  "dependencies": {
+    "child-process-promise": "2.2.1",
+    "handlebars": "4.0.11",
+    "rdf-translator": "2.0.0",
+    "yargs": "12.0.2",
+    "fs-extra": "^7.0.0",
+    "rimraf": "^2.6.2"
+  }
+}
