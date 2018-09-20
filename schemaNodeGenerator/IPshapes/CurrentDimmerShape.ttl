@@ -1,0 +1,43 @@
+@prefix dash: <http://datashapes.org/dash#> . @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . @prefix schema: <http://schema.org/> . @prefix sh: <http://www.w3.org/ns/shacl#> . @prefix xsd: <http://www.w3.org/2001/XMLSchema#> . @prefix iot: <http://iotschema.org/> . @prefix iotsh: <http://iotschema.org/shapes/> . 
+
+ iotsh:DimmerDataShape a sh:NodeShape ;
+ sh:targetClass iot:DimmerData ;
+ sh:and (
+[ sh:property [
+ sh:path schema:propertyType ;
+ sh:minCount 1 ;
+ sh:maxCount 1 ;
+ sh:datatype xsd:integer ; ]; ]
+[  sh:property [
+ sh:path schema:minValue ;
+ sh:minCount 1 ;
+ sh:maxCount 1 ;
+ sh:datatype xsd:integer ; ]; ]
+[  sh:property [
+ sh:path schema:maxValue ;
+ sh:minCount 1 ;
+ sh:maxCount 1 ;
+ sh:datatype xsd:integer ; ]; ] ).
+ 
+ iotsh:CurrentDimmerShape a sh:NodeShape ;
+ sh:targetClass iot:CurrentDimmer ;
+ sh:and (
+[ sh:property [
+ sh:path iot:providesOutputData ;
+ sh:minCount 1 ;
+ sh:maxCount 1 ;
+ sh:node iot:DimmerData ; ]; ]
+[sh:property [
+ sh:path iot:writable;
+ sh:minCount 1 ;
+ sh:maxCount 1 ;
+ sh:hasValue false ; ]; ] 
+[ sh:not [ 
+sh:property [ 
+sh:path iot:acceptsInputData ; 
+sh:minCount 1 ; ]]; ]
+[sh:property [
+ sh:path iot:observable;
+ sh:minCount 1 ;
+ sh:maxCount 1 ;
+ sh:hasValue xsd:boolean ; ]; ] ).
