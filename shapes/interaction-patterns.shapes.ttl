@@ -1,0 +1,203 @@
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix iot: <http://iotschema.org/> .
+@prefix iotsh: <http://iotschema.org/shapes/> .
+
+iotsh:TemperatureShape a sh:NodeShape ;
+  sh:targetClass iot:Temperature ;
+  sh:and ([
+  sh:property [
+    sh:path iot:providesOutputData ;
+    sh:minCount 1;
+    sh:maxCount 1;
+	sh:node iot:TemperatureData ;
+  ];
+ ]
+ [ sh:not [
+   sh:property [
+   sh:path iot:acceptsInputData ;
+   sh:minCount 1 ;
+   ]];
+ ]
+[
+  sh:property [
+    sh:path iot:writable ;
+	sh:minCount 1;
+    sh:maxCount 1;
+   sh:hasValue false ;
+  ];
+]
+[
+  sh:property [
+    sh:path iot:observable ;
+	sh:minCount 1;
+    sh:maxCount 1;
+   sh:datatype xsd:boolean ;
+  ];
+]).
+
+iotsh:TargetTemperatureShape a sh:NodeShape ;
+  sh:targetClass iot:TargetTemperature ;
+  sh:and (
+[
+  sh:property [
+    sh:path iot:acceptsInputData ;
+    sh:minCount 1;
+    sh:maxCount 1;
+	sh:node iot:TemperatureData ;
+  ];
+ ]
+[
+  sh:property [
+    sh:path iot:providesOutputData ;
+    sh:minCount 1;
+    sh:maxCount 1;
+	sh:node iot:TemperatureData ;
+  ];
+ ]
+[
+  sh:property [
+    sh:path iot:writable ;
+	sh:minCount 1;
+    sh:maxCount 1;
+   sh:hasValue true ;
+
+
+  ];
+]
+[
+  sh:property [
+    sh:path iot:observable ;
+	sh:minCount 1;
+    sh:maxCount 1;
+   sh:datatype xsd:boolean ;
+  ];
+]).
+iotsh:TemperatureDataShape a sh:NodeShape ;
+  sh:targetClass iot:TemperatureData ;
+  sh:and ([
+  sh:property [
+    sh:path schema:propertyType ;
+    sh:minCount 1;
+    sh:maxCount 1;
+	sh:datatype xsd:float ;
+  ] ;
+ ]
+ [
+  sh:property [
+    sh:path schema:minValue ;
+	sh:minCount 1;
+    sh:maxCount 1;
+	sh:datatype xsd:float;
+  ];
+ ] 
+ [
+  sh:property [
+    sh:path schema:maxValue ;
+	sh:minCount 1;
+    sh:maxCount 1;
+	sh:datatype xsd:float;
+  ];
+ ]
+ [
+  sh:property [
+    sh:path schema:unitCode ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:in ( iot:Celsius iot:Kelvin iot:Fahrenheit);
+  ];
+ ] ).
+# Shape to validate OperationStatus interaction property
+iotsh:OperationStatusShape a sh:NodeShape ;
+  sh:targetClass iot:OperationStatus ;
+  sh:and ([
+  sh:property [
+    sh:path iot:providesOutputData ;
+    sh:minCount 1;
+    sh:maxCount 1;
+	sh:node iot:StatusData ;
+  ];
+ ]
+ [ sh:not [
+   sh:property [
+   sh:path iot:acceptsInputData ;
+   sh:minCount 1 ;
+   ]];
+ ]
+[
+  sh:property [
+    sh:path iot:writable ;
+	sh:minCount 1;
+    sh:maxCount 1;
+   sh:hasValue false ;
+  ];
+]
+[
+  sh:property [
+    sh:path iot:observable ;
+	sh:minCount 1;
+    sh:maxCount 1;
+   sh:datatype xsd:boolean ;
+  ];
+]).
+#shape to validate StatusData
+iotsh:StatusDataShape a sh:NodeShape ;
+  sh:targetClass iot:StatusData ;
+  sh:property [
+    sh:path schema:propertyType ;
+    sh:minCount 1;
+    sh:maxCount 1;
+	sh:datatype xsd:boolean ;
+  ] .
+#Shape to validate RunMode interaction property
+iotsh:RunModeShape a sh:NodeShape ;
+  sh:targetClass iot:RunMode ;
+  sh:and (
+[
+  sh:property [
+    sh:path iot:acceptsInputData ;
+    sh:minCount 1;
+    sh:maxCount 1;
+	sh:node iot:RunModeData ;
+  ];
+ ]
+[
+  sh:property [
+    sh:path iot:providesOutputData ;
+    sh:minCount 1;
+    sh:maxCount 1;
+	sh:node iot:RunModeData ;
+  ];
+ ]
+[
+  sh:property [
+    sh:path iot:writable ;
+	sh:minCount 1;
+    sh:maxCount 1;
+   sh:hasValue true ;
+
+
+  ];
+]
+[
+  sh:property [
+    sh:path iot:observable ;
+	sh:minCount 1;
+    sh:maxCount 1;
+   sh:datatype xsd:boolean ;
+  ];
+]). 
+
+#shape to validate RunModeData
+iotsh:RunModeDataShape a sh:NodeShape ;
+  sh:targetClass iot:RunModeData ;
+  sh:property [
+    sh:path schema:propertyType ;
+    sh:minCount 1;
+    sh:maxCount 1;
+	sh:in ( "iot:CoolMode" "iot:FanMode" "iot:DryMode" "iot:EnergyOrPowerSaverMode" "iot:SleepMode" ) ;
+  ] .
