@@ -21,28 +21,4 @@ sh:minCount 1 ; ]]; ]
  sh:path iot:observable;
  sh:minCount 1 ;
  sh:maxCount 1 ;
- sh:hasValue xsd:boolean ; ]; ] ).
- 
- iotsh:FlowRateDataShape a sh:NodeShape ;
- sh:targetClass iot:FlowRateData ;
- sh:and (
-[ sh:property [
- sh:path schema:propertyType ;
- sh:minCount 1 ;
- sh:maxCount 1 ;
- sh:datatype xsd:float ; ]; ]
-[  sh:property [
- sh:path schema:minValue ;
- sh:minCount 1 ;
- sh:maxCount 1 ;
- sh:datatype xsd:float ; ]; ]
-[  sh:property [
- sh:path schema:maxValue ;
- sh:minCount 1 ;
- sh:maxCount 1 ;
- sh:datatype xsd:float ; ]; ]
-[ sh:property [
- sh:path schema:unitCode ;
- sh:minCount 1 ;
- sh:maxCount 1 ;
- sh:in ( iot:GallonsPerMinute iot:LitrePerMinute ) ; ]; ] ). 
+ sh:datatype xsd:boolean ; ]; ] ).

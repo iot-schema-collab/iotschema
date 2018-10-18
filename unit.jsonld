@@ -96,7 +96,8 @@
     {
 		"@id": "iot:Percent",
 		"@type": "iot:LevelUnit",
-		"rdfs:comment": "Unit of measurement for level",
+		"@type": "iot:GasInAirConcentrationUnit",
+		"rdfs:comment": "Unit of measurement for level or concentration.",
 		"rdfs:label": "Percent",
 	    "iot:reference" : "0112/2///62720#UAA000#001",
 	    "dct:source": "http://qudt.org/vocab/unit#Percent"

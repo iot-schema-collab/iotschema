@@ -14,6 +14,20 @@
  sh:maxCount 1 ;
  sh:in ( iot:Hour iot:Minute iot:Second ) ; ]; ] ).
 
+ iotsh:TimeDataShape a sh:NodeShape ;
+ sh:targetClass iot:TimeData ;
+ sh:and (
+[ sh:property [
+ sh:path schema:propertyType ;
+ sh:minCount 1 ;
+ sh:maxCount 1 ;
+ sh:datatype xsd:integer ; ]; ]
+[ sh:property [
+ sh:path schema:unitCode ;
+ sh:minCount 1 ;
+ sh:maxCount 1 ;
+ sh:in ( iot:Hour iot:Minute iot:Second ) ; ]; ] ).
+
  iotsh:TransitionTimeShape a sh:NodeShape ;
  sh:targetClass iot:TransitionTime ;
  sh:and (
@@ -36,4 +50,4 @@
  sh:path iot:observable;
  sh:minCount 1 ;
  sh:maxCount 1 ;
- sh:hasValue xsd:boolean ; ]; ] ).
+ sh:datatype xsd:boolean ; ]; ] ).

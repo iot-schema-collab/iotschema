@@ -83,68 +83,45 @@
 		}
     },
     {
-		"@id": "iot:BinarySwitch",
-		"@type": "rdfs:Class",
-		"iot:acceptsInputData": {
-			"@id": "iot:Toggle"
-		},
-		"rdfs:comment": "Binary Switch status property",
-		"rdfs:label": "BinarySwitch",
-		"rdfs:subClassOf": {
-			"@id": "iot:Property"
-      },
-		"iot:writable" : "schema:True",
-		"iot:observable" : "schema:Boolean"
-    },
-    {
-		"@id": "iot:Toggle",
-		"@type": "rdfs:Class",
-		"rdfs:comment": "Toggle",
-		"rdfs:label": "Toggle",
-		"rdfs:subClassOf": {
-			"@id": "schema:PropertyValue"
-		},
-		"schema:propertyType": {
-			"@id": "schema:Boolean"
-		}
-    },
-	{
-		"@id": "iot:TurnOn",
-		"@type": "rdfs:Class",
-		"rdfs:comment": "Turn on a switch",
-		"rdfs:label": "TurnOn",
-		"rdfs:subClassOf": {
-			"@id": "iot:Action"
-		},
-		"iot:acceptsInputData": {
-			"@id": "schema:Boolean"
-		}
-	},
-	{
-		"@id": "iot:TurnOff",
-		"@type": "rdfs:Class",
-		"rdfs:comment": "Turn off a switch",
-		"rdfs:label": "TurnOff",
-		"rdfs:subClassOf": {
-			"@id": "iot:Action"
-		},
-		"iot:acceptsInputData": {
-			"@id": "schema:Boolean"
-		}
-	},
-	{
 		"@id": "iot:SwitchStatus",
 		"@type": "rdfs:Class",
 		"iot:providesOutputData": {
 			"@id": "schema:Boolean"
 		},
-		"rdfs:comment": "Status of a switch",
+		"rdfs:comment": "Binary switch status (on/off property).",
 		"rdfs:label": "SwitchStatus",
 		"rdfs:subClassOf": {
 			"@id": "iot:Property"
 		},
 		"iot:writable" : "schema:False",
 		"iot:observable" : "schema:Boolean"
+    },
+	{
+		"@id": "iot:TurnOn",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Turn on a switch.",
+		"rdfs:label": "TurnOn",
+		"rdfs:subClassOf": {
+			"@id": "iot:Action"
+		}
+	},
+	{
+		"@id": "iot:TurnOff",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Turn off a switch.",
+		"rdfs:label": "TurnOff",
+		"rdfs:subClassOf": {
+			"@id": "iot:Action"
+		}
+	},
+	{
+		"@id": "iot:ToggleAction",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Toggles a boolean state on and off.",
+		"rdfs:label": "ToggleAction",
+		"rdfs:subClassOf": {
+			"@id": "iot:Action"
+		}
 	},
 	{
 		"@id": "iot:SetDimmer",
@@ -176,9 +153,6 @@
 		"@id": "iot:RampTime",
 		"@type": "rdfs:Class",
 		"iot:acceptsInputData": {
-			"@id": "iot:RampTimeData"
-		},
-		"iot:providesOutputData": {
 			"@id": "iot:RampTimeData"
 		},
 		"rdfs:comment": "Actual speed of changing between 2 dimming values",

@@ -1,0 +1,161 @@
+<script type="text/javascript">
+    RED.nodes.registerType('{{node_name}}',{
+        category: 'iotschemaorg',
+        color: '#00A4B4',
+        defaults: {
+        {{#IO}}{{#configurations}}
+            {{#is_equal this.elementType "checkbox"}}{{#options}}{{#remove_namespace this}}{{/remove_namespace}}:{value:false},{{/options}}{{/is_equal}}
+            {{name}}: {value:""},
+        {{/configurations}}{{/IO}}
+        {{#is_not_equal observable undefined}}
+        observable: {value:""},
+        {{/is_not_equal}}
+    name: {value:""},
+    iptype: {value:"{{raw_name}}"},
+    capability: {value:""},
+    foitype: {value:""},
+    foi: {value:""},
+    operation:{value:""}
+    },
+    inputs:{{numberOfInputs}},
+    outputs:{{numberOfOutputs}},
+    icon: "file.png",
+            label: function() {
+        return this.name||"{{node_name}}";
+    }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="{{node_name}}">
+	 <div class="form-row">
+	     <label for="node-input-name" style="width:40%"><i class="icon-tag"></i> Name:</label>
+         <input type="text" id="node-input-name" placeholder="Name" style="width:50%"/>
+     </div>
+     <div class="form-row">
+	     <label for="node-input-iptype"  style="width:40%"><i class="icon-tag"></i> Interaction Pattern Type:</label>
+         <input type="text" id="node-input-iptype" style="width:50%" readonly/>
+     </div>
+      <div class="form-row">
+	     <label for="node-input-capability"  style="width:40%"><i class="icon-tag"></i> Capability:</label>
+         <input type="text" id="node-input-capability" style="width:50%"/>
+     </div>
+     <div class="form-row">
+	     <label for="node-input-foitype"  style="width:40%"><i class="icon-tag"></i> Feature Of Interest Type:</label>
+         <input type="text" id="node-input-foitype" style="width:50%" placeholder=""/>
+     </div>
+     <div class="form-row">
+	     <label for="node-input-foi"  style="width:40%"><i class="icon-tag"></i> Feature Of Interest:</label>
+         <input type="text" id="node-input-foi" style="width:50%" placeholder=""/>
+     </div>
+
+     {{#IO}}{{#uniqueDataType}}{{#configurations}}
+    <div class="form-row">
+    {{#is_equal name "propertyType"}}
+        <label for="node-input-{{name}}"  style="width:40%"><i class="icon-tag"></i> {{#capitalize_first_letter name}}{{/capitalize_first_letter}}:</label>
+        <input type="text" id="node-input-{{name}}" style="width:50%" placeholder="{{type}}" disabled><br/>
+    {{/is_equal}}
+    {{#is_not_equal name "propertyType"}}
+		 <label for="node-input-{{name}}"  style="width:40%"><i class="icon-tag"></i> {{#capitalize_first_letter name}}{{/capitalize_first_letter}}:</label>
+	     {{#is_equal this.elementType "input"}}
+         <input type="text" id="node-input-{{name}}" style="width:50%" placeholder="{{type}}"><br/>
+         {{/is_equal}}
+        {{#is_equal this.elementType "select"}}
+         <select id="node-input-{{name}}" style="width:30%">
+               {{#options}}
+             <option value="{{this}}">{{#remove_namespace this}}{{/remove_namespace}}</option>
+               {{/options}}
+         </select><br/>
+            {{/is_equal}}
+        {{#is_equal this.elementType "checkbox"}}
+            {{#options}}
+          <div class="form-row">
+          <input type="checkbox" id="node-input-{{#remove_namespace this}}{{/remove_namespace}}" style="display: inline-block; width: 5%; vertical-align: top; padding-left: 50px;"/>
+          <label for="node-input-{{#remove_namespace this}}{{/remove_namespace}}"  style="width: auto">{{#remove_namespace this}}{{/remove_namespace}}</label>
+          </div>
+          {{/options}}
+          <br/>
+             {{/is_equal}}
+    {{/is_not_equal}}
+    </div>
+{{/configurations}}{{/uniqueDataType}}{{/IO}}
+     <div class="form-row">
+    {{#is_not_equal observable undefined}}
+         <label for="node-input-observable"  style="width:40%"><i class="icon-tag"></i> Observable:</label>
+         <select id="node-input-observable" style="width:30%">
+            <option value="true">True</option>
+            <option value="false">False</option>
+         </select>
+         {{/is_not_equal}}
+     </div>
+     <hr/>
+     <b>Optional</b><br/>
+     <div class="form-row">
+	     <label for="node-input-operation"  style="width:40%"><i class="icon-tag"></i> Operation:</label>
+         <select id="node-input-operation" style="width:30%">
+            <option value="create">Create</option>
+            <option value="retrieve">Retrieve</option>
+	        <option value="update">Update</option>
+            <option value="delete">Delete</option>
+            <option value="observe">Observe</option>
+         </select>
+     </div>
+</script>
+
+<script type="text/x-red" data-help-name="{{node_name}}">
+	<p>{{original_name}}
+	    is a
+            {{node_type}}.
+                {{#greater_than numberOfOriginalInputs 0}}
+                It accepts input
+                    {{#greater_than numberOfOriginalInputs 1}}
+                    s
+                    {{/greater_than}}
+                    which
+                    {{#less_than numberOfOriginalInputs 2}}
+                    is
+                    {{/less_than}}
+                    {{#greater_than numberOfOriginalInputs 2}}
+                    are
+                    {{/greater_than}}
+                    {{#IO}}{{#is_equal type "input"}}<code>{{#remove_namespace name}}{{/remove_namespace}}</code> {{/is_equal}}{{/IO}}.
+                {{/greater_than}}
+
+                {{#greater_than numberOfOriginalOutputs 0}}
+                It provides output
+                    {{#greater_than numberOfOriginalOutputs 1}}
+                    s
+                    {{/greater_than}}
+                    which
+                    {{#less_than numberOfOriginalOutputs 2}}
+                    is
+                    {{/less_than}}
+                    {{#greater_than numberOfOriginalOutputs 2}}
+                    are
+                    {{/greater_than}}
+                    {{#IO}}{{#is_equal type "output"}}<code>{{#remove_namespace name}}{{/remove_namespace}}</code> {{/is_equal}}{{/IO}}.</p>
+                {{/greater_than}}
+
+                <p><br/>
+                {{#IO}}
+                    {{#uniqueDataType}}{{#is_not_primary_type name}}
+                    <code>{{#remove_namespace name}}{{/remove_namespace}}</code> can be configured with
+                        {{#configurations}}
+                        <code>{{#name}}{{this}}{{/name}}</code>
+                        {{/configurations}}
+                      <br/><br/>
+                     <h4><b>Configurations</b></h4>
+                        {{#configurations}}
+                        <dl class="message-properties">
+                        <dt>{{#name}}{{#capitalize_first_letter this}}{{/capitalize_first_letter}}{{/name}} <span class="property-type">{{#is_equal element_type input}}
+                            {{#type}}{{#capitalize_first_letter this}}{{/capitalize_first_letter}}{{/type}}
+                        {{/is_equal}}
+
+                        {{#is_equal element_type select}}
+                             <ul>{{#options}}<li>{{#remove_namespace this}}{{/remove_namespace}}</li>{{/options}}</ul>
+                        {{/is_equal}}</span></dt>
+                        </dl>
+                        {{/configurations}}
+                    </dl>
+                    {{/is_not_primary_type}}{{/uniqueDataType}}
+                {{/IO}}
+</script>

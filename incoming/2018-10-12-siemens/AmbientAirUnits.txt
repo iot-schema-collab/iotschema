@@ -1,0 +1,15 @@
+{
+	"@id": "iot:GasInAirConcentrationUnit",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "An enumeration of units for concentration of gas in the air, e.g., concentration of carbon dioxide (CO2) in ambient air.",
+	"rdfs:label": "GasInAirConcentrationUnit",
+	"rdfs:subClassOf": {
+	"@id": "schema:Enumeration"
+	}
+},
+{
+	"@id": "iot:PartsPerMillion",
+	"@type": "iot:GasInAirConcentrationUnit",
+	"rdfs:comment": "The unit of concentration of gas in the air, e.g., concentration of carbon dioxide (CO2) in ambient air.",
+	"rdfs:label": "parts-per-million"
+}
