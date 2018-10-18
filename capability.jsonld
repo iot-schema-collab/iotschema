@@ -15,15 +15,12 @@
 		"rdfs:label": "AirConditioner",
 		"iot:domain": {"@id": "iot:Home"},
 		"iot:providesInteractionPattern": [
-		{
-			"@id": "iot:Temperature",
-			"@id": "iot:TargetTemperature",
-			"@id": "iot:SwitchStatus",
-			"@id": "iot:TurnOn",
-			"@id": "iot:TurnOff",
-			"@id": "iot:RunMode",
-			"@id": "iot:CountDown",
-			"@id": "iot:WindStrength"
+		{	"@id": "iot:Temperature" },
+		{	"@id": "iot:TargetTemperature" },
+		{	"@id": "iot:BinarySwitch" },
+		{	"@id": "iot:RunMode" },
+		{	"@id": "iot:CountDown" },
+		{	"@id": "iot:WindStrength"
 		}]
 	},
 	{
@@ -37,9 +34,8 @@
 			{"@id": "iot:Building"}
 			],
 		"iot:providesInteractionPattern": [
-		{
-			"@id": "iot:Humidity",
-			"@id": "iot:TargetHumidity"
+		{	"@id": "iot:Humidity" },
+		{	"@id": "iot:TargetHumidity"
 		}]
 	},
 	{
@@ -58,6 +54,27 @@
 		}]
 	},
 	{
+		"@id": "iot:LightControl",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": { "@id": "iot:Capability" },
+		"rdfs:comment": "A capability for controlling a light source, such as an RGB or other light.",
+		"rdfs:label": "LightControl",
+		"iot:domain": [
+			{"@id": "iot:Home"},
+			{"@id": "iot:Building"}
+			],
+		"iot:providesInteractionPattern": [
+		{	"@id": "iot:BinarySwitch" },
+		{	"@id": "iot:SwitchStatus" },
+		{	"@id": "iot:TurnOn" },
+		{	"@id": "iot:TurnOff" },
+		{	"@id": "iot:CurrentColour" },
+		{	"@id": "iot:SetColour" },
+		{	"@id": "iot:CurrentDimmer" },
+		{	"@id": "iot:SetDimmer" },
+		{	"@id": "iot:RampTime" }]
+	},
+	{
 		"@id": "iot:MotionControl",
 		"@type": "rdfs:Class",
 		"rdfs:subClassOf": { "@id": "iot:Capability" },
@@ -68,9 +85,8 @@
 			{"@id": "iot:Building"}
 			],
 		"iot:providesInteractionPattern": [
-		{
-			"@id": "iot:MotionDetected",
-			"@id": "iot:MotionType"
+		{	"@id": "iot:MotionDetected" },
+		{	"@id": "iot:MotionType"
 		}
 		]
 	},
@@ -94,10 +110,8 @@
 		"rdfs:label": "Thermostat",
 		"iot:domain": {"@id": "iot:Common"},
 		"iot:providesInteractionPattern": [
-			{
-			"@id": "iot:Temperature",
-			"@id": "iot:TargetTemperature"
-			}
+			{	"@id": "iot:Temperature" },
+		{   	"@id": "iot:TargetTemperature" }
 		]
 	},
 	{
@@ -116,13 +130,12 @@
 		"rdfs:label": "FloatSwitch",
 		"iot:domain": {"@id": "iot:Industry"},
 		"iot:providesInteractionPattern": [
-		{
-			"@id": "iot:OverflowStatus",
-			"@id": "iot:ExpectedPressure",
-			"@id": "iot:ExpectedDensity",
-			"@id": "iot:ExpectedAmbientTemperature",
-			"@id": "iot:ExpectedFloatImmersionDepth"
-		}]
+		{	"@id": "iot:OverflowStatus" },
+		{	"@id": "iot:ExpectedPressure" },
+		{	"@id": "iot:ExpectedDensity" },
+		{	"@id": "iot:ExpectedAmbientTemperature" },
+		{	"@id": "iot:ExpectedFloatImmersionDepth" }
+		]
 	},
 	{
 		"@id": "iot:Valve",
@@ -132,14 +145,13 @@
 		"rdfs:label": "Valve",
 		"iot:domain": {"@id": "iot:Industry"},
 		"iot:providesInteractionPattern": [
-		{
-			"@id": "iot:TurnOn",
-			"@id": "iot:TurnOff",
-			"@id": "iot:OperationStatus",
-			"@id": "iot:ExpectedFlowRate",
-			"@id": "iot:ExpectedUpstreamPressure",
-			"@id": "iot:ExpectedPressure"
-		}]
+		{	"@id": "iot:TurnOn" },
+		{	"@id": "iot:TurnOff" },
+		{	"@id": "iot:OperationStatus" },
+		{	"@id": "iot:ExpectedFlowRate" },
+		{	"@id": "iot:ExpectedUpstreamPressure" },
+		{	"@id": "iot:ExpectedPressure" }
+		]
 	},
 	{
 		"@id": "iot:Pump",
@@ -149,14 +161,13 @@
 		"rdfs:label": "Pump",
 		"iot:domain": {"@id": "iot:Industry"},
 		"iot:providesInteractionPattern": [
-		{
-			"@id": "iot:TurnOn",
-			"@id": "iot:TurnOff",
-			"@id": "iot:OperationStatus",
-			"@id": "iot:ExpectedFlowRate",
-			"@id": "iot:ExpectedPressure",
-			"@id": "iot:ExpectedAmbientTemperature"
-		}]
+		{	"@id": "iot:TurnOn" },
+		{	"@id": "iot:TurnOff" },
+		{	"@id": "iot:OperationStatus" },
+		{	"@id": "iot:ExpectedFlowRate" },
+		{	"@id": "iot:ExpectedPressure" },
+		{	"@id": "iot:ExpectedAmbientTemperature" }
+		]
 	},
 	{
 		"@id": "iot:UltrasonicSensing",
@@ -166,10 +177,9 @@
 		"rdfs:label": "UltrasonicSensing",
 		"iot:domain": {"@id": "iot:Industry"},
 		"iot:providesInteractionPattern": [
-		{
-			"@id": "iot:CurrentLevel",
-			"@id": "iot:ExpectedAmbientTemperature"
-		}]
+		{	"@id": "iot:CurrentLevel" },
+		{	"@id": "iot:ExpectedAmbientTemperature" }
+		]
 	},
 	{
 		"@id": "iot:ProximitySensing",
@@ -179,79 +189,26 @@
 		"rdfs:label": "ProximitySensing",
 		"iot:domain": {"@id": "iot:Industry"},
 		"iot:providesInteractionPattern": [
-		{
-			"@id": "iot:OperationStatus",
-			"@id": "iot:ExpectedAmbientTemperature",
-			"@id": "iot:ExpectedPressure"
-		}]
-	},
-	{
-		"@id": "iot:SoundPressure",
-		"@type": "rdfs:Class",
-		"rdfs:subClassOf": { "@id": "iot:Capability" },
-		"rdfs:comment": "Sensed Sound Pressure Level, e.g. using a microphone",
-		"rdfs:label": "SoundPressureCapability",
-		"iot:domain": [
-			{"@id": "iot:Home"},
-			{"@id": "iot:Building"}
-			],
-		"iot:providesInteractionPattern": [
-		  {
-			"@id": "iot:SoundPressureLevel"
-		  }
+		{	"@id": "iot:OperationStatus" },
+		{	"@id": "iot:ExpectedAmbientTemperature" },
+		{	"@id": "iot:ExpectedPressure" }
 		]
 	},
-	{
-		"@id": "iot:BinarySwitchControl",
-		"@type": "rdfs:Class",
-		"rdfs:subClassOf": { "@id": "iot:Capability" },
-		"rdfs:comment": "A general On/Off control capability",
-		"rdfs:label": "BinarySwitchControl",
-		"iot:domain": [
-			{"@id": "iot:Home"},
-			{"@id": "iot:Building"},
-			{"@id": "iot:Industry"}
-			],
-		"iot:providesInteractionPattern": [
-		{
-			"@id": "iot:SwitchStatus",
-			"@id": "iot:TurnOn",
-			"@id": "iot:TurnOff",
-			"@id": "iot:ToggleAction"
-		}]
-	},
-	{
-		"@id": "iot:DimmerControl",
-		"@type": "rdfs:Class",
-		"rdfs:subClassOf": { "@id": "iot:Capability" },
-		"rdfs:comment": "A light dimmer control capability.",
-		"rdfs:label": "DimmerControl",
-		"iot:domain": [
-			{"@id": "iot:Home"},
-			{"@id": "iot:Building"}
-			],
-		"iot:providesInteractionPattern": [
-		{
-			"@id": "iot:CurrentDimmer",
-			"@id": "iot:SetDimmerAction",
-			"@id": "iot:RampTime"
-		}]
-	},
-	{
-		"@id": "iot:ColourControl",
-		"@type": "rdfs:Class",
-		"rdfs:subClassOf": { "@id": "iot:Capability" },
-		"rdfs:comment": "The capability to set a color, e.g. for a colored light.",
-		"rdfs:label": "ColourControl",
-		"iot:domain": [
-			{"@id": "iot:Home"},
-			{"@id": "iot:Building"}
-			],
-		"iot:providesInteractionPattern": [
-		{
-			"@id": "iot:CurrentColour",
-			"@id": "iot:SetColour"
-		}]
-	}
+  {
+  	"@id": "iot:SoundPressure",
+  	"@type": "rdfs:Class",
+  	"rdfs:subClassOf": { "@id": "iot:Capability" },
+  	"rdfs:comment": "Sensed Sound Pressure Level, e.g. using a microphone",
+  	"rdfs:label": "SoundPressureCapability",
+  	"iot:domain": [
+  		{"@id": "iot:Home"},
+  		{"@id": "iot:Building"}
+  		],
+  	"iot:providesInteractionPattern": [
+  	  {
+  		"@id": "iot:SoundPressureLevel"
+  	  }
+    ]
+  }
 	]
 }
