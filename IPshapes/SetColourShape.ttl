@@ -18,44 +18,6 @@
  sh:minCount 1 ;
  sh:maxCount 1 ;
  sh:datatype xsd:integer ; ]; ] ).
- 
- iotsh:GColourDataShape a sh:NodeShape ;
- sh:targetClass iot:GColourData ;
- sh:and (
-[ sh:property [
- sh:path schema:propertyType ;
- sh:minCount 1 ;
- sh:maxCount 1 ;
- sh:datatype xsd:integer ; ]; ]
-[  sh:property [
- sh:path schema:minValue ;
- sh:minCount 1 ;
- sh:maxCount 1 ;
- sh:datatype xsd:integer ; ]; ]
-[  sh:property [
- sh:path schema:maxValue ;
- sh:minCount 1 ;
- sh:maxCount 1 ;
- sh:datatype xsd:integer ; ]; ] ). 
-
- iotsh:BColourDataShape a sh:NodeShape ;
- sh:targetClass iot:BColourData ;
- sh:and (
-[ sh:property [
- sh:path schema:propertyType ;
- sh:minCount 1 ;
- sh:maxCount 1 ;
- sh:datatype xsd:integer ; ]; ]
-[  sh:property [
- sh:path schema:minValue ;
- sh:minCount 1 ;
- sh:maxCount 1 ;
- sh:datatype xsd:integer ; ]; ]
-[  sh:property [
- sh:path schema:maxValue ;
- sh:minCount 1 ;
- sh:maxCount 1 ;
- sh:datatype xsd:integer ; ]; ] ).  
 
  iotsh:SetColourShape a sh:NodeShape ;
  sh:targetClass iot:SetColour ;

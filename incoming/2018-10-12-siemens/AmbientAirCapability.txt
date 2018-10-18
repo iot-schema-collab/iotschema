@@ -1,0 +1,20 @@
+{
+	"@id": "iot:AmbientAir",
+	"@type": "rdfs:Class",
+	"rdfs:subClassOf": { "@id": "iot:Capability" },
+	"rdfs:comment": "A capability to monitor gases in ambient air. Ambient air refers to any unconfined portion of the
+atmosphere or outdoor air.",
+	"rdfs:label": "AmbientAir",
+	"iot:domain": [
+			{"@id": "iot:Building"},
+			{"@id": "iot:Industry"},
+			{"@id": "iot:Home"}
+			],
+	"iot:providesInteractionPattern": [
+	{
+		"@id": "iot:NitrogenConcentration",
+		"@id": "iot:OxygenConcentration",
+		"@id": "iot:CarbonDioxideConcentration",
+		"@id": "iot:ArgonConcentration"
+	}]
+}

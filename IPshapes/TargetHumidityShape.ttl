@@ -12,7 +12,7 @@
  sh:path schema:unitCode ;
  sh:minCount 1 ;
  sh:maxCount 1 ;
- sh:in ( iot:Percent ) ; ]; ] ).
+ sh:in ( ) ; ]; ] ).
 
  iotsh:TargetHumidityShape a sh:NodeShape ;
  sh:targetClass iot:TargetHumidity ;
@@ -31,4 +31,4 @@
  sh:path iot:observable;
  sh:minCount 1 ;
  sh:maxCount 1 ;
- sh:hasValue xsd:boolean ; ]; ] ).
+ sh:datatype xsd:boolean ; ]; ] ).

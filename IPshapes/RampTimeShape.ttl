@@ -41,4 +41,4 @@
  sh:path iot:observable;
  sh:minCount 1 ;
  sh:maxCount 1 ;
- sh:hasValue xsd:boolean ; ]; ] ).
+ sh:datatype xsd:boolean ; ]; ] ).

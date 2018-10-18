@@ -1,13 +1,13 @@
 @prefix dash: <http://datashapes.org/dash#> . @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . @prefix schema: <http://schema.org/> . @prefix sh: <http://www.w3.org/ns/shacl#> . @prefix xsd: <http://www.w3.org/2001/XMLSchema#> . @prefix iot: <http://iotschema.org/> . @prefix iotsh: <http://iotschema.org/shapes/> . 
 
- iotsh:CarbonDioxideConcentrationShape a sh:NodeShape ;
- sh:targetClass iot:CarbonDioxideConcentration ;
+ iotsh:IlluminanceShape a sh:NodeShape ;
+ sh:targetClass iot:Illuminance ;
  sh:and (
 [ sh:property [
  sh:path iot:providesOutputData ;
  sh:minCount 1 ;
  sh:maxCount 1 ;
- sh:node iot:CarbonDioxideConcentrationData ; ]; ]
+ sh:node iot:IlluminanceData ; ]; ]
 [sh:property [
  sh:path iot:writable;
  sh:minCount 1 ;
@@ -21,13 +21,23 @@ sh:minCount 1 ; ]]; ]
  sh:path iot:observable;
  sh:minCount 1 ;
  sh:maxCount 1 ;
- sh:datatype xsd:boolean ; ]; ] ).
-
- iotsh:CarbonDioxideConcentrationDataShape a sh:NodeShape ;
- sh:targetClass iot:CarbonDioxideConcentrationData ;
+ sh:hasValue xsd:boolean ; ]; ] ).
+ 
+ iotsh:IlluminanceDataShape a sh:NodeShape ;
+ sh:targetClass iot:IlluminanceData ;
  sh:and (
 [ sh:property [
  sh:path schema:propertyType ;
+ sh:minCount 1 ;
+ sh:maxCount 1 ;
+ sh:datatype xsd:float ; ]; ]
+[  sh:property [
+ sh:path schema:minValue ;
+ sh:minCount 1 ;
+ sh:maxCount 1 ;
+ sh:datatype xsd:float ; ]; ]
+[  sh:property [
+ sh:path schema:maxValue ;
  sh:minCount 1 ;
  sh:maxCount 1 ;
  sh:datatype xsd:float ; ]; ]
@@ -35,5 +45,4 @@ sh:minCount 1 ; ]]; ]
  sh:path schema:unitCode ;
  sh:minCount 1 ;
  sh:maxCount 1 ;
- sh:in ( iot:PartsPerMillion ) ; ]; ] ). 
- 
+ sh:in ( iot:Lux ) ; ]; ] ). 
