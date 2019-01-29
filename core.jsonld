@@ -158,11 +158,8 @@
       "@type": "rdfs:Class",
       "rdfs:comment": "Equipment subclass of FeatureOfInterest",
       "rdfs:label": "Equipment",
-<<<<<<< HEAD
 	  "dct:source": "https://project-haystack.org/tag/equip",
-=======
-	  "dct:source": "https://project-haystack.org/tag/equip"
->>>>>>> 8e5c068641ba925ffffd56c37b7944817cde62f8
+	  "dct:source": "https://project-haystack.org/tag/equip",
       "rdfs:subClassOf": {
         "@id": "iot:FeatureOfInterest"
       } 
