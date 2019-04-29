@@ -1,0 +1,65 @@
+{
+  "@id": "iot:EnergyMode",
+  "@type": "rdfs:Class",
+  "rdfs:subClassOf": { "@id": "iot:Capability" },
+  "rdfs:comment": "A capability for changing the energy consumption mode of a thing",
+  "rdfs:label": "EnergyMode",
+    "iot:providesInteractionPattern": [
+      { "@id": "iot:EnergyModeProperty"},
+      { "@id": "iot:SetEnergyMode"}
+    ]
+},
+{
+  "@id": "iot:EnergyModeProperty",
+  "@type": "rdfs:Class",
+  "rdfs:comment": "Energy Mode current setting",
+  "rdfs:label": "EnergyModeProperty",
+  "rdfs:subClassOf": { "@id": "iot:Property" },
+  "iot:acceptsInputData": {
+    "@id": "iot:EnergyModeData"
+  },
+  "iot:providesOutputData": {
+    "@id": "iot:EnergyModeData"
+  },
+  "iot:writable" : "schema:True",
+  "iot:observable" : "schema:Boolean"
+},
+{
+  "@id": "iot:SetEnergyMode",
+  "@type": "rdfs:Class",
+  "rdfs:comment": "Change the Energy Mode setting",
+  "rdfs:label": "SetEnergyMode",
+  "rdfs:subClassOf": { "@id": "iot:Action" },
+  "iot:acceptsInputData": {
+      "@id": "iot:EnergyModeData"
+  }
+},
+{
+"@id": "iot:EnergyModeData",
+"@type": "rdfs:Class",
+"rdfs:comment": "Enum data for the Energy Mode setting",
+"rdfs:label": "EnergyModeData",
+"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+"schema:propertyType": { "@id": "iot:EnergyModeType" }
+},
+{
+  "@id": "iot:EnergyModeType",
+  "@type": "rdfs:Class",
+  "rdfs:comment": "An enumeration of run modes of an air conditioner.",
+  "rdfs:label": "EnergyModeType",
+  "rdfs:subClassOf": {
+    "@id": "schema:Enumeration"
+  }
+},
+{
+"@id": "iot:EconomyMode",
+"@type": "iot:EnergyModeType",
+"rdfs:comment": "Economy Mode",
+"rdfs:label": "EconomyMode"
+},
+{
+"@id": "iot:NormalMode",
+"@type": "iot:EnergyModeType",
+"rdfs:comment": "Economy Mode",
+"rdfs:label": "EconomyMode"
+},
