@@ -552,7 +552,7 @@
 		"rdfs:label": "HumidityData",
 		"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
 		"schema:propertyType": { "@id": "schema:Float" },
-		"schema:unitCode": { "@id": "iot:PercentUnit" }
+		"schema:unitCode": { "@id": "iot:Percent" }
     },
 	{
 		"@id": "iot:TargetHumidity",
