@@ -65,3 +65,6 @@ Provide Input for writable properties.
 | `<camelCaseName>` |
 
 See available [schema:DataTypes](http://schema.org/DataType).
+
+### Remarks
+Please write here any remark that you may have.
