@@ -1,0 +1,2756 @@
+{
+  "@context": {
+    "iot": "http://iotschema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "http://schema.org/"
+  },
+  "@graph":[
+  {
+    "@id": "iot:AirConditioner",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:domain": [
+      {
+        "@id": "iot:Home"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A capability for air conditioner"
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "AirConditioner"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Capability"
+      }
+    ]
+  },
+  {
+    "@id": "iot:temperature",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its Temperature interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "temperature"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:AirConditioner"
+      },
+      {
+        "@id": "iot:TemperatureSensing"
+      },
+      {
+        "@id": "iot:Thermostat"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:Temperature"
+      }
+    ]
+  },
+  {
+    "@id": "iot:targetTemperature",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its TargetTemperature interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "targetTemperature"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:AirConditioner"
+      },
+      {
+        "@id": "iot:Thermostat"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:TargetTemperature"
+      }
+    ]
+  },
+  {
+    "@id": "iot:switchstatus",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its SwitchStatus interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "switchstatus"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:AirConditioner"
+      },
+      {
+        "@id": "iot:BinarySwitchControl"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:SwitchStatus"
+      }
+    ]
+  },
+  {
+    "@id": "iot:turnOn",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "An action that relates a capability with its TurnOn interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "turnOn"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:AirConditioner"
+      },
+      {
+        "@id": "iot:Valve"
+      },
+      {
+        "@id": "iot:Pump"
+      },
+      {
+        "@id": "iot:BinarySwitchControl"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:TurnOn"
+      }
+    ]
+  },
+  {
+    "@id": "iot:turnOff",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "An action that relates a capability with its TurnOff interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "turnOff"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:AirConditioner"
+      },
+      {
+        "@id": "iot:Valve"
+      },
+      {
+        "@id": "iot:Pump"
+      },
+      {
+        "@id": "iot:BinarySwitchControl"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:TurnOff"
+      }
+    ]
+  },
+  {
+    "@id": "iot:runMode",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its RunMode interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "runMode"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:AirConditioner"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:RunMode"
+      }
+    ]
+  },
+  {
+    "@id": "iot:countDown",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its CountDown interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "countDown"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:AirConditioner"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:CountDown"
+      }
+    ]
+  },
+  {
+    "@id": "iot:windStrength",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its WindStrength interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "windStrength"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:AirConditioner"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:WindStrength"
+      }
+    ]
+  },
+  {
+    "@id": "iot:HumiditySensing",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:domain": [
+      {
+        "@id": "iot:Home"
+      },
+      {
+        "@id": "iot:Building"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Current sensed value for Humidity."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "HumiditySensing"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Capability"
+      }
+    ]
+  },
+  {
+    "@id": "iot:humidity",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its Humidity interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "humidity"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:HumiditySensing"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:Humidity"
+      }
+    ]
+  },
+  {
+    "@id": "iot:targetHumidity",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its TargetHumidity interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "targetHumidity"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:HumiditySensing"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:TargetHumidity"
+      }
+    ]
+  },
+  {
+    "@id": "iot:IlluminanceSensing",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:domain": [
+      {
+        "@id": "iot:Home"
+      },
+      {
+        "@id": "iot:Building"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Sensed luminous flux per unit area in lux."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "IlluminanceSensing"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Capability"
+      }
+    ]
+  },
+  {
+    "@id": "iot:illuminance",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its Illuminance interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "illuminance"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:IlluminanceSensing"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:Illuminance"
+      }
+    ]
+  },
+  {
+    "@id": "iot:MotionControl",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:domain": [
+      {
+        "@id": "iot:Home"
+      },
+      {
+        "@id": "iot:Building"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Presence (motion) sensing capability"
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "MotionControl"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Capability"
+      }
+    ]
+  },
+  {
+    "@id": "iot:motionDetected",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "An event that relates a capability with its MotionDetected interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "motionDetected"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:MotionControl"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:MotionDetected"
+      }
+    ]
+  },
+  {
+    "@id": "iot:motionType",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its MotionType interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "motionType"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:MotionControl"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:MotionType"
+      }
+    ]
+  },
+  {
+    "@id": "iot:TemperatureSensing",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:domain": [
+      {
+        "@id": "iot:Common"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A capability for temperature sensing"
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "TemperatureSensing"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Capability"
+      }
+    ]
+  },
+  {
+    "@id": "iot:Thermostat",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:domain": [
+      {
+        "@id": "iot:Common"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A capability for thermostat"
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "Thermostat"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Capability"
+      }
+    ]
+  },
+  {
+    "@id": "iot:LevelSwitch",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:domain": [
+      {
+        "@id": "iot:Industry"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A capability of a level switch"
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "LevelSwitch"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Capability"
+      }
+    ]
+  },
+  {
+    "@id": "iot:FloatSwitch",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:domain": [
+      {
+        "@id": "iot:Industry"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A capability of a float switch"
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "FloatSwitch"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:LevelSwitch"
+      }
+    ]
+  },
+  {
+    "@id": "iot:overflowStatus",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its OverflowStatus interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "overflowStatus"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:FloatSwitch"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:OverflowStatus"
+      }
+    ]
+  },
+  {
+    "@id": "iot:expectedPressure",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its ExpectedPressure interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "expectedPressure"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:FloatSwitch"
+      },
+      {
+        "@id": "iot:Valve"
+      },
+      {
+        "@id": "iot:Pump"
+      },
+      {
+        "@id": "iot:ProximitySensing"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:ExpectedPressure"
+      }
+    ]
+  },
+  {
+    "@id": "iot:expectedDensity",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its ExpectedDensity interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "expectedDensity"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:FloatSwitch"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:ExpectedDensity"
+      }
+    ]
+  },
+  {
+    "@id": "iot:expectedAmbientTemperature",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": ""
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "expectedAmbientTemperature"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:FloatSwitch"
+      },
+      {
+        "@id": "iot:Pump"
+      },
+      {
+        "@id": "iot:UltrasonicSensing"
+      },
+      {
+        "@id": "iot:ProximitySensing"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:ExpectedAmbientTemperature"
+      }
+    ]
+  },
+  {
+    "@id": "iot:expectedFloatImmersionDepth",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its ExpectedFloatImmersionDepth interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "expectedFloatImmersionDepth"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:FloatSwitch"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:ExpectedFloatImmersionDepth"
+      }
+    ]
+  },
+  {
+    "@id": "iot:Valve",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:domain": [
+      {
+        "@id": "iot:Industry"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A capability of a valve"
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "Valve"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Capability"
+      }
+    ]
+  },
+  {
+    "@id": "iot:operationStatus",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its OperationStatus interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "operationStatus"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:Valve"
+      },
+      {
+        "@id": "iot:Pump"
+      },
+      {
+        "@id": "iot:ProximitySensing"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:OperationStatus"
+      }
+    ]
+  },
+  {
+    "@id": "iot:expectedFlowRate",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its ExpectedFlowRate interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "expectedFlowRate"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:Valve"
+      },
+      {
+        "@id": "iot:Pump"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:ExpectedFlowRate"
+      }
+    ]
+  },
+  {
+    "@id": "iot:expectedUpstreamPressure",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its ExpectedUpstreamPressure interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "expectedUpstreamPressure"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:Valve"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:ExpectedUpstreamPressure"
+      }
+    ]
+  },
+  {
+    "@id": "iot:Pump",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:domain": [
+      {
+        "@id": "iot:Industry"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A capability of a pump"
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "Pump"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Capability"
+      }
+    ]
+  },
+  {
+    "@id": "iot:UltrasonicSensing",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:domain": [
+      {
+        "@id": "iot:Industry"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A capability of an ultrasonic sensor"
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "UltrasonicSensing"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Capability"
+      }
+    ]
+  },
+  {
+    "@id": "iot:currentLevel",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its CurrentLevel interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "currentLevel"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:UltrasonicSensing"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:CurrentLevel"
+      }
+    ]
+  },
+  {
+    "@id": "iot:ProximitySensing",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:domain": [
+      {
+        "@id": "iot:Industry"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A proximity sensing capability"
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "ProximitySensing"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Capability"
+      }
+    ]
+  },
+  {
+    "@id": "iot:SoundPressure",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:domain": [
+      {
+        "@id": "iot:Home"
+      },
+      {
+        "@id": "iot:Building"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Sensed Sound Pressure Level, e.g. using a microphone"
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "SoundPressureCapability"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Capability"
+      }
+    ]
+  },
+  {
+    "@id": "iot:soundPressureLevel",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its SoundPressureLevel interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "soundPressureLevel"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:SoundPressure"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:SoundPressureLevel"
+      }
+    ]
+  },
+  {
+    "@id": "iot:BinarySwitchControl",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:domain": [
+      {
+        "@id": "iot:Home"
+      },
+      {
+        "@id": "iot:Building"
+      },
+      {
+        "@id": "iot:Industry"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A general On/Off control capability"
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "BinarySwitchControl"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Capability"
+      }
+    ]
+  },
+  {
+    "@id": "iot:toggleAction",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "An action that relates a capability with its ToggleAction interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "toggleAction"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:BinarySwitchControl"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:ToggleAction"
+      }
+    ]
+  },
+  {
+    "@id": "iot:DimmerControl",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:domain": [
+      {
+        "@id": "iot:Home"
+      },
+      {
+        "@id": "iot:Building"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A light dimmer control capability."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "DimmerControl"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Capability"
+      }
+    ]
+  },
+  {
+    "@id": "iot:currentDimmer",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its CurrentDimmer interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "currentDimmer"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:DimmerControl"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:CurrentDimmer"
+      }
+    ]
+  },
+  {
+    "@id": "iot:setDimmer",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "An action that relates a capability with its SetDimmer interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "setDimmer"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:DimmerControl"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:SetDimmer"
+      }
+    ]
+  },
+  {
+    "@id": "iot:rampTime",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its RampTime interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "rampTime"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:DimmerControl"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:RampTime"
+      }
+    ]
+  },
+  {
+    "@id": "iot:ColourControl",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:domain": [
+      {
+        "@id": "iot:Home"
+      },
+      {
+        "@id": "iot:Building"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "The capability to set a color, e.g. for a colored light."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "ColourControl"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Capability"
+      }
+    ]
+  },
+  {
+    "@id": "iot:currentcolour",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its CurrentColour interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "currentcolour"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:ColourControl"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:CurrentColour"
+      }
+    ]
+  },
+  {
+    "@id": "iot:setColour",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "An action that relates a capability with its SetColour interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "setColour"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:ColourControl"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:SetColour"
+      }
+    ]
+  },
+  {
+    "@id": "iot:AmbientAir",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:domain": [
+      {
+        "@id": "iot:Building"
+      },
+      {
+        "@id": "iot:Industry"
+      },
+      {
+        "@id": "iot:Home"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A capability to monitor gases in ambient air. Ambient air refers to any unconfined portion of the atmosphere or outdoor air."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "AmbientAir"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Capability"
+      }
+    ]
+  },
+  {
+    "@id": "iot:nitrogenConcentration",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its NitrogenConcentration interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "nitrogenConcentration"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:AmbientAir"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:NitrogenConcentration"
+      }
+    ]
+  },
+  {
+    "@id": "iot:oxygenConcentration",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its OxygenConcentration interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "oxygenConcentration"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:AmbientAir"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:OxygenConcentration"
+      }
+    ]
+  },
+  {
+    "@id": "iot:carbonDioxideconcentration",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its CarbonDioxideConcentration interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "carbonDioxideconcentration"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:AmbientAir"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:CarbonDioxideConcentration"
+      }
+    ]
+  },
+  {
+    "@id": "iot:argonConcentration",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its ArgonConcentration interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "argonConcentration"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:AmbientAir"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:ArgonConcentration"
+      }
+    ]
+  },
+  {
+    "@id": "iot:PowerMonitoring",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:domain": [
+      {
+        "@id": "iot:Energy"
+      },
+      {
+        "@id": "iot:Building"
+      },
+      {
+        "@id": "iot:Industry"
+      },
+      {
+        "@id": "iot:Home"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A capability for power monitoring in an electric circuit."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "PowerMonitoring"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Capability"
+      }
+    ]
+  },
+  {
+    "@id": "iot:apparentPowera",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its ApparentPowerA interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "apparentPowera"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:PowerMonitoring"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:ApparentPowerA"
+      }
+    ]
+  },
+  {
+    "@id": "iot:apparentPowerB",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its ApparentPowerB interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "apparentPowerB"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:PowerMonitoring"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:ApparentPowerB"
+      }
+    ]
+  },
+  {
+    "@id": "iot:apparentPowerC",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its ApparentPowerC interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "apparentPowerC"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:PowerMonitoring"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:ApparentPowerC"
+      }
+    ]
+  },
+  {
+    "@id": "iot:totalApparentPower",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its TotalApparentPower interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "totalApparentPower"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:PowerMonitoring"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:TotalApparentPower"
+      }
+    ]
+  },
+  {
+    "@id": "iot:activePowera",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its ActivePowerA interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "activePowera"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:PowerMonitoring"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:ActivePowerA"
+      }
+    ]
+  },
+  {
+    "@id": "iot:activePowerB",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its ActivePowerB interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "activePowerB"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:PowerMonitoring"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:ActivePowerB"
+      }
+    ]
+  },
+  {
+    "@id": "iot:activePowerC",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its ActivePowerC interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "activePowerC"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:PowerMonitoring"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:ActivePowerC"
+      }
+    ]
+  },
+  {
+    "@id": "iot:totalActivePower",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its TotalActivePower interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "totalActivePower"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:PowerMonitoring"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:TotalActivePower"
+      }
+    ]
+  },
+  {
+    "@id": "iot:reactivePowerA",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its ReactivePowerA interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "reactivePowerA"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:PowerMonitoring"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:ReactivePowerA"
+      }
+    ]
+  },
+  {
+    "@id": "iot:reactivePowerB",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its ReactivePowerB interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "reactivePowerB"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:PowerMonitoring"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:ReactivePowerB"
+      }
+    ]
+  },
+  {
+    "@id": "iot:reactivePowerC",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its ReactivePowerC interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "reactivePowerC"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:PowerMonitoring"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:ReactivePowerC"
+      }
+    ]
+  },
+  {
+    "@id": "iot:totalReactivePower",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its TotalReactivePower interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "totalReactivePower"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:PowerMonitoring"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:TotalReactivePower"
+      }
+    ]
+  },
+  {
+    "@id": "iot:powerFactorA",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its PowerFactorA interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "powerFactorA"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:PowerMonitoring"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:PowerFactorA"
+      }
+    ]
+  },
+  {
+    "@id": "iot:powerFactorB",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its PowerFactorB interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "powerFactorB"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:PowerMonitoring"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:PowerFactorB"
+      }
+    ]
+  },
+  {
+    "@id": "iot:powerFactorC",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its PowerFactorC interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "powerFactorC"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:PowerMonitoring"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:PowerFactorC"
+      }
+    ]
+  },
+  {
+    "@id": "iot:totalPowerFactor",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its TotalPowerFactor interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "totalPowerFactor"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:PowerMonitoring"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:TotalPowerFactor"
+      }
+    ]
+  },
+  {
+    "@id": "iot:ElectricCurrentMonitoring",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:domain": [
+      {
+        "@id": "iot:Energy"
+      },
+      {
+        "@id": "iot:Building"
+      },
+      {
+        "@id": "iot:Industry"
+      },
+      {
+        "@id": "iot:Home"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A capability for current monitoring in an electric circuit."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "ElectricCurrentMonitoring"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Capability"
+      }
+    ]
+  },
+  {
+    "@id": "iot:electricCurrentA",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its ElectricCurrentA interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "electricCurrentA"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:ElectricCurrentMonitoring"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:ElectricCurrentA"
+      }
+    ]
+  },
+  {
+    "@id": "iot:electricCurrentB",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its ElectricCurrentB interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "electricCurrentB"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:ElectricCurrentMonitoring"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:ElectricCurrentB"
+      }
+    ]
+  },
+  {
+    "@id": "iot:electricCurrentC",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its ElectricCurrentC interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "electricCurrentC"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:ElectricCurrentMonitoring"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:ElectricCurrentC"
+      }
+    ]
+  },
+  {
+    "@id": "iot:averageElectricCurrent",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its AverageElectricCurrent interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "averageElectricCurrent"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:ElectricCurrentMonitoring"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:AverageElectricCurrent"
+      }
+    ]
+  },
+  {
+    "@id": "iot:lineFrequency",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its LineFrequency interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "lineFrequency"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:ElectricCurrentMonitoring"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:LineFrequency"
+      }
+    ]
+  },
+  {
+    "@id": "iot:VoltageMonitoring",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:domain": [
+      {
+        "@id": "iot:Energy"
+      },
+      {
+        "@id": "iot:Building"
+      },
+      {
+        "@id": "iot:Industry"
+      },
+      {
+        "@id": "iot:Home"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A capability for voltage monitoring in an electric circuit."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "VoltageMonitoring"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Capability"
+      }
+    ]
+  },
+  {
+    "@id": "iot:phaseToNeutralVoltageA",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its PhaseToNeutralVoltageA interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "phaseToNeutralVoltageA"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:VoltageMonitoring"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:PhaseToNeutralVoltageA"
+      }
+    ]
+  },
+  {
+    "@id": "iot:phaseToNeutralVoltageB",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its PhaseToNeutralVoltageB interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "phaseToNeutralVoltageB"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:VoltageMonitoring"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:PhaseToNeutralVoltageB"
+      }
+    ]
+  },
+  {
+    "@id": "iot:phaseToNeutralVoltageC",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its PhaseToNeutralVoltageC interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "phaseToNeutralVoltageC"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:VoltageMonitoring"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:PhaseToNeutralVoltageC"
+      }
+    ]
+  },
+  {
+    "@id": "iot:phaseTophaseVoltageAB",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its PhaseToPhaseVoltageAB interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "phaseTophaseVoltageAB"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:VoltageMonitoring"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:PhaseToPhaseVoltageAB"
+      }
+    ]
+  },
+  {
+    "@id": "iot:phaseTophaseVoltageBC",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its PhaseToPhaseVoltageBC interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "phaseTophaseVoltageBC"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:VoltageMonitoring"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:PhaseToPhaseVoltageBC"
+      }
+    ]
+  },
+  {
+    "@id": "iot:phaseTophaseVoltageCA",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its PhaseToPhaseVoltageCA interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "phaseTophaseVoltageCA"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:VoltageMonitoring"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:PhaseToPhaseVoltageCA"
+      }
+    ]
+  },
+  {
+    "@id": "iot:averagePhaseToNeutralVoltage",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its AveragePhaseToNeutralVoltage interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "averagePhaseToNeutralVoltage"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:VoltageMonitoring"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:AveragePhaseToNeutralVoltage"
+      }
+    ]
+  },
+  {
+    "@id": "iot:averagePhaseToPhaseVoltage",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its AveragePhaseToPhaseVoltage interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "averagePhaseToPhaseVoltage"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:VoltageMonitoring"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:AveragePhaseToPhaseVoltage"
+      }
+    ]
+  },
+  {
+    "@id": "iot:EnergyMonitoring",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:domain": [
+      {
+        "@id": "iot:Energy"
+      },
+      {
+        "@id": "iot:Building"
+      },
+      {
+        "@id": "iot:Industry"
+      },
+      {
+        "@id": "iot:Home"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A capability for energy monitoring in an electric circuit."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "EnergyMonitoring"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Capability"
+      }
+    ]
+  },
+  {
+    "@id": "iot:apparentEnergy",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its ApparentEnergy interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "apparentEnergy"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:EnergyMonitoring"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:ApparentEnergy"
+      }
+    ]
+  },
+  {
+    "@id": "iot:activeEnergyImported",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its ActiveEnergyImported interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "activeEnergyImported"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:EnergyMonitoring"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:ActiveEnergyImported"
+      }
+    ]
+  },
+  {
+    "@id": "iot:activeEnergyExported",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its ActiveEnergyExported interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "activeEnergyExported"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:EnergyMonitoring"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:ActiveEnergyExported"
+      }
+    ]
+  },
+  {
+    "@id": "iot:reactiveEnergyImported",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its ReactiveEnergyImported interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "reactiveEnergyImported"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:EnergyMonitoring"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:ReactiveEnergyImported"
+      }
+    ]
+  },
+  {
+    "@id": "iot:reactiveEnergyExported",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its ReactiveEnergyExported interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "reactiveEnergyExported"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:EnergyMonitoring"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:ReactiveEnergyExported"
+      }
+    ]
+  }
+]
+}
