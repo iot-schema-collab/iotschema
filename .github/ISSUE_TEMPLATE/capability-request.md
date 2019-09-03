@@ -9,13 +9,13 @@ assignees: ''
 
 ## Capability `<CamelCaseName>`
 
-`<description>`
+`Description`
 
 ### Properties
 
 | Name | Description | Input | Output |
 | --- | --- | --- | --- |
-| `<camelCaseName>` | `<description>` | `<camelCaseName>` | `<camelCaseName>` |
+| `<camelCaseName>` | `Description` | `<camelCaseName>` | `<camelCaseName>` |
 
 Provide Input for writable properties. 
 
@@ -23,46 +23,46 @@ Provide Input for writable properties.
 
 | Name | Description | Input | Output |
 | --- | --- | --- | --- |
-| `<camelCaseName>` | `<description>` | `<camelCaseName>` | `<camelCaseName>` |
+| `<camelCaseName>` | `Description` | `<camelCaseName>` | `<camelCaseName>` |
 
 ### Events
 
 | Name | Description | Input | Output |
 | --- | --- | --- | --- |
-| `<camelCaseName>` | `<description>` | `<camelCaseName>` | `<camelCaseName>` |
+| `<camelCaseName>` | `Description` | `<camelCaseName>` | `<camelCaseName>` |
 
 ### Data Types
 
 #### Numeric Data Types:
 
-| Name | Definition | Min Value | Max Value | Unit Code |
+| Name | Description | Data Type | Min/Max Value | Unit Code |
 | --- | --- | --- | --- | --- | 
-| `<camelCaseName>` | `<dataype>` | --- | --- | --- | 
+| `<camelCaseName>` | `Description` | `<dataype>` | `yes/no` | --- | 
 
 #### Enumeration or Text Data Types:
-| Name | Data Type | Enumeration (comma separated) Values |
-| --- | --- |  --- |
-| `<camelCaseName>` | `<dataype>` | --- | 
+| Name | Description | Data Type | Enumeration (comma separated) Values |
+| --- | --- |  --- | --- |
+| `<camelCaseName>` | `Description` | `<dataype>` | --- | 
 
 #### Boolean Data Types:
-| Name | 
-| --- | 
-| `<camelCaseName>` |
+| Name | Description |
+| --- | --- | 
+| `<camelCaseName>` | `Description` |
 
 #### Date Data Types:
-| Name | 
-| --- | 
-| `<camelCaseName>` |
+| Name | Description |
+| --- | --- |
+| `<camelCaseName>` | `Description` |
 
 #### DateTime Data Types:
-| Name | 
-| --- | 
-| `<camelCaseName>` |
+| Name | Description |
+| --- | --- |
+| `<camelCaseName>` | `Description` |
 
 #### Time Data Types:
-| Name | 
-| --- | 
-| `<camelCaseName>` |
+| Name | Description |
+| --- | --- |
+| `<camelCaseName>` | `Description` |
 
 See available [schema:DataTypes](http://schema.org/DataType).
 
