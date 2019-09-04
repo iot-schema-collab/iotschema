@@ -13,9 +13,9 @@ assignees: ''
 
 ### Properties
 
-| Name | Description | Input | Output |
+| Name | Description | Input | Output | Writable | Observable |
 | --- | --- | --- | --- |
-| `<camelCaseName>` | `Description` | `<camelCaseName>` | `<camelCaseName>` |
+| `<camelCaseName>` | `Description` | `yes/no` | `yes/no` |
 
 Provide Input for writable properties. 
 
