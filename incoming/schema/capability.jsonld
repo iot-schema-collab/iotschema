@@ -402,6 +402,22 @@
 			"@id": "iot:UnderVoltageAlarm",
 			"@id": "iot:OverPressureAlarm"
 		}]
+	},
+	{
+		"@id": "iot:ElectricPowerSystem",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": { "@id": "iot:Capability" },
+		"rdfs:comment": "The class of electric power systems, i.e., systems that exchange electricity (i.e., electric power) with other systems. Electric power systems may consume, produce, or store electricity",
+		"rdfs:label": "ElectricPowerSystem",
+		"iot:domain": [
+				{"@id": "iot:Energy"},
+				{"@id": "iot:Building"},
+				{"@id": "iot:Home"}
+				],
+		"iot:providesInteractionPattern": [
+		{
+			"@id": "iot:PccPower"
+		}]
 	}
 	]
 }

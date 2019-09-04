@@ -1579,5 +1579,17 @@
 			"@id": "iot:PressureData"
 		}
     },
+	{
+		"@id": "iot:PccPower",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Power at Point of Common Coupling (PCC) is the power in the point on the electrical network, nearest to the generator, at which other customers are, or could be, connected.",
+		"rdfs:label": "PccPower",
+		"rdfs:subClassOf": { "@id": "iot:Property" },
+		"iot:providesOutputData": {
+			"@id": "iot:ActivePowerData"
+		},
+		"iot:writable" : "schema:False",
+		"iot:observable" : "schema:Boolean"
+	}
   ]
 }
