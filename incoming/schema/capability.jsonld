@@ -369,6 +369,39 @@
 			"@id": "iot:ReactiveEnergyImported",
 			"@id": "iot:ReactiveEnergyExported"
 		}]
+	},
+	{
+		"@id": "iot:ElectricBattery",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": { "@id": "iot:Capability" },
+		"rdfs:comment": "A capability for an electric battery(an electric power storage system). Power at Point of Common Coupling (PCC) is the power in the point on the electrical network, nearest to the generator, at which other customers are, or could be, connected.",
+		"rdfs:label": "ElectricBattery",
+		"iot:domain": [
+				{"@id": "iot:Energy"},
+				{"@id": "iot:Building"},
+				{"@id": "iot:Home"}
+				],
+		"iot:providesInteractionPattern": [
+		{
+			"@id": "iot:StateOfCharge",
+			"@id": "iot:Capacity",
+			"@id": "iot:Charging",
+			"@id": "iot:Discharging",
+			"@id": "iot:LowBattery",
+			"@id": "iot:MaxChargeCurrent",
+			"@id": "iot:MaxDischargeCurrent",
+			"@id": "iot:MaxChargePower",
+			"@id": "iot:MaxDischargePower",
+			"@id": "iot:ChargeBattery",
+			"@id": "iot:DischargeBattery",
+			"@id": "iot:BatteryLowVoltageAlarm",
+			"@id": "iot:OverTemperatureAlarm",
+			"@id": "iot:UnderTemperatureAlarm",
+			"@id": "iot:OverElectricalCurrentAlarm",
+			"@id": "iot:OverVoltageAlarm",
+			"@id": "iot:UnderVoltageAlarm",
+			"@id": "iot:OverPressureAlarm"
+		}]
 	}
 	]
 }
