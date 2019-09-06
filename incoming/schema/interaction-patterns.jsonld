@@ -1479,10 +1479,15 @@
  {
 		"@id": "iot:ChargeBattery",
 		"@type": "rdfs:Class",
-		"iot:acceptsInputData": {
+		"iot:acceptsInputData": [
+		{
 			"@id": "iot:CRateData"
 		},
-		"rdfs:comment": "Charge a battery (an electric power storage system) with C-rate.)",
+		{
+			"@id": "iot:ERateData"
+		}
+		],
+		"rdfs:comment": "Charge a battery (an electric power storage system) either with C-rate or E-rate.)",
 		"rdfs:label": "ChargeBattery",
 		"rdfs:subClassOf": {
 			"@id": "iot:Action"
@@ -1497,14 +1502,45 @@
 		"schema:propertyType": { "@id": "schema:Float" },
 		"schema:unitCode": { "@id": "iot:CRateUnit" }
     },
+	{
+		"@id": "iot:ERateData",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "E or E-rate is a measure of the power rate at which a battery is charged or discharged in 1 hour. The unit of the E-rate is Watt. A 1E rate is the discharge power to discharge the entire battery in 1 hour.",
+		"rdfs:label": "ERateData",
+		"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+		"schema:propertyType": { "@id": "schema:Float" },
+		"schema:unitCode": { "@id": "iot:ActivePowerUnit" }
+    },
  {
 		"@id": "iot:DischargeBattery",
 		"@type": "rdfs:Class",
-		"iot:acceptsInputData": {
+		"iot:acceptsInputData": [
+		{
 			"@id": "iot:CRateData"
 		},
-		"rdfs:comment": "Discharge a battery (an electric power storage system) with C-rate.)",
+		{
+			"@id": "iot:ERateData"
+		}
+		],
+		"rdfs:comment": "Discharge a battery (an electric power storage system) either with C-rate or E-rate.)",
 		"rdfs:label": "DischargeBattery",
+		"rdfs:subClassOf": {
+			"@id": "iot:Action"
+		}
+	},
+  {
+		"@id": "iot:SetPointBattery",
+		"@type": "rdfs:Class",
+		"iot:acceptsInputData": [
+		{
+			"@id": "iot:CRateData"
+		},
+		{
+			"@id": "iot:ERateData"
+		}
+		],
+		"rdfs:comment": "Charge or discharge a battery (an electric power storage system) either with C-rate or E-rate. When charging it's a positive number and when discharging it's a negative number.)",
+		"rdfs:label": "SetPointBattery",
 		"rdfs:subClassOf": {
 			"@id": "iot:Action"
 		}
@@ -1590,6 +1626,51 @@
 		},
 		"iot:writable" : "schema:False",
 		"iot:observable" : "schema:Boolean"
+	},
+	{
+		"@id": "iot:StartRecording",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Starts a recording activity (e.g., audio-, video-recording).",
+		"rdfs:label": "StartRecording",
+		"rdfs:subClassOf": {
+			"@id": "iot:Action"
+		}
+	},
+	{
+		"@id": "iot:StopRecording",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Stops a recording activity (e.g., audio-, video-recording).",
+		"rdfs:label": "StopRecording",
+		"rdfs:subClassOf": {
+			"@id": "iot:Action"
+		}
+	},
+	{
+		"@id": "iot:PauseRecording",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Pauses a recording activity (e.g., audio-, video-recording).",
+		"rdfs:label": "PauseRecording",
+		"rdfs:subClassOf": {
+			"@id": "iot:Action"
+		}
+	},
+	{
+		"@id": "iot:ResumeRecording",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Resumes a recording activity (e.g., audio-, video-recording).",
+		"rdfs:label": "ResumeRecording",
+		"rdfs:subClassOf": {
+			"@id": "iot:Action"
+		}
+	},
+		{
+		"@id": "iot:MakeImage",
+		"@type": "rdfs:Class",
+		"rdfs:comment": "Takes a single (snapshot) image.",
+		"rdfs:label": "MakeImage",
+		"rdfs:subClassOf": {
+			"@id": "iot:Action"
+		}
 	}
   ]
 }

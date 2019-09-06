@@ -394,6 +394,7 @@
 			"@id": "iot:MaxDischargePower",
 			"@id": "iot:ChargeBattery",
 			"@id": "iot:DischargeBattery",
+			"@id": "iot:SetPointBattery",
 			"@id": "iot:BatteryLowVoltageAlarm",
 			"@id": "iot:OverTemperatureAlarm",
 			"@id": "iot:UnderTemperatureAlarm",
@@ -417,6 +418,51 @@
 		"iot:providesInteractionPattern": [
 		{
 			"@id": "iot:PccPower"
+		}]
+	},
+	{
+		"@id": "iot:Microphone",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": { "@id": "iot:Capability" },
+		"rdfs:comment": "A capability for an Internet Protocol (IP) microphone.",
+		"rdfs:label": "ElectricPowerSystem",
+		"iot:domain": [
+				{"@id": "iot:Energy"},
+				{"@id": "iot:Building"},
+				{"@id": "iot:Industry"},
+				{"@id": "iot:Home"}
+				],
+		"iot:providesInteractionPattern": [
+		{
+			"@id": "iot:TurnOn",
+			"@id": "iot:TurnOff",
+			"@id": "iot:StartRecording",
+			"@id": "iot:StopRecording",
+			"@id": "iot:PauseRecording",
+			"@id": "iot:ResumeRecording"
+		}]
+	},
+	{
+		"@id": "iot:Camera",
+		"@type": "rdfs:Class",
+		"rdfs:subClassOf": { "@id": "iot:Capability" },
+		"rdfs:comment": "A capability for an Internet Protocol (IP) camera.",
+		"rdfs:label": "ElectricPowerSystem",
+		"iot:domain": [
+				{"@id": "iot:Energy"},
+				{"@id": "iot:Building"},
+				{"@id": "iot:Industry"},
+				{"@id": "iot:Home"}
+				],
+		"iot:providesInteractionPattern": [
+		{
+			"@id": "iot:TurnOn",
+			"@id": "iot:TurnOff",
+			"@id": "iot:StartRecording",
+			"@id": "iot:StopRecording",
+			"@id": "iot:PauseRecording",
+			"@id": "iot:ResumeRecording",
+			"@id": "iot:MakeImage"
 		}]
 	}
 	]
