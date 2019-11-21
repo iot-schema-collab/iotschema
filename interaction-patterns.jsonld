@@ -5593,6 +5593,1082 @@
         "@id": "iot:Property"
       }
     ]
+  },
+  {
+    "@id": "iot:StateOfCharge",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:observable": [
+      {
+        "@value": "schema:Boolean"
+      }
+    ],
+    "iot:writable": [
+      {
+        "@value": "schema:False"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "The rounded percentage of the current charging level of a battery in the range of [0, 100]."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "StateOfCharge"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Property"
+      }
+    ]
+  },
+  {
+    "@id": "iot:providesStateOfChargeData",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates an Interaction Pattern with its output StateOfChargeData."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "providesStateOfChargeData"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesOutputData"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:StateOfCharge"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:StateOfChargeData"
+      }
+    ]
+  },
+  {
+    "@id": "iot:StateOfChargeData",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Battery state of charge."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "StateOfChargeData"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "schema:PropertyValue"
+      }
+    ]
+  },
+  {
+    "@id": "iot:stateOfChargeUnitCode",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates iot:stateOfChargeUnitCode with its unit."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "stateOfChargeUnitCode"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "schema:unitCode"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:StateOfChargeData"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:LevelUnit"
+      }
+    ]
+  },
+  {
+    "@id": "iot:Capacity",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:observable": [
+      {
+        "@value": "schema:Boolean"
+      }
+    ],
+    "iot:writable": [
+      {
+        "@value": "schema:False"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "The total capacity of battery."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "Capacity"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Property"
+      }
+    ]
+  },
+  {
+    "@id": "iot:providesElectricChargeData",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates an Interaction Pattern with its output ElectricChargeData."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "providesElectricChargeData"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesOutputData"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:Capacity"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:ElectricChargeData"
+      }
+    ]
+  },
+  {
+    "@id": "iot:ElectricChargeData",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Electric charge data."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "ElectricChargeData"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "schema:PropertyValue"
+      }
+    ]
+  },
+  {
+    "@id": "iot:electricChargeUnitCode",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates iot:electricChargeUnitCode with its unit."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "electricChargeUnitCode"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "schema:unitCode"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:ElectricChargeData"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:ElectricChargeUnit"
+      }
+    ]
+  },
+  {
+    "@id": "iot:Charging",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:observable": [
+      {
+        "@value": "schema:Boolean"
+      }
+    ],
+    "iot:writable": [
+      {
+        "@value": "schema:True"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "The status of charging. 'True' indicates enabled, and ''False' indicates not enabled."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "Charging"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Property"
+      }
+    ]
+  },
+  {
+    "@id": "iot:providesChargingStatusData",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates an Interaction Pattern with its output ChargingStatusData."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "providesChargingStatusData"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesOutputData"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:Charging"
+      },
+      {
+        "@id": "iot:Discharging"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:ChargingStatusData"
+      }
+    ]
+  },
+  {
+    "@id": "iot:ChargingStatusData",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Charging status data."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "ChargingStatusData"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "schema:PropertyValue"
+      }
+    ]
+  },
+  {
+    "@id": "iot:Discharging",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:observable": [
+      {
+        "@value": "schema:Boolean"
+      }
+    ],
+    "iot:writable": [
+      {
+        "@value": "schema:True"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "The status of discharging. 'True' indicates charging, and 'False' indicates not charging."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "Discharging"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Property"
+      }
+    ]
+  },
+  {
+    "@id": "iot:LowBattery",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:observable": [
+      {
+        "@value": "schema:Boolean"
+      }
+    ],
+    "iot:writable": [
+      {
+        "@value": "schema:False"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Indication that the battery is in a low state of charge."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "LowBattery"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Property"
+      }
+    ]
+  },
+  {
+    "@id": "iot:providesLowBatteryData",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates an Interaction Pattern with its output LowBatteryData."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "providesLowBatteryData"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesOutputData"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:LowBattery"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:LowBatteryData"
+      }
+    ]
+  },
+  {
+    "@id": "iot:LowBatteryData",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Low battery data."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "LowBatteryData"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "schema:PropertyValue"
+      }
+    ]
+  },
+  {
+    "@id": "iot:MaxChargeCurrent",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:observable": [
+      {
+        "@value": "schema:Boolean"
+      }
+    ],
+    "iot:writable": [
+      {
+        "@value": "schema:False"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "It is the charge electric current limit (CCL)."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "MaxChargeCurrent"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Property"
+      }
+    ]
+  },
+  {
+    "@id": "iot:MaxDischargeCurrent",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:observable": [
+      {
+        "@value": "schema:Boolean"
+      }
+    ],
+    "iot:writable": [
+      {
+        "@value": "schema:False"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "It is the discharge electric current limit (DCL)."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "MaxDischargeCurrent"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Property"
+      }
+    ]
+  },
+  {
+    "@id": "iot:MaxChargePower",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:observable": [
+      {
+        "@value": "schema:Boolean"
+      }
+    ],
+    "iot:writable": [
+      {
+        "@value": "schema:False"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "It is the charging power limit."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "MaxChargePower"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Property"
+      }
+    ]
+  },
+  {
+    "@id": "iot:MaxDischargePower",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:observable": [
+      {
+        "@value": "schema:Boolean"
+      }
+    ],
+    "iot:writable": [
+      {
+        "@value": "schema:False"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "It is the discharging power limit."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "MaxDischargePower"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Property"
+      }
+    ]
+  },
+  {
+    "@id": "iot:ChargeBattery",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Charge a battery (an electric power storage system) either with C-rate or E-rate.)"
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "ChargeBattery"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Action"
+      }
+    ]
+  },
+  {
+    "@id": "iot:acceptsCRateData",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates an Interaction Pattern with its input RateData."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "acceptsCRateData"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:acceptsInputData"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:ChargeBattery"
+      },
+      {
+        "@id": "iot:DischargeBattery"
+      },
+      {
+        "@id": "iot:SetPointBattery"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:CRateData"
+      }
+    ]
+  },
+  {
+    "@id": "iot:acceptsERateData",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates an Interaction Pattern with its input RateData."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "acceptsERateData"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:acceptsInputData"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:ChargeBattery"
+      },
+      {
+        "@id": "iot:DischargeBattery"
+      },
+      {
+        "@id": "iot:SetPointBattery"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:ERateData"
+      }
+    ]
+  },
+  {
+    "@id": "iot:CRateData",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "C or C-rate is a measure of the rate at which a battery is charged or discharged relative to its capacity. The unit of the C-rate is h−1, equivalent to stating the battery's capacity to store an electrical charge in unit hour times current in the same unit as the charge or discharge current."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "CRateData"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "schema:PropertyValue"
+      }
+    ]
+  },
+  {
+    "@id": "iot:cRateUnitCode",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates iot:cRateUnitCode with its unit."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "cRateUnitCode"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "schema:unitCode"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:CRateData"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:CRateUnit"
+      }
+    ]
+  },
+  {
+    "@id": "iot:ERateData",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "E or E-rate is a measure of the power rate at which a battery is charged or discharged in 1 hour. The unit of the E-rate is Watt. A 1E rate is the discharge power to discharge the entire battery in 1 hour."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "ERateData"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "schema:PropertyValue"
+      }
+    ]
+  },
+  {
+    "@id": "iot:eRateUnitCode",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates iot:eRateUnitCode with its unit."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "eRateUnitCode"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "schema:unitCode"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:ERateData"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:ActivePowerUnit"
+      }
+    ]
+  },
+  {
+    "@id": "iot:DischargeBattery",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Discharge a battery (an electric power storage system) either with C-rate or E-rate.)"
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "DischargeBattery"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Action"
+      }
+    ]
+  },
+  {
+    "@id": "iot:SetPointBattery",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Charge or discharge a battery (an electric power storage system) either with C-rate or E-rate. When charging it's a positive number and when discharging it's a negative number.)"
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "SetPointBattery"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Action"
+      }
+    ]
+  },
+  {
+    "@id": "iot:BatteryLowVoltageAlarm",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Battery low voltage alarm warns of impending battery failure."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "BatteryLowVoltageAlarm"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Event"
+      }
+    ]
+  },
+  {
+    "@id": "iot:OverTemperatureAlarm",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Too high temperature."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "OverTemperatureAlarm"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Event"
+      }
+    ]
+  },
+  {
+    "@id": "iot:UnderTemperatureAlarm",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Too low  temperature."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "UnderTemperatureAlarm"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Event"
+      }
+    ]
+  },
+  {
+    "@id": "iot:OverElectricCurrentAlarm",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Too high electric current (e.g., a battery is charged or discharged with)."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "OverElectricCurrentAlarm"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Event"
+      }
+    ]
+  },
+  {
+    "@id": "iot:OverVoltageAlarm",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Too high voltage (e.g., a battery is charged or discharged with)."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "OverVoltageAlarm"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Event"
+      }
+    ]
+  },
+  {
+    "@id": "iot:UnderVoltageAlarm",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Too low  voltage (e.g., a battery is charged or discharged with)."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "UnderVoltageAlarm"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Event"
+      }
+    ]
+  },
+  {
+    "@id": "iot:OverPressureAlarm",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Too high pressure."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "OverPressureAlarm"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Event"
+      }
+    ]
+  },
+  {
+    "@id": "iot:PccPower",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:observable": [
+      {
+        "@value": "schema:Boolean"
+      }
+    ],
+    "iot:writable": [
+      {
+        "@value": "schema:False"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Power at Point of Common Coupling (PCC) is the power in the point on the electrical network, nearest to the generator, at which other customers are, or could be, connected."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "PccPower"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Property"
+      }
+    ]
+  },
+  {
+    "@id": "iot:StartRecording",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Starts a recording activity (e.g., audio-, video-recording)."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "StartRecording"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Action"
+      }
+    ]
+  },
+  {
+    "@id": "iot:StopRecording",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Stops a recording activity (e.g., audio-, video-recording)."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "StopRecording"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Action"
+      }
+    ]
+  },
+  {
+    "@id": "iot:PauseRecording",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Pauses a recording activity (e.g., audio-, video-recording)."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "PauseRecording"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Action"
+      }
+    ]
+  },
+  {
+    "@id": "iot:ResumeRecording",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Resumes a recording activity (e.g., audio-, video-recording)."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "ResumeRecording"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Action"
+      }
+    ]
+  },
+  {
+    "@id": "iot:MakeImage",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Takes a single (snapshot) image."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "MakeImage"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Action"
+      }
+    ]
   }
 ]
 }
