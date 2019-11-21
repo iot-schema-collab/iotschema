@@ -679,6 +679,35 @@
 		"@type": "iot:ReactiveEnergyUnit",
 		"rdfs:comment": "The unit of the reactive enregy, expressed in giga (one trillion) as a decimal unit prefix.",
 		"rdfs:label": "teravolt-ampere-reactive-hour"
+	},
+	{
+		"@id": "iot:AmpereHour",
+		"@type": "iot:ElectricChargeUnit",
+		"rdfs:comment": "The unit of the electric charge (battery capacity).",
+		"rdfs:label": "ampere-hour",
+		"iot:reference": "0112/2///62720#UAA102#001",
+		"dct:source": "http://www.qudt.org/qudt/owl/1.0.0/unit/Instances.html#AmpereHour"
+	},
+	{
+		"@id": "iot:KiloAmpereHour",
+		"@type": "iot:ElectricChargeUnit",
+		"rdfs:comment": "The unit of the electric charge (battery capacity), expressed in a unit prefix meaning 'one thousand'.",
+		"rdfs:label": "kilo-ampere-hour",
+		"iot:reference": "0112/2///62720#UAB053#001"
+	},
+	{
+		"@id": "iot:MilliAmpereHour",
+		"@type": "iot:ElectricChargeUnit",
+		"rdfs:comment": "The unit of the electric charge (battery capacity), expressed in a unit prefix meaning 'one thousandth'.",
+		"rdfs:label": "milli-ampere-hour",
+		"iot:reference": "0112/2///62720#UAA777#001"
+	},
+	{
+		"@id": "iot:ReciprocalHour",
+		"@type": "iot:CRateUnit",
+		"rdfs:comment": "Reciprocal of the unit hour",
+		"rdfs:label": "reciprocal-hour",
+		"iot:reference": "0112/2///62720#UAA526#001"
 	}
   ]
 }

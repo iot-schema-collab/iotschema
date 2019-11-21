@@ -2751,6 +2751,927 @@
         "@id": "iot:ReactiveEnergyExported"
       }
     ]
+  },
+  {
+    "@id": "iot:ElectricBattery",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:domain": [
+      {
+        "@id": "iot:Energy"
+      },
+      {
+        "@id": "iot:Building"
+      },
+      {
+        "@id": "iot:Home"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A capability for an electric battery(an electric power storage system). Power at Point of Common Coupling (PCC) is the power in the point on the electrical network, nearest to the generator, at which other customers are, or could be, connected."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "ElectricBattery"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Capability"
+      }
+    ]
+  },
+  {
+    "@id": "iot:stateOfCharge",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its StateOfCharge interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "stateOfCharge"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:ElectricBattery"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:StateOfCharge"
+      }
+    ]
+  },
+  {
+    "@id": "iot:capacity",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its Capacity interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "capacity"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:ElectricBattery"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:Capacity"
+      }
+    ]
+  },
+  {
+    "@id": "iot:charging",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its Charging interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "charging"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:ElectricBattery"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:Charging"
+      }
+    ]
+  },
+  {
+    "@id": "iot:discharging",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its Discharging interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "discharging"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:ElectricBattery"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:Discharging"
+      }
+    ]
+  },
+  {
+    "@id": "iot:lowBattery",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its LowBattery interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "lowBattery"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:ElectricBattery"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:LowBattery"
+      }
+    ]
+  },
+  {
+    "@id": "iot:maxChargeCurrent",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its MaxChargeCurrent interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "maxChargeCurrent"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:ElectricBattery"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:MaxChargeCurrent"
+      }
+    ]
+  },
+  {
+    "@id": "iot:maxDischargeCurrent",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its MaxDischargeCurrent interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "maxDischargeCurrent"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:ElectricBattery"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:MaxDischargeCurrent"
+      }
+    ]
+  },
+  {
+    "@id": "iot:maxChargePower",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its MaxChargePower interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "maxChargePower"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:ElectricBattery"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:MaxChargePower"
+      }
+    ]
+  },
+  {
+    "@id": "iot:maxDischargePower",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its MaxDischargePower interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "maxDischargePower"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:ElectricBattery"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:MaxDischargePower"
+      }
+    ]
+  },
+  {
+    "@id": "iot:chargeBattery",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "An action that relates a capability with its ChargeBattery interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "chargeBattery"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:ElectricBattery"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:ChargeBattery"
+      }
+    ]
+  },
+  {
+    "@id": "iot:dischargeBattery",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "An action that relates a capability with its DischargeBattery interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "dischargeBattery"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:ElectricBattery"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:DischargeBattery"
+      }
+    ]
+  },
+  {
+    "@id": "iot:setPointBattery",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "An action that relates a capability with its SetPointBattery interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "setPointBattery"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:ElectricBattery"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:SetPointBattery"
+      }
+    ]
+  },
+  {
+    "@id": "iot:batteryLowVoltageAlarm",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "An event that relates a capability with its BatteryLowVoltageAlarm interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "batteryLowVoltageAlarm"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:ElectricBattery"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:BatteryLowVoltageAlarm"
+      }
+    ]
+  },
+  {
+    "@id": "iot:overTemperatureAlarm",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "An event that relates a capability with its OverTemperatureAlarm interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "overTemperatureAlarm"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:ElectricBattery"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:OverTemperatureAlarm"
+      }
+    ]
+  },
+  {
+    "@id": "iot:underTemperatureAlarm",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "An event that relates a capability with its UnderTemperatureAlarm interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "underTemperatureAlarm"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:ElectricBattery"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:UnderTemperatureAlarm"
+      }
+    ]
+  },
+  {
+    "@id": "iot:overElectricalCurrentAlarm",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": ""
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "overElectricalCurrentAlarm"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:ElectricBattery"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:OverElectricalCurrentAlarm"
+      }
+    ]
+  },
+  {
+    "@id": "iot:overVoltageAlarm",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "An event that relates a capability with its OverVoltageAlarm interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "overVoltageAlarm"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:ElectricBattery"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:OverVoltageAlarm"
+      }
+    ]
+  },
+  {
+    "@id": "iot:underVoltageAlarm",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "An event that relates a capability with its UnderVoltageAlarm interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "underVoltageAlarm"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:ElectricBattery"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:UnderVoltageAlarm"
+      }
+    ]
+  },
+  {
+    "@id": "iot:overPressureAlarm",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "An event that relates a capability with its OverPressureAlarm interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "overPressureAlarm"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:ElectricBattery"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:OverPressureAlarm"
+      }
+    ]
+  },
+  {
+    "@id": "iot:ElectricPowerSystem",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:domain": [
+      {
+        "@id": "iot:Energy"
+      },
+      {
+        "@id": "iot:Building"
+      },
+      {
+        "@id": "iot:Home"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "The class of electric power systems, i.e., systems that exchange electricity (i.e., electric power) with other systems. Electric power systems may consume, produce, or store electricity"
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "ElectricPowerSystem"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Capability"
+      }
+    ]
+  },
+  {
+    "@id": "iot:pccpower",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its PccPower interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "pccpower"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:ElectricPowerSystem"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:PccPower"
+      }
+    ]
+  },
+  {
+    "@id": "iot:Microphone",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:domain": [
+      {
+        "@id": "iot:Energy"
+      },
+      {
+        "@id": "iot:Building"
+      },
+      {
+        "@id": "iot:Industry"
+      },
+      {
+        "@id": "iot:Home"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A capability for an Internet Protocol (IP) microphone."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "Microphone"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Capability"
+      }
+    ]
+  },
+  {
+    "@id": "iot:startRecording",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "An action that relates a capability with its StartRecording interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "startRecording"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:Microphone"
+      },
+      {
+        "@id": "iot:Camera"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:StartRecording"
+      }
+    ]
+  },
+  {
+    "@id": "iot:stopRecording",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "An action that relates a capability with its StopRecording interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "stopRecording"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:Microphone"
+      },
+      {
+        "@id": "iot:Camera"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:StopRecording"
+      }
+    ]
+  },
+  {
+    "@id": "iot:pauseRecording",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "An action that relates a capability with its PauseRecording interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "pauseRecording"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:Microphone"
+      },
+      {
+        "@id": "iot:Camera"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:PauseRecording"
+      }
+    ]
+  },
+  {
+    "@id": "iot:resumerecording",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "An action that relates a capability with its ResumeRecording interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "resumerecording"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:Microphone"
+      },
+      {
+        "@id": "iot:Camera"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:ResumeRecording"
+      }
+    ]
+  },
+  {
+    "@id": "iot:Camera",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:domain": [
+      {
+        "@id": "iot:Energy"
+      },
+      {
+        "@id": "iot:Building"
+      },
+      {
+        "@id": "iot:Industry"
+      },
+      {
+        "@id": "iot:Home"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A capability for an Internet Protocol (IP) camera."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "Camera"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Capability"
+      }
+    ]
+  },
+  {
+    "@id": "iot:makeImage",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "An action that relates a capability with its MakeImage interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "makeImage"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:Camera"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:MakeImage"
+      }
+    ]
   }
 ]
 }
