@@ -4,7 +4,7 @@
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "http://schema.org/",
-	"dct": "http://purl.org/dc/terms/"
+    "dct": "http://purl.org/dc/terms/"
   },
   "@graph": [
     {
@@ -16,20 +16,24 @@
         "@id": "schema:Enumeration"
       }
     },
-	{
-		"@id": "iot:Unit",
-		"@type": "rdfs:Class",
-		"rdfs:comment": "Unit of measurement",
-		"rdfs:label": "Unit"
-	},
-	{
-	    "@id": "iot:reference",
-		"@type": "rdf:Property",
-		"schema:domainIncludes": "iot:Unit",
-		"schema:rangeIncludes": "schema:Text",
-		"rdfs:comment": "IRDI reference to unit as specified by IEC Common Data Dictionary",
-		"rdfs:label" : "Reference"
-	},
+    {
+      "@id": "iot:Unit",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Unit of measurement",
+      "rdfs:label": "Unit"
+    },
+    {
+      "@id": "iot:reference",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "iot:Unit"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "IRDI reference to unit as specified by IEC Common Data Dictionary",
+      "rdfs:label": "Reference"
+    },
     {
       "@id": "iot:isObservedBy",
       "@type": "rdf:Property",
@@ -101,18 +105,19 @@
       "@id": "iot:providesOutputData",
       "@type": "rdf:Property",
       "rdfs:label": "providesOutputData",
-	  "rdfs:comment": "Property for Output Data from an Interaction.",
+      "rdfs:comment": "Property for Output Data from an Interaction.",
       "schema:domainIncludes": [
-	    {
-        "@id": "iot:InteractionPattern"
-		}],
+        {
+          "@id": "iot:InteractionPattern"
+        }
+      ],
       "schema:rangeIncludes": [
         {
           "@id": "schema:PropertyValue"
         },
         {
           "@id": "schema:PropertyValueSpecification"
-        }		
+        }
       ]
     },
     {
@@ -141,7 +146,7 @@
       "@type": "rdfs:Class",
       "rdfs:comment": "Feature Of Interest - The thing whose property is being estimated or calculated in the course of an Observation, or whose property is being manipulated by an Actuator. ",
       "rdfs:label": "FeatureOfInterest",
-	  "dct:source": "http://www.w3.org/ns/sosa/FeatureOfInterest"
+      "dct:source": "http://www.w3.org/ns/sosa/FeatureOfInterest"
     },
     {
       "@id": "iot:Site",
@@ -149,20 +154,20 @@
       "rdfs:comment": "Site (e.g., Building Site) is a subclass of Place and FeatureOfInterest",
       "rdfs:label": "Place",
       "rdfs:subClassOf": {
-	    "@id": "schema:Place",
+        "@id": "schema:Place",
         "@id": "iot:FeatureOfInterest"
       }
-    },	
+    },
     {
       "@id": "iot:Equipment",
       "@type": "rdfs:Class",
       "rdfs:comment": "Equipment subclass of FeatureOfInterest",
       "rdfs:label": "Equipment",
-	  "dct:source": "https://project-haystack.org/tag/equip",
+      "dct:source": "https://project-haystack.org/tag/equip",
       "rdfs:subClassOf": {
         "@id": "iot:FeatureOfInterest"
-      } 
-    },	
+      }
+    },
     {
       "@id": "iot:location",
       "@type": "rdf:Property",
@@ -179,13 +184,13 @@
           "@id": "iot:Site"
         }
       ]
-    },	
+    },
     {
       "@id": "iot:observedProperty",
       "@type": "rdf:Property",
       "rdfs:comment": "Relation linking a PropertyValue to the property that was observed. The Property or Event should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this PropertyValue. ",
       "rdfs:label": "observedProperty",
-	  "dct:source": "http://www.w3.org/ns/sosa/observedProperty",
+      "dct:source": "http://www.w3.org/ns/sosa/observedProperty",
       "schema:domainIncludes": {
         "@id": "schema:PropertyValue"
       },
@@ -214,7 +219,7 @@
       "@type": "rdf:Property",
       "rdfs:comment": "Relation between a PropertyValue and the Action of a FeatureOfInterest it is acting upon.",
       "rdfs:label": "actsOnProperty",
-	  "dct:source": "http://www.w3.org/ns/sosa/actsOnProperty",
+      "dct:source": "http://www.w3.org/ns/sosa/actsOnProperty",
       "schema:domainIncludes": {
         "@id": "schema:PropertyValue"
       },
@@ -223,13 +228,13 @@
           "@id": "iot:Action"
         }
       ]
-    },	
+    },
     {
       "@id": "iot:isPropertyOf",
       "@type": "rdf:Property",
       "rdfs:comment": "Relation between a Property and the entity it belongs to.",
       "rdfs:label": "isPropertyOf",
-	  "dct:source": "http://www.w3.org/ns/ssn/isPropertyOf",
+      "dct:source": "http://www.w3.org/ns/ssn/isPropertyOf",
       "schema:domainIncludes": {
         "@id": "iot:Property"
       },
@@ -238,7 +243,7 @@
           "@id": "iot:FeatureOfInterest"
         }
       ]
-    },	
+    },
     {
       "@id": "iot:isActionOf",
       "@type": "rdf:Property",
@@ -252,7 +257,7 @@
           "@id": "iot:FeatureOfInterest"
         }
       ]
-    },	
+    },
     {
       "@id": "iot:isEventOf",
       "@type": "rdf:Property",
@@ -266,12 +271,12 @@
           "@id": "iot:FeatureOfInterest"
         }
       ]
-    },	
+    },
     {
       "@id": "iot:acceptsInputData",
       "@type": "rdf:Property",
       "rdfs:label": "acceptsInputData",
-	  "rdfs:comment" : "Property for Input Data of an Interaction.",
+      "rdfs:comment": "Property for Input Data of an Interaction.",
       "schema:domainIncludes": {
         "@id": "iot:InteractionPattern"
       },
@@ -325,16 +330,16 @@
       "schema:rangeIncludes": {
         "@id": "iot:FeatureOfInterest"
       }
-    },	
+    },
     {
       "@id": "iot:capability",
       "@type": "rdf:Property",
       "rdfs:label": "capability",
-	  "rdfs:comment": "A property that relates an interaction pattern with its capability .",
+      "rdfs:comment": "A property that relates an interaction pattern with its capability .",
       "schema:domainIncludes": {
         "@id": "iot:InteractionPattern"
       },
-	  "schema:inverseOf": {
+      "schema:inverseOf": {
         "@id": "iot:providesInteractionPattern"
       },
       "schema:rangeIncludes": {
@@ -345,14 +350,14 @@
       "@id": "iot:providesInteractionPattern",
       "@type": "rdf:Property",
       "rdfs:label": "providesInteractionPattern",
-	  "rdfs:comment": "A property that relates a capability with its interaction patterns.",
+      "rdfs:comment": "A property that relates a capability with its interaction patterns.",
       "schema:domainIncludes": {
         "@id": "iot:Capability"
       },
       "schema:rangeIncludes": {
         "@id": "iot:InteractionPattern"
       }
-    },	
+    },
     {
       "@id": "iot:Common",
       "@type": "iot:Domain",
@@ -397,7 +402,7 @@
       "@type": "iot:Domain",
       "rdfs:comment": "Industry Domain",
       "rdfs:label": "Industry"
-    },	
+    },
     {
       "@id": "iot:Mobility",
       "@type": "iot:Domain",
@@ -446,7 +451,7 @@
       "@id": "iot:writable",
       "@type": "rdf:Property",
       "rdfs:label": "writable",
-	  "rdfs:comment" : "Property to specify writability of a property.",
+      "rdfs:comment": "Property to specify writability of a property.",
       "schema:domainIncludes": {
         "@id": "iot:Property"
       },
@@ -460,7 +465,7 @@
       "@id": "iot:observable",
       "@type": "rdf:Property",
       "rdfs:label": "observable",
-	  "rdfs:comment" : "Property to specify observability of a property.",
+      "rdfs:comment": "Property to specify observability of a property.",
       "schema:domainIncludes": {
         "@id": "iot:Property"
       },
@@ -469,7 +474,6 @@
           "@id": "schema:Boolean"
         }
       ]
-    }	
+    }
   ]
 }
-
