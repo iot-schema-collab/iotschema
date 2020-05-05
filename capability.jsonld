@@ -1559,6 +1559,99 @@
     ]
   },
   {
+    "@id": "iot:demandControlledVentilation",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its DemandControlledVentilation interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "demandControlledVentilation"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:AmbientAir"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:DemandControlledVentilation"
+      }
+    ]
+  },
+  {
+    "@id": "iot:carbonDioxideConcentrationLimit",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its CarbonDioxideConcentrationLimit interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "carbonDioxideConcentrationLimit"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:AmbientAir"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:CarbonDioxideConcentrationLimit"
+      }
+    ]
+  },
+  {
+    "@id": "iot:highCarbonDioxideConcentrationAlarm",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates a capability with its HighCarbonDioxideConcentrationAlarm interaction pattern."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "HighCarbonDioxideConcentrationAlarm"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesInteractionPattern"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:AmbientAir"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:HighCarbonDioxideConcentrationAlarm"
+      }
+    ]
+  },
+  {
     "@id": "iot:PowerMonitoring",
     "@type": [
       "rdfs:Class"

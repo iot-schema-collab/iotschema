@@ -1,0 +1,80 @@
+{
+	"@id": "iot:VoltageUnit",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "An enumeration of voltage units.",
+	"rdfs:label": "VoltageUnit",
+	"rdfs:subClassOf": {
+	"@id": "schema:Enumeration"
+	}
+},
+{
+	"@id": "iot:Volt",
+	"@type": "iot:VoltageUnit",
+	"rdfs:comment": "The unit of voltage.",
+	"rdfs:label": "volt",
+	"iot:reference": "0112/2///62720#UAA296#001",
+	"dct:source": "http://www.qudt.org/qudt/owl/1.0.0/unit/Instances.html#Volt"
+},
+{
+	"@id": "iot:FemtoVolt",
+	"@type": "iot:VoltageUnit",
+	"rdfs:comment": "The unit of voltage, expressed in a unit prefix meaning "one 0.000000000000001".",
+	"rdfs:label": "femtovolt",
+	"iot:reference": "0112/2///62720#UAC770#001"
+},
+{
+	"@id": "iot:PicoVolt",
+	"@type": "iot:VoltageUnit",
+	"rdfs:comment": "The unit of voltage, expressed in a unit prefix meaning "one trillionth".",
+	"rdfs:label": "picovolt",
+	"iot:reference": "0112/2///62720#UAB363#001"
+},
+{
+	"@id": "iot:NanoVolt",
+	"@type": "iot:VoltageUnit",
+	"rdfs:comment": "The unit of voltage, expressed in a unit prefix meaning "one billionth".",
+	"rdfs:label": "nanovolt",
+	"iot:reference": "0112/2///62720#UAC771#001"
+},
+{
+	"@id": "iot:MicroVolt",
+	"@type": "iot:VoltageUnit",
+	"rdfs:comment": "The unit of voltage, expressed in a unit prefix meaning "one millionth".",
+	"rdfs:label": "microvolt",
+	"iot:reference": "0112/2///62720#UAA078#001"
+},
+{
+	"@id": "iot:MilliVolt",
+	"@type": "iot:VoltageUnit",
+	"rdfs:comment": "The unit of voltage, expressed in a unit prefix meaning "one thousandth".",
+	"rdfs:label": "millivolt",
+	"iot:reference": "0112/2///62720#UAA804#001"
+},
+{
+	"@id": "iot:KiloVolt",
+	"@type": "iot:VoltageUnit",
+	"rdfs:comment": "The unit of voltage, expressed in a unit prefix meaning "one thousand".",
+	"rdfs:label": "kilovolt",
+	"iot:reference": "0112/2///62720#UAA580#001"
+},
+{
+	"@id": "iot:MegaVolt",
+	"@type": "iot:VoltageUnit",
+	"rdfs:comment": "The unit of voltage, expressed in a unit prefix meaning "one million".",
+	"rdfs:label": "megavolt",
+	"iot:reference": "0112/2///62720#UAA221#001"
+},
+{
+	"@id": "iot:GigaVolt",
+	"@type": "iot:VoltageUnit",
+	"rdfs:comment": "The unit of voltage, expressed in a unit prefix meaning "one billion".",
+	"rdfs:label": "gigavolt",
+	"iot:reference": "0112/2///62720#UAC772#001"
+},
+{
+	"@id": "iot:TeraVolt",
+	"@type": "iot:VoltageUnit",
+	"rdfs:comment": "The unit of voltage, expressed in a unit prefix meaning "one trillion".",
+	"rdfs:label": "teravolt",
+	"iot:reference": "0112/2///62720#UAC773#001"
+}

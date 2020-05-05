@@ -1,0 +1,236 @@
+{
+	"@id": "iot:ApparentPowerA",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The apparent power for phase A (there exist phases A, B, and C).",
+	"rdfs:label": "ApparentPowerA",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:ApparentPowerData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:ApparentPowerData",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "Data for the apparent power.",
+	"rdfs:label": "ApparentPowerData",
+	"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+	"schema:propertyType": { "@id": "schema:Float" },
+	"schema:unitCode": { "@id": "iot:ApparentPowerUnit" },
+	"schema:minValue": "schema:Float",
+	"schema:maxValue": "schema:Float"
+},
+{
+	"@id": "iot:ApparentPowerB",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The apparent power for phase B (there exist phases A, B, and C).",
+	"rdfs:label": "ApparentPowerB",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:ApparentPowerData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:ApparentPowerC",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The apparent power for phase C (there exist phases A, B, and C).",
+	"rdfs:label": "ApparentPowerC",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:ApparentPowerData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:TotalApparentPower",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The total apparent power.",
+	"rdfs:label": "TotalApparentPower",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:ApparentPowerData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:ActivePowerA",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The active power for phase A (there exist phases A, B, and C).",
+	"rdfs:label": "ActivePowerA",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:ActivePowerData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:ActivePowerData",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "Data for the active power",
+	"rdfs:label": "ActivePowerData",
+	"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+	"schema:propertyType": { "@id": "schema:Float" },
+	"schema:unitCode": { "@id": "iot:ActivePowerUnit" },
+	"schema:minValue": "schema:Float",
+	"schema:maxValue": "schema:Float"
+},
+{
+	"@id": "iot:ActivePowerB",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The active power for phase B (there exist phases A, B, and C).",
+	"rdfs:label": "ActivePowerB",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:ActivePowerData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:ActivePowerC",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The active power for phase C (there exist phases A, B, and C).",
+	"rdfs:label": "ActivePowerC",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:ActivePowerData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:TotalActivePower",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The total active power.",
+	"rdfs:label": "TotalActivePower",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:ActivePowerData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:ReactivePowerA",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The reactive power for phase A (there exist phases A, B, and C).",
+	"rdfs:label": "ReactivePowerA",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:ReactivePowerData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:ReactivePowerData",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "Data for the reactive power",
+	"rdfs:label": "ReactivePowerData",
+	"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+	"schema:propertyType": { "@id": "schema:Float" },
+	"schema:unitCode": { "@id": "iot:ReactivePowerUnit" },
+	"schema:minValue": "schema:Float",
+	"schema:maxValue": "schema:Float"
+},
+{
+	"@id": "iot:ReactivePowerB",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The reactive power for phase B (there exist phases A, B, and C).",
+	"rdfs:label": "ReactivePowerB",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:ReactivePowerData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:ReactivePowerC",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The reactive power for phase C (there exist phases A, B, and C).",
+	"rdfs:label": "ReactivePowerC",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:ReactivePowerData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:TotalReactivePower",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The total reactive power.",
+	"rdfs:label": "TotalReactivePower",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:ReactivePowerData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:PowerFactorA",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The power factor for phase A (there exist phases A, B, and C).",
+	"rdfs:label": "PowerFactorA",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:PowerFactorData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:PowerFactorData",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "Data for the power factor.",
+	"rdfs:label": "PowerFactorData",
+	"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+	"schema:propertyType": { "@id": "schema:Float" },
+	"schema:unitCode": { "@id": "iot:Percent" },
+	"schema:minValue": "schema:Float",
+	"schema:maxValue": "schema:Float"
+},
+{
+	"@id": "iot:PowerFactorB",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The power factor for phase B (there exist phases A, B, and C).",
+	"rdfs:label": "PowerFactorB",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:PowerFactorData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:PowerFactorC",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The power factor for phase C (there exist phases A, B, and C).",
+	"rdfs:label": "PowerFactorC",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:PowerFactorData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:TotalPowerFactor",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The total power factor.",
+	"rdfs:label": "TotalPowerFactor",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:PowerFactorData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+}

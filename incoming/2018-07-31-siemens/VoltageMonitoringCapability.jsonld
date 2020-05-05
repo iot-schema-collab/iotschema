@@ -1,0 +1,24 @@
+{
+	"@id": "iot:VoltageMonitoring",
+	"@type": "rdfs:Class",
+	"rdfs:subClassOf": { "@id": "iot:Capability" },
+	"rdfs:comment": "A capability for voltage monitoring in an electric circuit.",
+	"rdfs:label": "VoltageMonitoring",
+	"iot:domain": [
+			{"@id": "iot:Energy"},
+			{"@id": "iot:Building"},
+			{"@id": "iot:Industry"},
+			{"@id": "iot:Home"}
+			],
+	"iot:providesInteractionPattern": [
+	{
+		"@id": "iot:PhaseToNeutralVoltageA",
+		"@id": "iot:PhaseToNeutralVoltageB",
+		"@id": "iot:PhaseToNeutralVoltageC",
+		"@id": "iot:PhaseToPhaseVoltageAB",
+		"@id": "iot:PhaseToPhaseVoltageBC",
+		"@id": "iot:PhaseToPhaseVoltageCA",
+		"@id": "iot:AveragePhaseToNeutralVoltage",
+		"@id": "iot:AveragePhaseToPhaseVoltage"
+	}]
+}

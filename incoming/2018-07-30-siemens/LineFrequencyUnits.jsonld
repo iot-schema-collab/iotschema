@@ -1,0 +1,79 @@
+{
+	"@id": "iot:LineFrequencyUnit",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "An enumeration of line frequency units.",
+	"rdfs:label": "LineFrequencyUnit",
+	"rdfs:subClassOf": {
+	"@id": "schema:Enumeration"
+	}
+},
+{
+	"@id": "iot:Hertz",
+	"@type": "iot:LineFrequencyUnit",
+	"rdfs:comment": "The unit of line frequency.",
+	"rdfs:label": "hertz",
+	"iot:reference": "0112/2///62720#UAA170#001",
+	"dct:source": "http://www.qudt.org/qudt/owl/1.0.0/unit/Instances.html#Hertz"
+},
+{
+	"@id": "iot:Femtohertz",
+	"@type": "iot:LineFrequencyUnit",
+	"rdfs:comment": "The unit of line frequency, expressed in a unit prefix meaning "one 0.000000000000001".",
+	"rdfs:label": "femtohertz"
+},
+{
+	"@id": "iot:Picohertz",
+	"@type": "iot:LineFrequencyUnit",
+	"rdfs:comment": "The unit of line frequency, expressed in a unit prefix meaning "one trillionth".",
+	"rdfs:label": "picohertz"
+},
+{
+	"@id": "iot:Nanoampere",
+	"@type": "iot:LineFrequencyUnit",
+	"rdfs:comment": "The unit of line frequency, expressed in a unit prefix meaning "one billionth".",
+	"rdfs:label": "nanohertz"
+},
+{
+	"@id": "iot:Microhertz",
+	"@type": "iot:LineFrequencyUnit",
+	"rdfs:comment": "The unit of line frequency, expressed in a unit prefix meaning "one millionth".",
+	"rdfs:label": "microhertz"
+},
+{
+	"@id": "iot:Millihertz",
+	"@type": "iot:LineFrequencyUnit",
+	"rdfs:comment": "The unit of line frequency, expressed in a unit prefix meaning "one thousandth".",
+	"rdfs:label": "millihertz",
+	"iot:reference": "0112/2///62720#UAB698#001"
+},
+{
+	"@id": "iot:KiloHertz",
+	"@type": "iot:LineFrequencyUnit",
+	"rdfs:comment": "The unit of line frequency, expressed in a unit prefix meaning "one thousand".",
+	"rdfs:label": "kilohertz",
+	"iot:reference": "0112/2///62720#UAA566#001",
+	"dct:source": "http://www.qudt.org/qudt/owl/1.0.0/unit/Instances.html#KiloHertz"
+},
+{
+	"@id": "iot:MegaHertz",
+	"@type": "iot:LineFrequencyUnit",
+	"rdfs:comment": "The unit of line frequency, expressed in a unit prefix meaning "one million".",
+	"rdfs:label": "megahertz",
+	"iot:reference": "0112/2///62720#UAA209#001",
+	"dct:source": "http://www.qudt.org/qudt/owl/1.0.0/unit/Instances.html#MegaHertz"
+},
+{
+	"@id": "iot:GigaHertz",
+	"@type": "iot:LineFrequencyUnit",
+	"rdfs:comment": "The unit of line frequency, expressed in a unit prefix meaning "one billion".",
+	"rdfs:label": "gigahertz",
+	"iot:reference": "0112/2///62720#UAA150#001",
+	"dct:source": "http://www.qudt.org/qudt/owl/1.0.0/unit/Instances.html#GigaHertz"
+},
+{
+	"@id": "iot:TeraHertz",
+	"@type": "iot:LineFrequencyUnit",
+	"rdfs:comment": "The unit of line frequency, expressed in a unit prefix meaning "one trillion".",
+	"rdfs:label": "terahertz",
+	"iot:reference": "0112/2///62720#UAA287#001"
+}

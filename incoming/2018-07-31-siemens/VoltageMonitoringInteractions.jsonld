@@ -1,0 +1,107 @@
+{
+	"@id": "iot:PhaseToNeutralVoltageA",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The voltage between the phase (line) A and neutral (there exist phases A, B, and C).",
+	"rdfs:label": "PhaseToNeutralVoltageA",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:VoltageData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:VoltageData",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "Voltage data.",
+	"rdfs:label": "VoltageData",
+	"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+	"schema:propertyType": { "@id": "schema:Float" },
+	"schema:unitCode": { "@id": "iot:VoltageUnit" },
+	"schema:minValue": "schema:Float",
+	"schema:maxValue": "schema:Float"
+},
+{
+	"@id": "iot:PhaseToNeutralVoltageB",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The voltage between the phase (line) B and neutral (there exist phases A, B, and C).",
+	"rdfs:label": "PhaseToNeutralVoltageB",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:VoltageData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:PhaseToNeutralVoltageC",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The voltage between the phase (line) C and neutral (there exist phases A, B, and C).",
+	"rdfs:label": "PhaseToNeutralVoltageC",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:VoltageData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:PhaseToPhaseVoltageAB",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The voltage between phases A and B (line-to-line voltages in a polyphase system).",
+	"rdfs:label": "PhaseToPhaseVoltageAB",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:VoltageData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:PhaseToPhaseVoltageBC",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The voltage between phases B and C (line-to-line voltages in a polyphase system).",
+	"rdfs:label": "PhaseToPhaseVoltageBC",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:VoltageData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:PhaseToPhaseVoltageCA",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The voltage between phases C and A (line-to-line voltages in a polyphase system).",
+	"rdfs:label": "PhaseToPhaseVoltageCA",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:VoltageData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:AveragePhaseToNeutralVoltage",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The average voltage between phase (line) and neutral.",
+	"rdfs:label": "AveragePhaseToNeutralVoltage",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:VoltageData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:AveragePhaseToPhaseVoltage",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The average voltage between two phases (line-to-line voltages in a polyphase system).",
+	"rdfs:label": "AveragePhaseToPhaseVoltage",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:VoltageData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+}

@@ -72,9 +72,6 @@
       },
       {
         "@id": "iot:TemperatureAlarm"
-      },
-      {
-        "@id": "iot:TemperatureAlarm"
       }
     ],
     "schema:rangeIncludes": [
@@ -204,7 +201,13 @@
       {
         "@id": "iot:NitrogenConcentrationData"
       },
-      {
+	  {
+        "@id": "iot:DemandControlledVentilationData"
+      },
+	  {
+        "@id": "iot:CarbonDioxideConcentrationLimitData"
+      },
+	  {
         "@id": "iot:OxygenConcentrationData"
       },
       {
@@ -322,6 +325,12 @@
       },
       {
         "@id": "iot:VoltageData"
+      },
+	  {
+        "@id": "iot:DemandControlledVentilation"
+      },
+	  {
+        "@id": "iot:CarbonDioxideConcentrationLimit"
       }
     ],
     "schema:rangeIncludes": [
@@ -405,6 +414,12 @@
       },
       {
         "@id": "iot:VoltageData"
+      },
+	  {
+        "@id": "iot:DemandControlledVentilation"
+      },
+	  {
+        "@id": "iot:CarbonDioxideConcentrationLimit"
       }
     ],
     "schema:rangeIncludes": [
@@ -1367,7 +1382,7 @@
     ],
     "rdfs:comment": [
       {
-        "@value": "A property that relates an Interaction Pattern with its input indData."
+        "@value": "A property that relates an Interaction Pattern with its input WindData."
       }
     ],
     "rdfs:label": [
@@ -3157,13 +3172,13 @@
     ]
   },
   {
-    "@id": "scheprovidesma:Boolean",
+    "@id": "providesBooleanData",
     "@type": [
       "rdf:Property"
     ],
     "rdfs:comment": [
       {
-        "@value": "A property that relates an Interaction Pattern with its output ma:Boolean."
+        "@value": "A property that relates an Interaction Pattern with its output (Boolean)."
       }
     ],
     "rdfs:subPropertyOf": [
@@ -3173,7 +3188,8 @@
     ],
     "schema:domainIncludes": [
       {
-        "@id": "iot:TemperatureAlarm"
+        "@id": "iot:TemperatureAlarm",
+		"@id": "iot:HighCarbonDioxideConcentrationAlarm"
       }
     ],
     "schema:rangeIncludes": [
@@ -3235,7 +3251,8 @@
     ],
     "schema:domainIncludes": [
       {
-        "@id": "iot:CarbonDioxideConcentration"
+        "@id": "iot:CarbonDioxideConcentration",
+		"@id": "iot:HighCarbonDioxideConcentrationAlarm"
       }
     ],
     "schema:rangeIncludes": [
@@ -3266,18 +3283,18 @@
     ]
   },
   {
-    "@id": "iot:carbonDioxideconcentrationUnitCode",
+    "@id": "iot:carbonDioxideConentrationUnitCode",
     "@type": [
       "rdf:Property"
     ],
     "rdfs:comment": [
       {
-        "@value": "A property that relates iot:carbonDioxideconcentrationUnitCode with its unit."
+        "@value": "A property that relates iot:carbonDioxideConentrationUnitCode with its unit."
       }
     ],
     "rdfs:label": [
       {
-        "@value": "carbonDioxideconcentrationUnitCode"
+        "@value": "carbonDioxideConentrationUnitCode"
       }
     ],
     "rdfs:subPropertyOf": [
@@ -3402,6 +3419,234 @@
     "schema:domainIncludes": [
       {
         "@id": "iot:NitrogenConcentrationData"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:GasInAirConcentrationUnit"
+      }
+    ]
+  },
+  {
+    "@id": "iot:DemandControlledVentilation",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:observable": [
+      {
+        "@value": "schema:Boolean"
+      }
+    ],
+    "iot:writable": [
+      {
+        "@value": "schema:True"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Demand controlled ventilation (DCV) maintains ambient air quality by automated adjustments of the ventilation rate provided to a space in response to changes in conditions such as occupant number or indoor pollutant concentration."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "DemandControlledVentilation"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Property"
+      }
+    ]
+  },
+  {
+    "@id": "iot:providesDemandControlledVentilationData",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates an Interaction Pattern with its output DemandControlledVentilationData."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "providesDemandControlledVentilationData"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesOutputData"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:DemandControlledVentilation"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:DemandControlledVentilationData"
+      }
+    ]
+  },
+  {
+    "@id": "iot:DemandControlledVentilationData",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Demand controlled ventilation data."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "DemandControlledVentilationData"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "schema:PropertyValue"
+      }
+    ]
+  },
+  {
+    "@id": "iot:demandControlledVentilationUnitCode",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates demandControlledVentilationUnitCode with its unit."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "demandControlledVentilationUnitCode"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "schema:unitCode"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:DemandControlledVentilationData"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:GasInAirConcentrationUnit"
+      }
+    ]
+  },
+  {
+    "@id": "iot:CarbonDioxideConcentrationLimit",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:observable": [
+      {
+        "@value": "schema:Boolean"
+      }
+    ],
+    "iot:writable": [
+      {
+        "@value": "schema:True"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "The limit (e.g., min and max value) specified for the concentration of carbon dioxide (CO2) in ambient air."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "CarbonDioxideConcentrationLimit"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Property"
+      }
+    ]
+  },
+  {
+    "@id": "iot:providesCarbonDioxideConcentrationLimitData",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates an Interaction Pattern with its output CarbonDioxideConcentrationLimitData."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "providesCarbonDioxideConcentrationLimitData"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesOutputData"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:CarbonDioxideConcentrationLimit"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:CarbonDioxideConcentrationLimitData"
+      }
+    ]
+  },
+  {
+    "@id": "iot:CarbonDioxideConcentrationLimitData",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Carbon dioxide concentration data defining the limit."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "CarbonDioxideConcentrationLimitData"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "schema:PropertyValue"
+      }
+    ]
+  },
+  {
+    "@id": "iot:carbonDioxideConcentrationLimitUnitCode",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates carbonDioxideConcentrationLimitUnitCode with its unit."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "carbonDioxideConcentrationLimitUnitCode"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "schema:unitCode"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:CarbonDioxideConcentrationLimitData"
       }
     ],
     "schema:rangeIncludes": [
@@ -6526,6 +6771,27 @@
     "rdfs:label": [
       {
         "@value": "OverPressureAlarm"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Event"
+      }
+    ]
+  },
+  {
+    "@id": "iot:HighCarbonDioxideConcentrationAlarm",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Too high carbon dioxide concentration."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "HighCarbonDioxideConcentrationAlarm"
       }
     ],
     "rdfs:subClassOf": [

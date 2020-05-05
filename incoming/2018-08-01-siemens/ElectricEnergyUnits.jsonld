@@ -1,0 +1,126 @@
+{
+	"@id": "iot:ApparentEnergyUnit",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "An enumeration of apparent energy units.",
+	"rdfs:label": "ApparentEnergyUnit",
+	"rdfs:subClassOf": {
+	"@id": "schema:Enumeration"
+	}
+},
+{
+	"@id": "iot:VoltAmpereHours",
+	"@type": "iot:ApparentEnergyUnit",
+	"rdfs:comment": "The unit of the apparent energy.",
+	"rdfs:label": "volt-ampere-hours"
+},
+{
+	"@id": "iot:KiloVoltAmpereHours",
+	"@type": "iot:ApparentEnergyUnit",
+	"rdfs:comment": "The unit of the apparent enregy, expressed in kilo (one thousand) as a decimal unit prefix.",
+	"rdfs:label": "kilovolt-ampere-hours"
+},
+{
+	"@id": "iot:MegaVoltAmpereHours",
+	"@type": "iot:ApparentEnergyUnit",
+	"rdfs:comment": "The unit of the apparent enregy, expressed in mega (one million) as a decimal unit prefix.",
+	"rdfs:label": "megavolt-ampere-hours"
+},
+{
+	"@id": "iot:GigaVoltAmpereHours",
+	"@type": "iot:ApparentEnergyUnit",
+	"rdfs:comment": "The unit of the apparent enregy, expressed in giga (one billion) as a decimal unit prefix.",
+	"rdfs:label": "gigavolt-ampere-hours"
+},
+{
+	"@id": "iot:TeraVoltAmpereHours",
+	"@type": "iot:ApparentPowerUnit",
+	"rdfs:comment": "The unit of the apparent enregy, expressed in giga (one trillion) as a decimal unit prefix.",
+	"rdfs:label": "teravolt-ampere-hours"
+},
+{
+	"@id": "iot:ActiveEnergyUnit",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "An enumeration of active enregy units.",
+	"rdfs:label": "ActiveEnergyUnit",
+	"rdfs:subClassOf": {
+	"@id": "schema:Enumeration"
+	}
+},
+{
+	"@id": "iot:WattHour",
+	"@type": "iot:ActiveEnergyUnit",
+	"rdfs:comment": "The unit of the active enregy.",
+	"rdfs:label": "watt-hour",
+	"dct:source": "http://www.qudt.org/qudt/owl/1.0.0/unit/Instances.html#Watthour",
+	"iot:reference": "0112/2///62720#UAA308#001"
+},
+{
+	"@id": "iot:KiloWattHour",
+	"@type": "iot:ActiveEnergyUnit",
+	"rdfs:comment": "The unit of the active enregy, expressed in kilo (one thousand) as a decimal unit prefix.",
+	"rdfs:label": "kilowatt-hour",
+	"dct:source": "http://www.qudt.org/qudt/owl/1.0.0/unit/Instances.html#Kilowatthour",
+	"iot:reference": "0112/2///62720#UAA584#001"
+},
+{
+	"@id": "iot:MegaWattHour",
+	"@type": "iot:ActiveEnergyUnit",
+	"rdfs:comment": "The unit of the active enregy, expressed in mega (one million) as a decimal unit prefix.",
+	"rdfs:label": "megawatt-hour",
+	"iot:reference": "0112/2///62720#UAA225#001"
+},
+{
+	"@id": "iot:GigaWattHour",
+	"@type": "iot:ActiveEnergyUnit",
+	"rdfs:comment": "The unit of the active enregy, expressed in giga (one billion) as a decimal unit prefix.",
+	"rdfs:label": "gigawatt-hour",
+	"iot:reference": "0112/2///62720#UAA155#001"
+},
+{
+	"@id": "iot:TeraWattHour",
+	"@type": "iot:ActiveEnergyUnit",
+	"rdfs:comment": "The unit of the active enregy, expressed in giga (one trillion) as a decimal unit prefix.",
+	"rdfs:label": "terawatt-hour",
+	"iot:reference": "0112/2///62720#UAA155#001"
+},
+{
+	"@id": "iot:ReactiveEnergyUnit",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "An enumeration of reactive enregy units.",
+	"rdfs:label": "ReactiveEnergyUnit",
+	"rdfs:subClassOf": {
+	"@id": "schema:Enumeration"
+	}
+},
+{
+	"@id": "iot:VoltAmpereReactiveHour",
+	"@type": "iot:ReactiveEnergyUnit",
+	"rdfs:comment": "The unit of reactive enregy.",
+	"rdfs:label": "volt-ampere-reactive-hour"
+},
+{
+	"@id": "iot:KiloVoltAmpereReactiveHour",
+	"@type": "iot:ReactiveEnergyUnit",
+	"rdfs:comment": "The unit of reactive enregy, expressed in kilo (one thousand) as a decimal unit prefix.",
+	"rdfs:label": "kilovolt-ampere-reactive-hour",
+	"iot:reference": "0112/2///62720#UAB195#001"
+},
+{
+	"@id": "iot:MegaVoltAmpereReactiveHour",
+	"@type": "iot:ReactiveEnergyUnit",
+	"rdfs:comment": "The unit of reactive enregy, expressed in mega (one million) as a decimal unit prefix.",
+	"rdfs:label": "megavolt-ampere-reactive-hour",
+	"iot:reference": "0112/2///62720#UAB198#001"
+},
+{
+	"@id": "iot:GigaVoltAmpereReactiveHour",
+	"@type": "iot:ReactiveEnergyUnit",
+	"rdfs:comment": "The unit of reactive enregy, expressed in giga (one billion) as a decimal unit prefix.",
+	"rdfs:label": "gigavolt-ampere-reactive-hour"
+},
+{
+	"@id": "iot:TeraVoltAmpereReactiveHour",
+	"@type": "iot:ReactiveEnergyUnit",
+	"rdfs:comment": "The unit of the reactive enregy, expressed in giga (one trillion) as a decimal unit prefix.",
+	"rdfs:label": "teravolt-ampere-reactive-hour"
+}
