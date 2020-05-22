@@ -1494,6 +1494,9 @@
       },
 	  {
         "@id": "iot:OperationStatus"
+      }, 
+	  {
+        "@id": "iot:OverflowStatus"
       }
     ],
     "schema:rangeIncludes": [
