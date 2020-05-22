@@ -72,6 +72,12 @@
       },
       {
         "@id": "iot:TemperatureAlarm"
+      },
+      {
+        "@id": "iot:OverTemperatureAlarm"
+      },
+      {
+        "@id": "iot:UnderTemperatureAlarm"
       }
     ],
     "schema:rangeIncludes": [
@@ -549,87 +555,6 @@
     "rdfs:subClassOf": [
       {
         "@id": "iot:Property"
-      }
-    ]
-  },
-  {
-    "@id": "iot:providesStatusData",
-    "@type": [
-      "rdf:Property"
-    ],
-    "rdfs:comment": [
-      {
-        "@value": "A property that relates an Interaction Pattern with its output StatusData."
-      }
-    ],
-    "rdfs:label": [
-      {
-        "@value": "providesStatusData"
-      }
-    ],
-    "rdfs:subPropertyOf": [
-      {
-        "@id": "iot:providesOutputData"
-      }
-    ],
-    "schema:domainIncludes": [
-      {
-        "@id": "iot:OperationStatus"
-      }
-    ],
-    "schema:rangeIncludes": [
-      {
-        "@id": "iot:StatusData"
-      }
-    ]
-  },
-  {
-    "@id": "iot:StatusData",
-    "@type": [
-      "rdfs:Class"
-    ],
-    "rdfs:comment": [
-      {
-        "@value": "StatusData"
-      }
-    ],
-    "rdfs:label": [
-      {
-        "@value": "StatusData"
-      }
-    ],
-    "rdfs:subClassOf": [
-      {
-        "@id": "schema:PropertyValue"
-      }
-    ]
-  },
-  {
-    "@id": "schema:Boolean",
-    "@type": [
-      "rdf:Property"
-    ],
-    "rdfs:comment": [
-      {
-        "@value": "A property that relates an Interaction pattern with its data ."
-      }
-    ],
-    "rdfs:label": [
-      {
-        "@value": "Boolean"
-      }
-    ],
-    "schema:domainIncludes": [
-      {
-        "@id": "iot:StatusData"
-      },
-      {
-        "@id": "iot:StateData"
-      }
-    ],
-    "schema:rangeIncludes": [
-      {
-        "@id": "schema:Boolean"
       }
     ]
   },
@@ -1535,18 +1460,18 @@
     ]
   },
   {
-    "@id": "iot:providesStateData",
+    "@id": "iot:providesBooleanData",
     "@type": [
       "rdf:Property"
     ],
     "rdfs:comment": [
       {
-        "@value": "A property that relates an Interaction Pattern with its output StateData."
+        "@value": "A property that relates an Interaction Pattern with its output BooleanData."
       }
     ],
     "rdfs:label": [
       {
-        "@value": "providesStateData"
+        "@value": "providesBooleanData"
       }
     ],
     "rdfs:subPropertyOf": [
@@ -1557,11 +1482,23 @@
     "schema:domainIncludes": [
       {
         "@id": "iot:MotionDetected"
+      },
+	  {
+        "@id": "iot:SwitchStatus"
+      },
+	  {
+        "@id": "iot:TemperatureAlarm"
+      },
+	  {
+        "@id": "iot:HighCarbonDioxideConcentrationAlarm"
+      },
+	  {
+        "@id": "iot:OperationStatus"
       }
     ],
     "schema:rangeIncludes": [
       {
-        "@id": "iot:StateData"
+		"@id": "schema:Boolean"
       }
     ]
   },
@@ -2660,6 +2597,9 @@
       },
       {
         "@id": "iot:ExpectedUpstreamPressure"
+      },
+      {
+        "@id": "iot:OverPressureAlarm"
       }
     ],
     "schema:rangeIncludes": [
@@ -3168,33 +3108,6 @@
     "rdfs:subClassOf": [
       {
         "@id": "iot:Event"
-      }
-    ]
-  },
-  {
-    "@id": "providesBooleanData",
-    "@type": [
-      "rdf:Property"
-    ],
-    "rdfs:comment": [
-      {
-        "@value": "A property that relates an Interaction Pattern with its output (Boolean)."
-      }
-    ],
-    "rdfs:subPropertyOf": [
-      {
-        "@id": "iot:providesOutputData"
-      }
-    ],
-    "schema:domainIncludes": [
-      {
-        "@id": "iot:TemperatureAlarm",
-		"@id": "iot:HighCarbonDioxideConcentrationAlarm"
-      }
-    ],
-    "schema:rangeIncludes": [
-      {
-        "@id": "schema:Boolean"
       }
     ]
   },
@@ -4810,6 +4723,9 @@
       },
       {
         "@id": "iot:AverageElectricCurrent"
+      },
+      {
+        "@id": "iot:OverElectricCurrentAlarm"
       }
     ],
     "schema:rangeIncludes": [
@@ -5152,6 +5068,15 @@
       },
       {
         "@id": "iot:AveragePhaseToPhaseVoltage"
+      },
+      {
+        "@id": "iot:BatteryLowVoltageAlarm"
+      },
+      {
+        "@id": "iot:OverVoltageAlarm"
+      },
+      {
+        "@id": "iot:UnderVoltageAlarm"
       }
     ],
     "schema:rangeIncludes": [
@@ -6933,6 +6858,176 @@
     "rdfs:subClassOf": [
       {
         "@id": "iot:Action"
+      }
+    ]
+  },
+  {
+    "@id": "iot:providesAudioVideoData",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates an Interaction Pattern with its output AudioVideoData."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "providesAudioVideoData"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesOutputData"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:StartRecording"
+      },
+	  {
+        "@id": "iot:ResumeRecording"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:AudioVideoData"
+      }
+    ]
+  },
+  {
+    "@id": "iot:AudioVideoData",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Modes of audio/video data."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "AudioVideoData"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "schema:PropertyValue"
+      }
+    ]
+  },
+  {
+    "@id": "iot:audioVideoDataMode",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates an Interaction pattern data with its possible (enumerated) modes."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "audioVideoDataMode"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "schema:propertyType"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:AudioVideoData"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:AudioVideoDataMode"
+      }
+    ]
+  },
+  {
+    "@id": "iot:AudioVideoDataMode",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "An enumeration of modes of audio/video data."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "AudioVideoDataMode"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "schema:Enumeration"
+      }
+    ]
+  },
+  {
+    "@id": "iot:StreamDataMode",
+    "@type": [
+      "iot:AudioVideoDataMode"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Stream data mode."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "StreamedDataMode"
+      }
+    ]
+  },
+  {
+    "@id": "iot:BufferDataMode",
+    "@type": [
+      "iot:AudioVideoDataMode"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Buffer data mode."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "BufferDataMode"
+      }
+    ]
+  },
+  {
+    "@id": "iot:providesMakeImageData",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates an Interaction Pattern with its output AudioVideoData."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "providesMakeImageData"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesOutputData"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:MakeImage"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:AudioVideoData"
       }
     ]
   }

@@ -104,7 +104,7 @@
     ]
   },
   {
-    "@id": "iot:switchstatus",
+    "@id": "iot:switchStatus",
     "@type": [
       "rdf:Property"
     ],
@@ -115,7 +115,7 @@
     ],
     "rdfs:label": [
       {
-        "@value": "switchstatus"
+        "@value": "switchStatus"
       }
     ],
     "rdfs:subPropertyOf": [
@@ -169,6 +169,12 @@
       },
       {
         "@id": "iot:BinarySwitchControl"
+      },
+      {
+        "@id": "iot:Microphone"
+      },
+      {
+        "@id": "iot:Camera"
       }
     ],
     "schema:rangeIncludes": [
@@ -209,6 +215,12 @@
       },
       {
         "@id": "iot:BinarySwitchControl"
+      },
+      {
+        "@id": "iot:Microphone"
+      },
+      {
+        "@id": "iot:Camera"
       }
     ],
     "schema:rangeIncludes": [
