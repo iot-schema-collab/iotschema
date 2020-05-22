@@ -1970,27 +1970,6 @@
     ]
   },
   {
-    "@id": "iot:StateData",
-    "@type": [
-      "rdfs:Class"
-    ],
-    "rdfs:comment": [
-      {
-        "@value": "State data"
-      }
-    ],
-    "rdfs:label": [
-      {
-        "@value": "StateData"
-      }
-    ],
-    "rdfs:subClassOf": [
-      {
-        "@id": "schema:PropertyValue"
-      }
-    ]
-  },
-  {
     "@id": "iot:MotionType",
     "@type": [
       "rdfs:Class"
@@ -6774,6 +6753,9 @@
     "rdfs:subClassOf": [
       {
         "@id": "iot:Action"
+      },
+	  {
+        "@id": "iot:TurnOn"
       }
     ]
   },
@@ -6795,6 +6777,9 @@
     "rdfs:subClassOf": [
       {
         "@id": "iot:Action"
+      },
+	  {
+        "@id": "iot:TurnOff"
       }
     ]
   },

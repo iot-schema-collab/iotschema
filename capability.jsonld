@@ -1644,7 +1644,7 @@
     ],
     "rdfs:label": [
       {
-        "@value": "HighCarbonDioxideConcentrationAlarm"
+        "@value": "highCarbonDioxideConcentrationAlarm"
       }
     ],
     "rdfs:subPropertyOf": [
