@@ -1,0 +1,12 @@
+{
+	"@id": "iot:Fan",
+	"@type": "rdfs:Class",
+	"rdfs:subClassOf": { "@id": "iot:VariableFrequencyDrive" },
+	"rdfs:comment": "A capability to control a fan driven flow of outdoor air into a building.",
+	"rdfs:label": "Fan",
+	"iot:domain": [
+		{"@id": "iot:Building"},
+		{"@id": "iot:Industry"},
+		{"@id": "iot:Home"}
+	]
+}
