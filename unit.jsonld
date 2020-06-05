@@ -60,6 +60,14 @@
 	    "iot:reference" : "0112/2///62720#UAA972#001",
 	    "dct:source": "http://data.nasa.gov/qudt/owl/unit#SecondTime"
 	},
+	{
+		"@id": "iot:Millisecond",
+		"@type": "iot:TimeUnit",
+		"rdfs:comment": "Millisecond Time Unit",
+		"rdfs:label": "Millisecond",
+	    "iot:reference" : "0112/2///62720#UAA899",
+	    "dct:source": "http://qudt.org/vocab/unit/MilliSEC"
+	},
     {
 		"@id": "iot:Minute",
 		"@type": "iot:TimeUnit",
@@ -93,7 +101,7 @@
 		"@id": "schema:Enumeration"
 		}
 	},
-    {
+	{
 		"@id": "iot:Percent",
 		"@type": "iot:LevelUnit",
 		"@type": "iot:GasInAirConcentrationUnit",

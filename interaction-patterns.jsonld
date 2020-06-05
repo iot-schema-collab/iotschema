@@ -783,7 +783,7 @@
     ],
     "rdfs:comment": [
       {
-        "@value": "Actual speed of changing between 2 dimming values"
+        "@value": "Actual time needed to make a transition between two states in a state-changing action, e.g., to gradually change voltage or frequency between two defined values."
       }
     ],
     "rdfs:label": [
@@ -846,6 +846,9 @@
     "rdfs:subClassOf": [
       {
         "@id": "schema:PropertyValue"
+      },
+	  {
+        "@id": "iot:TimeData"
       }
     ]
   },
@@ -7018,6 +7021,37 @@
         "@id": "iot:AudioVideoData"
       }
     ]
-  }
+  },
+  {
+    "@id": "iot:timeUnitCode",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates iot:timeUnitCode with its unit."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "timeUnitCode"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "schema:unitCode"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:TimeData"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:TimeUnit"
+      }
+    ]
+  },
 ]
 }

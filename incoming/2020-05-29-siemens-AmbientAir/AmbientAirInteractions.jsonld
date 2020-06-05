@@ -1,0 +1,151 @@
+{
+	"@id": "iot:CarbonDioxideConcentration",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "Concentration of carbon dioxide (CO2) in ambient air.",
+	"rdfs:label": "CarbonDioxideConcentration",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:CarbonDioxideConcentrationData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:CarbonDioxideConcentrationData",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "Carbon dioxide concentration data.",
+	"rdfs:label": "CarbonDioxideConcentrationData",
+	"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+	"schema:propertyType": { "@id": "schema:Float" },
+	"schema:unitCode": { "@id": "iot:GasInAirConcentrationUnit" }
+},
+{
+	"@id": "iot:NitrogenConcentration",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "Concentration of nitrogen in ambient air.",
+	"rdfs:label": "NitrogenConcentration",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:NitrogenConcentrationData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:NitrogenConcentrationData",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "Nitrogen concentration data.",
+	"rdfs:label": "NitrogenConcentrationData",
+	"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+	"schema:propertyType": { "@id": "schema:Float" },
+	"schema:unitCode": { "@id": "iot:GasInAirConcentrationUnit" }
+},
+{
+	"@id": "iot:OxygenConcentration",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "Concentration of oxygen in ambient air.",
+	"rdfs:label": "OxygenConcentration",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:OxygenConcentrationData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:OxygenConcentrationData",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "Oxygen concentration data.",
+	"rdfs:label": "OxygenConcentrationData",
+	"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+	"schema:propertyType": { "@id": "schema:Float" },
+	"schema:unitCode": { "@id": "iot:GasInAirConcentrationUnit" }
+},
+{
+	"@id": "iot:ArgonConcentration",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "Concentration of argon in ambient air.",
+	"rdfs:label": "ArgonConcentration",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:ArgonConcentrationData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:ArgonConcentrationData",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "Argon concentration data.",
+	"rdfs:label": "ArgonConcentrationData",
+	"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+	"schema:propertyType": { "@id": "schema:Float" },
+	"schema:unitCode": { "@id": "iot:GasInAirConcentrationUnit" }
+},
+{
+	"@id": "iot:DemandControlledVentilation",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "Demand controlled ventilation (DCV) maintains ambient air quality by automated adjustments of the ventilation rate provided to a space in response to changes in conditions such as occupant number or indoor pollutant concentration.",
+	"rdfs:label": "DemandControlledVentilation",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:DemandControlledVentilationData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:DemandControlledVentilationData",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "Demand controlled ventilation data.",
+	"rdfs:label": "DemandControlledVentilationData",
+	"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+	"schema:propertyType": { "@id": "schema:Number" },
+	"schema:unitCode": { "@id": "iot:GasInAirConcentrationUnit" }
+},
+{
+	"@id": "iot:CarbonDioxideConcentrationLimit",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "Carbon dioxide concentration data defining the limit.",
+	"rdfs:label": "CarbonDioxideConcentrationLimit",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:CarbonDioxideConcentrationLimitData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:CarbonDioxideConcentrationLimitData",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "Carbon dioxide concentration data defining the limit.",
+	"rdfs:label": "CarbonDioxideConcentrationLimitData",
+	"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+	"schema:propertyType": { "@id": "schema:Number" },
+	"schema:unitCode": { "@id": "iot:GasInAirConcentrationUnit" }
+},
+{
+	"@id": "iot:HighCarbonDioxideConcentrationAlarm",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "Too high carbon dioxide concentration.",
+	"rdfs:label": "HighCarbonDioxideConcentrationAlarm",
+	"rdfs:subClassOf": { "@id": "iot:Event" },
+	"iot:providesOutputData": {
+		"@id": "iot:CarbonDioxideConcentrationLimitData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:CarbonDioxideConcentrationLimitData",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "Carbon dioxide concentration data defining the limit.",
+	"rdfs:label": "CarbonDioxideConcentrationLimitData",
+	"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+	"schema:propertyType": { "@id": "schema:Number" },
+	"schema:unitCode": { "@id": "iot:GasInAirConcentrationUnit" }
+}
+
+
+
+
