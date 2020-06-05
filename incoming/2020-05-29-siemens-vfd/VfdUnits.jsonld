@@ -1,0 +1,81 @@
+{
+	"@id": "iot:SpeedDataUnit",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "An enumeration of units for concentration of gas in the air, e.g., concentration of carbon dioxide (CO2) in ambient air.",
+	"rdfs:label": "SpeedDataUnit",
+	"rdfs:subClassOf": {
+		"@id": "schema:Enumeration"
+	}
+},
+{
+	"@id": "iot:MeterPerSecond",
+	"@type": "iot:SpeedDataUnit",
+	"rdfs:comment": "SI unit of both speed and velocity.",
+	"rdfs:label": "MeterPerSecond",
+	"iot:reference" : "0112/2///62720#UAA733",
+	"dct:source": "http://qudt.org/vocab/unit/M-PER-SEC"
+},
+{
+	"@id": "iot:CentimetrePerSecond",
+	"@type": "iot:SpeedDataUnit",
+	"rdfs:comment": "SI unit of both speed and velocity.",
+	"rdfs:label": "CentimetrePerSecond",
+	"iot:reference" : "0112/2///62720#UAA379",
+	"dct:source": "http://qudt.org/vocab/unit/CentiM-PER-SEC"
+},
+{
+	"@id": "iot:FeetPerSecond",
+	"@type": "iot:SpeedDataUnit",
+	"rdfs:comment": "Unit of speed.",
+	"rdfs:label": "FeetPerSecond"
+},
+{
+	"@id": "iot:Mach",
+	"@type": "iot:SpeedDataUnit",
+	"rdfs:comment": "Unit of speed.",
+	"rdfs:label": "Mach"
+},
+{
+	"@id": "iot:MilesPerHour",
+	"@type": "iot:SpeedDataUnit",
+	"rdfs:comment": "Unit of speed.",
+	"rdfs:label": "MilesPerHour"
+},
+{
+	"@id": "iot:Rpm",
+	"@type": "iot:SpeedDataUnit",
+	"rdfs:comment": "Unit of speed.",
+	"rdfs:label": "RevolutionsPerMinute"
+},
+{
+	"@id": "iot:LightYear",
+	"@type": "iot:SpeedDataUnit",
+	"rdfs:comment": "Unit of speed.",
+	"rdfs:label": "LightYear"
+},
+{
+	"@id": "iot:Knot",
+	"@type": "iot:SpeedDataUnit",
+	"rdfs:comment": "Unit of speed.",
+	"rdfs:label": "Knot"
+},
+{
+	"@id": "iot:Percent",
+	"@type": "iot:LevelUnit",
+	"@type": "iot:GasInAirConcentrationUnit",
+	"@type": "iot:SpeedDataUnit",
+	"@type": "iot:RampUnit",
+	"rdfs:comment": "Unit of measurement for level, concentration, speed.",
+	"rdfs:label": "Percent",
+	"iot:reference" : "0112/2///62720#UAA000#001",
+	"dct:source": "http://qudt.org/vocab/unit#Percent"
+},
+{
+	"@id": "iot:RampUnit",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "An enumeration of ramp data units.",
+	"rdfs:label": "RampUnit",
+	"rdfs:subClassOf": {
+		"@id": "schema:Enumeration"
+	}
+}

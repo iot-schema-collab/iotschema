@@ -1,0 +1,24 @@
+{
+	"@id": "iot:VariableFrequencyDrive",
+	"@type": "rdfs:Class",
+	"rdfs:subClassOf": { "@id": "iot:Capability" },
+	"rdfs:comment": "A capability for a variable-frequency drive (VFD) or adjustable-frequency drive (AFD), variable-voltage/variable-frequency (VVVF) drive, variable speed drive (VSD), AC drive, micro drive or inverter drive. It is a type of adjustable-speed drive used in electro-mechanical drive systems to control AC motor speed and torque by varying motor input frequency and voltage.",
+	"rdfs:label": "VariableFrequencyDrive",
+	"iot:domain": [
+			{"@id": "iot:Building"},
+			{"@id": "iot:Industry"},
+			{"@id": "iot:Home"}
+			],
+	"iot:providesInteractionPattern": [
+	{
+		"@id": "iot:SwitchStatus",
+		"@id": "iot:TurnOn",
+		"@id": "iot:TurnOff",
+		"@id": "iot:CurrentSpeed",
+		"@id": "iot:TargetSpeed",
+		"@id": "iot:RampTime",
+		"@id": "iot:RampUp",
+		"@id": "iot:RampDown",
+		"@id": "iot:TotalActivePower"
+	}]
+}

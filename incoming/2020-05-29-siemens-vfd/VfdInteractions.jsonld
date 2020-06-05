@@ -1,0 +1,81 @@
+{
+	"@id": "iot:CurrentSpeed",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "Current variable speed, e.g., it is 0% (off) to 100% (full speed). Other units apply.",
+	"rdfs:label": "CurrentSpeed",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:SpeedData"
+	},
+	"iot:writable" : "schema:False",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:SpeedData",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "Speed data.",
+	"rdfs:label": "SpeedData",
+	"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+	"schema:propertyType": { "@id": "schema:Number" },
+	"schema:unitCode": { "@id": "iot:SpeedDataUnit" }
+},
+{
+	"@id": "iot:TargetSpeed",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "Speed to be achieved. It may differ from the current speed if a device (e.g., drive or fan) is ramping.",
+	"rdfs:label": "TargetSpeed",
+	"rdfs:subClassOf": { "@id": "iot:Property" },
+	"iot:providesOutputData": {
+		"@id": "iot:SpeedData"
+	},
+	"iot:writable" : "schema:Boolean",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:RampUp",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The soft start of a functionality.",
+	"rdfs:label": "RampUp",
+	"rdfs:subClassOf": { "@id": "iot:Action" },
+	"iot:acceptsInputData": [
+      {
+        "@id": "iot:RampData"
+      },
+      {
+        "@id": "iot:RampTimeData"
+      }
+	]  
+	"iot:writable" : "schema:Boolean",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:RampDown",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "The soft stop of a functionality.",
+	"rdfs:label": "RampDown",
+	"rdfs:subClassOf": { "@id": "iot:Action" },
+	"iot:acceptsInputData": [
+      {
+        "@id": "iot:RampData"
+      },
+      {
+        "@id": "iot:RampTimeData"
+      }
+	]  
+	"iot:writable" : "schema:Boolean",
+	"iot:observable" : "schema:Boolean"
+},
+{
+	"@id": "iot:RampData",
+	"@type": "rdfs:Class",
+	"rdfs:comment": "Ramp data.",
+	"rdfs:label": "RampData",
+	"rdfs:subClassOf": { "@id": "schema:PropertyValue" },
+	"schema:propertyType": { "@id": "schema:Number" },
+	"schema:unitCode": { "@id": "iot:RampUnit" }
+}
+
+
+
+
+
