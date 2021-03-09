@@ -7052,6 +7052,205 @@
         "@id": "iot:TimeUnit"
       }
     ]
+  },
+  {
+    "@id": "iot:StateMachineStatus",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "iot:observable": [
+      {
+        "@value": "schema:Boolean"
+      }
+    ],
+    "iot:writable": [
+      {
+        "@value": "schema:True"
+      }
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Status of a state machine."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "StateMachineStatus"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "iot:Property"
+      }
+    ]
+  },
+  {
+    "@id": "iot:providesStateMachineStatusData",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates an Interaction Pattern with its output StateMachineStatusData."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "providesStateMachineStatusData"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "iot:providesOutputData"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:StateMachineStatus"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:StateMachineStatusData"
+      }
+    ]
+  },
+  {
+    "@id": "iot:StateMachineStatusData",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Statuses of a state machine."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "StateMachineStatusData"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "schema:PropertyValue"
+      }
+    ]
+  },
+  {
+    "@id": "iot:stateMachineStatusType",
+    "@type": [
+      "rdf:Property"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "A property that relates an Interaction pattern with its data."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "stateMachineStatusType"
+      }
+    ],
+    "rdfs:subPropertyOf": [
+      {
+        "@id": "schema:propertyType"
+      }
+    ],
+    "schema:domainIncludes": [
+      {
+        "@id": "iot:StateMachineStatusData"
+      }
+    ],
+    "schema:rangeIncludes": [
+      {
+        "@id": "iot:StateMachineStatusType"
+      }
+    ]
+  },
+  {
+    "@id": "iot:StateMachineStatusType",
+    "@type": [
+      "rdfs:Class"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "An enumeration of statuses of a state machine."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "StateMachineStatusType"
+      }
+    ],
+    "rdfs:subClassOf": [
+      {
+        "@id": "schema:Enumeration"
+      }
+    ]
+  },
+  {
+    "@id": "iot:Start",
+    "@type": [
+      "iot:StateMachineStatusType"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Start status."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "Start"
+      }
+    ]
+  },
+  {
+    "@id": "iot:Stop",
+    "@type": [
+      "iot:StateMachineStatusType"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Stop status."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "Stop"
+      }
+    ]
+  },
+  {
+    "@id": "iot:Idle",
+    "@type": [
+      "iot:StateMachineStatusType"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Idle status."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "Idle"
+      }
+    ]
+  },
+  {
+    "@id": "iot:Error",
+    "@type": [
+      "iot:StateMachineStatusType"
+    ],
+    "rdfs:comment": [
+      {
+        "@value": "Error status."
+      }
+    ],
+    "rdfs:label": [
+      {
+        "@value": "Error"
+      }
+    ]
   }
 ]
 }
